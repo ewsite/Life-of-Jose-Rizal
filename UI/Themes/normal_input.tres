@@ -1,0 +1,15 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://yc88xocw74pi"]
+
+[ext_resource type="Texture2D" uid="uid://ci2qt54db5t7b" path="res://UI/Assets/Textures/NormalInputUI.png" id="1_127ad"]
+
+[resource]
+content_margin_left = 12.0
+content_margin_top = 5.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+texture = ExtResource("1_127ad")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 11.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(8, 6, 112, 52)

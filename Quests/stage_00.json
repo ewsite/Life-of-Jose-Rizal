@@ -1,0 +1,15 @@
+{
+	"name": "Introduction",
+	"stage_path": "Stage00",
+	"quests": [
+		{
+			"name": "Introduction",
+			"unskippable": true,
+			"scene_path": "Introduction",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		}
+	]
+}

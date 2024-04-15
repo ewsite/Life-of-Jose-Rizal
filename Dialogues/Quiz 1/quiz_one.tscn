@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dawi8ebx5r1gp"]
+
+[ext_resource type="Script" path="res://Dialogues/Quiz 1/quiz_one.gd" id="1_20ice"]
+[ext_resource type="Texture2D" uid="uid://bwrchkrnum0x8" path="res://Dialogues/Quiz 1/sample_portrait.png" id="2_ildct"]
+
+[node name="QuizOne" type="Node2D"]
+position = Vector2(8, 0)
+script = ExtResource("1_20ice")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Portraits" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="Character1" type="Sprite2D" parent="CanvasLayer/Portraits"]
+position = Vector2(922.75, 324.25)
+scale = Vector2(1.01214, 1.0133)
+texture = ExtResource("2_ildct")
+region_enabled = true
+region_rect = Rect2(134.724, 0, 453.646, 639.22)
+
+[node name="Character2" type="Sprite2D" parent="CanvasLayer/Portraits"]
+position = Vector2(232, 320)
+scale = Vector2(1.01214, 1.0133)
+texture = ExtResource("2_ildct")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(134.724, 0, 453.646, 639.22)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

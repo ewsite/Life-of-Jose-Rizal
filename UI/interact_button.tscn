@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf076f6lb6t76"]
+
+[ext_resource type="Script" path="res://UI/InteractButton.gd" id="1_57dd5"]
+
+[node name="InteractButton" type="Button"]
+size_flags_horizontal = 8
+text = "-> Talk"
+alignment = 0
+script = ExtResource("1_57dd5")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

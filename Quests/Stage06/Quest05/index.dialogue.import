@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dgmyyjdrbyr0l"
+path="res://.godot/imported/index.dialogue-24cf73309019f4d0bf1dee7d596c6ece.tres"
+
+[deps]
+
+source_file="res://Quests/Stage06/Quest05/index.dialogue"
+dest_files=["res://.godot/imported/index.dialogue-24cf73309019f4d0bf1dee7d596c6ece.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,18 @@
+~ this_is_a_node_title
+do DialogueStates.spawn_character("Portrait", 6)
+do DialogueStates.flip_character("Portrait", true)
+Portrait: Hello Bitches
+do DialogueStates.fire_identification_question("Doodie?")
+Portrait: Question 1
+if DialogueStates.player_answer == "doodie":
+	Portrait: Nice
+else:
+	Portrait: Bad
+do DialogueStates.fire_identification_question("Anong palayaw ni Francisco Rizal Mercado?")
+Portrait: Question 2
+if DialogueStates.player_answer == "kikoy":
+	Portrait: Nice
+else
+	Portrait: Wrong
+Portrait: That's it
+=> END

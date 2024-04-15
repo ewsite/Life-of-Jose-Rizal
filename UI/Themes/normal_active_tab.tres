@@ -1,0 +1,16 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cfmrkws064k8e"]
+
+[ext_resource type="Texture2D" uid="uid://dblmd5yy0rnmy" path="res://UI/Assets/Textures/ActiveTabUI.png" id="1_25tld"]
+
+[resource]
+content_margin_top = 4.0
+texture = ExtResource("1_25tld")
+texture_margin_left = 17.0
+texture_margin_top = 9.0
+texture_margin_right = 17.0
+texture_margin_bottom = 15.0
+expand_margin_left = 8.0
+expand_margin_top = 4.0
+expand_margin_right = 8.0
+expand_margin_bottom = 4.0
+region_rect = Rect2(0, 5, 128, 59)

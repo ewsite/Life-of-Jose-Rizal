@@ -1,0 +1,147 @@
+{
+	"name": "Ang Lihim na Pag-alis",
+	"stage_path": "Stage03",
+	"quests": [
+		{
+			"name": "Ang Lihim na Pag-alis",
+			"description": "Ang Lihim na Pag-alis",
+			"scene_path": "Quest01",
+			"unskippable": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang Lihim na Pag-alis",
+			"description": "Pumunta sa Maynila",
+			"target_map": "CalambaPres",
+			"target_node": "ManilaPortTPEntry",
+			"scene_path": "Quest02",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Umakyat sa Barko",
+			"target_map": "ManilaPortPres",
+			"target_node": "BoatEntry",
+			"scene_path": "Quest03",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Umakyat sa Barko",
+			"unskippable": true,
+			"scene_path": "Quest04",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "aaaaaa",
+			"unskippable": true,
+			"scene_path": "Quest05",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pananatili at Pag-aaral sa Espanya",
+			"description": "Maglibot muna",
+			"target_map": "BarcelonaPres",
+			"target_node": "Inline1Entry",
+			"inline": true,
+			"scene_path": "Quest06",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pananatili at Pag-aaral sa Espanya",
+			"description": "Pumasok muna sa pansamantalang tirahan",
+			"target_map": "BarcelonaPres",
+			"target_node": "TempHouseEntry",
+			"scene_path": "Quest07",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pananatili at Pag-aaral sa Espanya",
+			"description": "Pumunta sa Madrid",
+			"target_map": "BarcelonaPres",
+			"target_node": "MadridTPEntry",
+			"scene_path": "Quest08",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Circulo Hispano Filipino",
+			"description": "Ipagpatuloy ang pag-aaral",
+			"target_map": "MadridPres",
+			"target_node": "UMadridEntry",
+			"scene_path": "Quest09",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Circulo Hispano Filipino",
+			"description": "Pumunta sa isang gusali",
+			"target_map": "MadridPres",
+			"target_node": "CHFEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Circulo Hispano Filipino",
+			"description": "...",
+			"target_map": "CHFPres",
+			"target_node": "Inline1Entry",
+			"scene_path": "Quest10",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Circulo Hispano Filipino",
+			"description": "Umupo Dito",
+			"target_map": "CHFPres",
+			"target_node": "ChairEntry",
+			"scene_path": "Quest11",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Circulo Hispano Filipino",
+			"description": "Pagtatapos",
+			"unskippable": true,
+			"scene_path": "Quest12",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		}
+		
+	]
+}

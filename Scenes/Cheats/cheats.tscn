@@ -1,0 +1,228 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0533h22c3is"]
+
+[ext_resource type="Script" path="res://Scenes/Cheats/cheats.gd" id="1_0hndh"]
+[ext_resource type="Script" path="res://Scenes/Cheats/DeveloperConsoleWindow.gd" id="1_pm3ri"]
+[ext_resource type="Script" path="res://Scenes/Cheats/QuestListWindow.gd" id="2_qw7wf"]
+[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="3_0nxi3"]
+[ext_resource type="Script" path="res://Scenes/Cheats/ChangeQuestWindow.gd" id="5_tok8b"]
+
+[node name="Cheats" type="CanvasLayer"]
+process_mode = 3
+layer = 128
+script = ExtResource("1_0hndh")
+
+[node name="CheatsContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="DeveloperConsoleWindow" type="Window" parent="CheatsContainer"]
+disable_3d = true
+msaa_2d = 3
+use_debanding = true
+canvas_item_default_texture_filter = 0
+sdf_oversize = 0
+sdf_scale = 0
+title = "Cheats"
+position = Vector2i(317, 36)
+size = Vector2i(450, 300)
+unresizable = true
+script = ExtResource("1_pm3ri")
+
+[node name="Control" type="Control" parent="CheatsContainer/DeveloperConsoleWindow"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_0nxi3")
+
+[node name="ColorRect" type="ColorRect" parent="CheatsContainer/DeveloperConsoleWindow/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CheatsContainer/DeveloperConsoleWindow/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Life of Rizal Developer Cheats"
+
+[node name="CheatQuestListContainer" type="HBoxContainer" parent="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer/VBoxContainer/CheatQuestListContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quest Lists"
+
+[node name="QuestsListsButton" type="Button" parent="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer/VBoxContainer/CheatQuestListContainer"]
+layout_mode = 2
+text = "Check"
+
+[node name="CheatChangeQuestContainer" type="HBoxContainer" parent="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer/VBoxContainer/CheatChangeQuestContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Change quest"
+
+[node name="ChangeQuestButton" type="Button" parent="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer/VBoxContainer/CheatChangeQuestContainer"]
+layout_mode = 2
+text = "Check"
+
+[node name="QuestListWindow" type="Window" parent="CheatsContainer"]
+canvas_item_default_texture_filter = 0
+title = "Quest List"
+position = Vector2i(0, 36)
+size = Vector2i(300, 300)
+script = ExtResource("2_qw7wf")
+
+[node name="Control" type="Control" parent="CheatsContainer/QuestListWindow"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_0nxi3")
+
+[node name="ColorRect" type="ColorRect" parent="CheatsContainer/QuestListWindow/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CheatsContainer/QuestListWindow/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="QuestListContainer" type="VBoxContainer" parent="CheatsContainer/QuestListWindow/Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ChangeQuestWindow" type="Window" parent="CheatsContainer"]
+canvas_item_default_texture_filter = 0
+title = "Change Quest"
+position = Vector2i(0, 36)
+size = Vector2i(350, 250)
+script = ExtResource("5_tok8b")
+
+[node name="Control" type="Control" parent="CheatsContainer/ChangeQuestWindow"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_0nxi3")
+
+[node name="ColorRect" type="ColorRect" parent="CheatsContainer/ChangeQuestWindow/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CheatsContainer/ChangeQuestWindow/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -173.5
+offset_right = 173.5
+offset_bottom = 211.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "change quest form hehe"
+
+[node name="StageContainer" type="HBoxContainer" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer/StageContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "STAGE"
+
+[node name="StageNum" type="LineEdit" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer/StageContainer"]
+layout_mode = 2
+
+[node name="QuestContainer" type="HBoxContainer" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer/QuestContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "quest"
+
+[node name="QuestNum" type="LineEdit" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer/QuestContainer"]
+layout_mode = 2
+virtual_keyboard_type = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChangeQuestSubmit" type="Button" parent="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "confirm"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="close_requested" from="CheatsContainer/DeveloperConsoleWindow" to="." method="dev_console_close_request"]
+[connection signal="pressed" from="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer/VBoxContainer/CheatQuestListContainer/QuestsListsButton" to="." method="show_quest_list_window"]
+[connection signal="pressed" from="CheatsContainer/DeveloperConsoleWindow/Control/MarginContainer/VBoxContainer/CheatChangeQuestContainer/ChangeQuestButton" to="." method="show_change_quest_window"]
+[connection signal="close_requested" from="CheatsContainer/QuestListWindow" to="CheatsContainer/QuestListWindow" method="_on_close_requested"]
+[connection signal="close_requested" from="CheatsContainer/ChangeQuestWindow" to="CheatsContainer/ChangeQuestWindow" method="_on_close_requested"]
+[connection signal="visibility_changed" from="CheatsContainer/ChangeQuestWindow" to="CheatsContainer/ChangeQuestWindow" method="_on_visibility_changed"]
+[connection signal="pressed" from="CheatsContainer/ChangeQuestWindow/Control/MarginContainer/VBoxContainer/HBoxContainer2/ChangeQuestSubmit" to="CheatsContainer/ChangeQuestWindow" method="submit"]

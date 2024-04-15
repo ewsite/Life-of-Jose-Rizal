@@ -1,0 +1,176 @@
+[gd_scene load_steps=8 format=3 uid="uid://dw42citf08smh"]
+
+[ext_resource type="Script" path="res://UI/Dialogue/Assessment/identification.gd" id="1_88opx"]
+[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="2_vgt7u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jcphe"]
+font_size = 35
+font_color = Color(0.215686, 0.12549, 0.054902, 1)
+
+[sub_resource type="Animation" id="Animation_66wlj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yas53"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.210224, 4.59479),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -720)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_if5h2"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.233258, 5.46416),
+"update": 0,
+"values": [Vector2(0, -720), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gunyr"]
+_data = {
+"RESET": SubResource("Animation_66wlj"),
+"hide": SubResource("Animation_yas53"),
+"show": SubResource("Animation_if5h2")
+}
+
+[node name="Identification" type="CanvasLayer"]
+layer = 15
+script = ExtResource("1_88opx")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vgt7u")
+
+[node name="Panel" type="PanelContainer" parent="Control"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -69.5
+offset_right = 200.0
+offset_bottom = 69.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="QuestionLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "what do you mean?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="AnswerInput" type="LineEdit" parent="Control/Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "type your answer here"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SubmitButton" type="Button" parent="Control/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "submit"
+
+[node name="TimerContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -194.0
+offset_top = 52.0
+offset_right = -68.0
+offset_bottom = 132.0
+grow_horizontal = 0
+metadata/_edit_group_ = true
+
+[node name="TimerLabel" type="Label" parent="Control/TimerContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "30"
+label_settings = SubResource("LabelSettings_jcphe")
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Control/TimerContainer"]
+unique_name_in_owner = true
+wait_time = 30.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gunyr")
+}
+
+[connection signal="pressed" from="Control/Panel/MarginContainer/VBoxContainer/HBoxContainer/SubmitButton" to="." method="submit" binds= [false]]
+[connection signal="timeout" from="Control/TimerContainer/Timer" to="." method="timeout"]

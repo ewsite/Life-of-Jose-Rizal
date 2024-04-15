@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfd480f05h8vo"]
+
+[ext_resource type="Script" path="res://Quests/Stage01/Activity/index.gd" id="1_oy1ed"]
+[ext_resource type="Texture2D" uid="uid://b0bbr4vy0bk86" path="res://Quests/Stage01/Activity/Cuts/TokinoSora.png" id="2_f0sfd"]
+[ext_resource type="Texture2D" uid="uid://dgaixd7ttywt7" path="res://addons/main_system/Nodes/Portrait/PortraitPlaceholder.png" id="3_dgfwk"]
+[ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="4_dmauk"]
+
+[node name="Activity" type="CanvasLayer"]
+script = ExtResource("1_oy1ed")
+
+[node name="WackRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Node" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Node"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_f0sfd")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Portraits" type="GridContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 6
+metadata/_edit_lock_ = true
+
+[node name="Portrait" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(495, 313)
+scale = Vector2(3.28767, 3.28767)
+texture = ExtResource("3_dgfwk")
+flip_h = true
+script = ExtResource("4_dmauk")

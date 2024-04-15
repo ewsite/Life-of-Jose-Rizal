@@ -1,0 +1,60 @@
+{
+	"name": "Ang Unang Araw ni Rizal",
+	"stage_path": "Stage01",
+	"quests": [
+		{
+			"name": "Calamba Papunta sa Binan",
+			"description": "Pumunta sa Bahay Kubo",
+			"target_map": "CalambaPres",
+			"target_node": "BahayKuboEntry",
+			"scene_path": "Quest01",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Calamba Papunta sa Binan",
+			"description": "Pumunta sa Bahay ni Rizal",
+			"target_map": "CalambaPres",
+			"target_node": "BahayRizalEntry",
+			"scene_path": "Quest02",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Calamba Papunta sa Binan",
+			"description": "Diretsuhin sa kanan",
+			"target_map": "CalambaPres",
+			"target_node": "BinanTPEntry",
+			"scene_path": "Quest03",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Calamba Papunta sa Binan",
+			"description": "Kilalanin ang Maestro sa bahay kubo.",
+			"target_map": "BinanPres",
+			"target_node": "Justiniano",
+			"scene_path": "Quest04",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Bago Magpatuloy",
+			"description": "Pumunta kay Captain",
+			"unskippable": true,
+			"scene_path": "Activity",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		}
+	]
+}

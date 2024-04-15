@@ -1,0 +1,14 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://d0oy7i5nttcly"]
+
+[ext_resource type="Texture2D" uid="uid://dy0t0mo15a32n" path="res://UI/Assets/Textures/NormalPressAltPlayButtonUI.png" id="1_hs2ou"]
+
+[resource]
+content_margin_top = 4.0
+texture = ExtResource("1_hs2ou")
+texture_margin_left = 9.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 13.0
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+region_rect = Rect2(8, 6, 112, 52)

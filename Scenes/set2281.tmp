@@ -1,0 +1,434 @@
+[gd_scene load_steps=19 format=3 uid="uid://c445gi4xyu2qj"]
+
+[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="1_qby1p"]
+[ext_resource type="FontFile" uid="uid://byd4o3d8iu4kc" path="res://UI/Assets/Fonts/PixCon.ttf" id="1_s8pmy"]
+[ext_resource type="Script" path="res://Scenes/settings.gd" id="2_5be5b"]
+[ext_resource type="StyleBox" uid="uid://ryixq2qdn8ek" path="res://UI/Themes/normat_default_button.tres" id="2_c3ess"]
+[ext_resource type="StyleBox" uid="uid://dt4t5xde4xgkw" path="res://UI/Themes/pressed_default_button.tres" id="3_o8dts"]
+[ext_resource type="StyleBox" uid="uid://b0nmgepu55ahp" path="res://UI/Themes/focus_input.tres" id="4_fcs3v"]
+[ext_resource type="StyleBox" uid="uid://yc88xocw74pi" path="res://UI/Themes/normal_input.tres" id="5_rwtw2"]
+[ext_resource type="Texture2D" uid="uid://cfqeix1skpuj3" path="res://UI/Assets/Textures/PanelUI.png" id="6_rg6sd"]
+[ext_resource type="StyleBox" uid="uid://bcdcr7oyf2jhx" path="res://UI/Themes/default_panel.tres" id="7_gt65h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjp23"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmgye"]
+
+[sub_resource type="Image" id="Image_e12jx"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 96, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 97, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 191, 255, 255, 255, 191, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 97, 255, 255, 255, 96, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_1qcpo"]
+image = SubResource("Image_e12jx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sniu1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yfs4"]
+texture = ExtResource("6_rg6sd")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_weauf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sl1ci"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="Theme" id="Theme_0gxuo"]
+Button/colors/font_color = Color(0.217404, 0.125372, 0.0555573, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.217404, 0.125372, 0.0555573, 1)
+Button/colors/font_hover_color = Color(0.217404, 0.125372, 0.0555573, 1)
+Button/colors/font_hover_pressed_color = Color(0.217404, 0.125372, 0.0555573, 1)
+Button/colors/font_outline_color = Color(0.217404, 0.125372, 0.0555573, 1)
+Button/colors/font_pressed_color = Color(0.217404, 0.125372, 0.0555573, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 8
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_s8pmy")
+Button/styles/disabled = SubResource("StyleBoxEmpty_gjp23")
+Button/styles/focus = SubResource("StyleBoxEmpty_xmgye")
+Button/styles/hover = ExtResource("2_c3ess")
+Button/styles/normal = ExtResource("2_c3ess")
+Button/styles/pressed = ExtResource("3_o8dts")
+Label/colors/font_color = Color(0.215686, 0.12549, 0.054902, 1)
+Label/fonts/font = ExtResource("1_s8pmy")
+LineEdit/colors/caret_color = Color(0.217404, 0.125372, 0.0555573, 1)
+LineEdit/colors/clear_button_color = Color(0.875, 0.875, 0.875, 1)
+LineEdit/colors/clear_button_color_pressed = Color(0.217404, 0.125372, 0.0555573, 1)
+LineEdit/colors/font_color = Color(0.217404, 0.125372, 0.0555573, 1)
+LineEdit/colors/font_outline_color = Color(1, 1, 1, 0)
+LineEdit/colors/font_placeholder_color = Color(0.329412, 0.2, 0.101961, 1)
+LineEdit/colors/font_selected_color = Color(0.217404, 0.125372, 0.0555573, 1)
+LineEdit/colors/font_uneditable_color = Color(0.875, 0.875, 0.875, 0.5)
+LineEdit/colors/selection_color = Color(0.5, 0.5, 0.5, 1)
+LineEdit/constants/caret_width = 1
+LineEdit/constants/minimum_character_width = 4
+LineEdit/constants/outline_size = 0
+LineEdit/font_sizes/font_size = 16
+LineEdit/fonts/font = ExtResource("1_s8pmy")
+LineEdit/icons/clear = SubResource("ImageTexture_1qcpo")
+LineEdit/styles/focus = ExtResource("4_fcs3v")
+LineEdit/styles/normal = ExtResource("5_rwtw2")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_sniu1")
+Panel/styles/panel = SubResource("StyleBoxTexture_6yfs4")
+PanelContainer/styles/panel = ExtResource("7_gt65h")
+RichTextLabel/colors/default_color = Color(0.217404, 0.125372, 0.0555573, 1)
+RichTextLabel/colors/font_outline_color = Color(0.217404, 0.125372, 0.0555573, 1)
+RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 0)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0)
+RichTextLabel/colors/selection_color = Color(0.101961, 0.101961, 1, 0.8)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_even_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/constants/shadow_outline_size = 1
+RichTextLabel/constants/table_h_separation = 3
+RichTextLabel/constants/table_v_separation = 3
+RichTextLabel/constants/text_highlight_h_padding = 3
+RichTextLabel/constants/text_highlight_v_padding = 3
+RichTextLabel/font_sizes/bold_font_size = 12
+RichTextLabel/font_sizes/bold_italics_font_size = 12
+RichTextLabel/font_sizes/italics_font_size = 12
+RichTextLabel/font_sizes/mono_font_size = 12
+RichTextLabel/font_sizes/normal_font_size = 12
+RichTextLabel/fonts/bold_font = ExtResource("1_s8pmy")
+RichTextLabel/fonts/bold_italics_font = ExtResource("1_s8pmy")
+RichTextLabel/fonts/italics_font = ExtResource("1_s8pmy")
+RichTextLabel/fonts/mono_font = ExtResource("1_s8pmy")
+RichTextLabel/fonts/normal_font = ExtResource("1_s8pmy")
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_weauf")
+RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_sl1ci")
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0gxuo")
+script = ExtResource("2_5be5b")
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.984314, 0.94902, 0.921569, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 48.0
+offset_right = 376.0
+offset_bottom = 122.0
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.223529, 0.172549, 0.117647, 1)
+theme_override_font_sizes/font_size = 32
+text = "settings"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -304.0
+offset_top = -80.0
+offset_right = -50.0
+offset_bottom = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "back to main menu"
+
+[node name="SettingTabs" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = 165.0
+offset_right = -48.0
+offset_bottom = -124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_separation = 8
+current_tab = 1
+
+[node name="Display" type="PanelContainer" parent="SettingTabs"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingTabs/Display"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingTabs/Display/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+metadata/_edit_group_ = true
+
+[node name="CheckButton" type="CheckButton" parent="SettingTabs/Display/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "fullscreen"
+
+[node name="PanelContainer" type="PanelContainer" parent="SettingTabs"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingTabs/PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingTabs/PanelContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "keyboard controls"
+
+[node name="WalkLeftContainer" type="HBoxContainer" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="label" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkLeftContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "walk left"
+
+[node name="player_walk_left_bind" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkLeftContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "a"
+
+[node name="WalkLeftConfig" type="Button" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkLeftContainer"]
+layout_mode = 2
+text = "change"
+
+[node name="WalkRightContainer" type="HBoxContainer" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name=";abel" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkRightContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "walk right"
+
+[node name="player_walk_right_bind" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkRightContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "a"
+
+[node name="WalkRightConfig" type="Button" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkRightContainer"]
+layout_mode = 2
+text = "change"
+
+[node name="WalkUpContainer" type="HBoxContainer" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="label" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkUpContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "walk up"
+
+[node name="player_walk_up_bind" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkUpContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "a"
+
+[node name="WalkUpConfig" type="Button" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkUpContainer"]
+layout_mode = 2
+text = "change"
+
+[node name="WalkDownContainer" type="HBoxContainer" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="label" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkDownContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Walk Down
+"
+
+[node name="player_walk_down_bind" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkDownContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "a"
+
+[node name="WalkDownConfig" type="Button" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkDownContainer"]
+layout_mode = 2
+text = "change"
+
+[node name="PlayerInteractContainer" type="HBoxContainer" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="label" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayerInteractContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "interact"
+
+[node name="player_interact_bind" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayerInteractContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "a"
+
+[node name="InteractConfig" type="Button" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayerInteractContainer"]
+layout_mode = 2
+text = "change"
+
+[node name="PlayerRunContainer" type="HBoxContainer" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="label" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayerRunContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run"
+
+[node name="player_run_bind" type="Label" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayerRunContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "a"
+
+[node name="RunBind" type="Button" parent="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayerRunContainer"]
+layout_mode = 2
+text = "change"
+
+[node name="KeyboardInputPopup" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Control" type="Control" parent="KeyboardInputPopup"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qby1p")
+
+[node name="ColorRect" type="ColorRect" parent="KeyboardInputPopup/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.529412)
+
+[node name="popup" type="PanelContainer" parent="KeyboardInputPopup/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.5
+offset_top = -30.5
+offset_right = 219.5
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="KeyboardInputPopup/Control/popup"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="KeyboardInputPopup/Control/popup/MarginContainer"]
+layout_mode = 2
+text = "press any key to change input"
+
+[connection signal="pressed" from="Button" to="." method="back_to_main_menu"]
+[connection signal="toggled" from="SettingTabs/Display/MarginContainer/VBoxContainer/CheckButton" to="." method="toggle_fullscreen"]
+[connection signal="pressed" from="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkLeftContainer/WalkLeftConfig" to="." method="change_input_map" binds= ["player_walk_left"]]
+[connection signal="pressed" from="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkRightContainer/WalkRightConfig" to="." method="change_input_map" binds= ["player_walk_right"]]
+[connection signal="pressed" from="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkUpContainer/WalkUpConfig" to="." method="change_input_map" binds= ["player_walk_up"]]
+[connection signal="pressed" from="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/WalkDownContainer/WalkDownConfig" to="." method="change_input_map" binds= ["player_walk_down"]]
+[connection signal="pressed" from="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayerInteractContainer/InteractConfig" to="." method="change_input_map" binds= ["player_interact"]]
+[connection signal="pressed" from="SettingTabs/PanelContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayerRunContainer/RunBind" to="." method="change_input_map" binds= ["player_run"]]

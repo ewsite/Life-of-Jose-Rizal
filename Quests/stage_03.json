@@ -1,0 +1,272 @@
+{
+	"name": "Pag-aaral ni Rizal",
+	"stage_path": "Stage02",
+	"quests": [
+		{
+			"name": "Bago umalis sa Calamba....",
+			"description": "Magpaalam",
+			"target_map": "CalambaPres",
+			"target_node": "BahayRizalEntry",
+			"scene_path": "Quest01",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Bag umalis sa Calamba...",
+			"description": "Pumunta sa Maynila",
+			"target_map": "CalambaPres",
+			"target_node": "AtaneoTPEntry",
+			"scene_path": "Quest02",
+			"rewards": {
+				"points": 300,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Ataneo",
+			"description": "Libutin muna ang paligid.",
+			"target_map": "AteneoPres",
+			"target_node": "Pest1Entry",
+			"scene_path": "Quest03",
+			"inline": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Ataneo De Municipal",
+			"description": "Pumasok sa paaralan",
+			"target_map": "AteneoPres",
+			"target_node": "AtaneoEntry",
+			"scene_path": "Quest04",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagkatapos mag-aral....",
+			"description": "Bumalik sa Calamba",
+			"target_map": "AteneoPres",
+			"target_node": "CalambaTPEntry",
+			"scene_path": "Quest05",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagbalik sa Calamba",
+			"description": "Kausapin ang pamilya sa tirahan mo",
+			"target_map": "CalambaPres",
+			"target_node": "BahayRizalEntry",
+			"scene_path": "Quest06",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagbalik sa Calamba",
+			"description": "Lumipas ang ilang araw",
+			"unskippable": true,
+			"scene_path": "Quest07",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagbalik sa Calamba",
+			"description": "Kausapin ang pamilya sa tirahan mo",
+			"unskippable": true,
+			"scene_path": "Quest08",
+			"rewards": {
+				"points": 100,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagbalik sa Calamba",
+			"description": "Pumunta sa Maynila",
+			"target_map": "CalambaPres",
+			"target_node": "USTTPEntry",
+			"scene_path": "Quest09",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Libutin muna ang paligid.",
+			"target_map": "USTPres",
+			"target_node": "Inline1Entry",
+			"scene_path": "Quest10",
+			"inline": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Libutin muna ang paligid.",
+			"target_map": "USTPres",
+			"target_node": "Inline2Entry",
+			"scene_path": "Quest11",
+			"inline": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Pumasok sa paaralan",
+			"target_map": "USTPres",
+			"target_node": "USTEntry",
+			"scene_path": "Quest12",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Kunin ang grading card...",
+			"target_map": "USTPres",
+			"target_node": "USTGCardEntry",
+			"scene_path": "Quest13",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang Unang Pag-ibig",
+			"description": "Bumalik sa Pansamantalang Tirahan",
+			"target_map": "USTPres",
+			"target_node": "PT1Entry",
+			"scene_path": "Quest14",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Ipagpatuloy ang Pag-aaral",
+			"target_map": "USTPres",
+			"target_node": "USTEntry",
+			"scene_path": "Quest15",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Kunin ang grading card...",
+			"target_map": "USTPres",
+			"target_node": "USTGCardEntry",
+			"scene_path": "Quest16",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Bumalik sa Pansamantalang Tirahan",
+			"target_map": "USTPres",
+			"target_node": "PT1Entry",
+			"scene_path": "Quest17",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Ipagpatuloy ang Pag-aaral",
+			"target_map": "USTPres",
+			"target_node": "USTEntry",
+			"scene_path": "Quest18",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Kunin ang grading card...",
+			"target_map": "USTPres",
+			"target_node": "USTGCardEntry",
+			"scene_path": "Quest19",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Magdrama sa pansamantalang bahay",
+			"target_map": "USTPres",
+			"target_node": "PT1Entry",
+			"force_complete": true,
+			"rewards": {
+				"points": 40,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Magdrama sa pansamantalang bahay",
+			"target_map": "PT1Pres",
+			"target_node": "Drama1Entry",
+			"scene_path": "Quest20",
+			"inline": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Magdrama sa pansamantalang bahay",
+			"target_map": "PT1Pres",
+			"target_node": "Drama2Entry",
+			"scene_path": "Quest21",
+			"inline": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pag-aaral sa Santo Tomas",
+			"description": "Magdrama sa pansamantalang bahay",
+			"scene_path": "Quest22",
+			"unskippable": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Bumalik sa Calamba",
+			"description": "Bumalik sa Calamba",
+			"target_map": "USTPres",
+			"target_node": "CalambaTPEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		}
+	]
+}

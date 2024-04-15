@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvalu2m0egjce"]
+
+[ext_resource type="Script" path="res://UI/LoadingScreens/default.gd" id="1_perrs"]
+[ext_resource type="Texture2D" uid="uid://cbx0jbnvm16ml" path="res://UI/Assets/Textures/JustCircle.png" id="2_0187b"]
+[ext_resource type="FontFile" uid="uid://byd4o3d8iu4kc" path="res://UI/Assets/Fonts/PixCon.ttf" id="3_tt048"]
+
+[sub_resource type="Animation" id="Animation_8tlx5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Giant Meat Ball:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6mvns"]
+resource_name = "clear"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Giant Meat Ball:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_ve27h"]
+resource_name = "start"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Giant Meat Ball:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(3, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3hfyf"]
+_data = {
+"RESET": SubResource("Animation_8tlx5"),
+"clear": SubResource("Animation_6mvns"),
+"start": SubResource("Animation_ve27h")
+}
+
+[node name="LoadingScreen" type="CanvasLayer"]
+layer = 128
+script = ExtResource("1_perrs")
+
+[node name="Giant Meat Ball" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(250, 250)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_0187b")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Giant Meat Ball"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -49.0
+offset_right = 206.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.217404, 0.125372, 0.0555573, 1)
+theme_override_fonts/font = ExtResource("3_tt048")
+theme_override_font_sizes/font_size = 26
+text = "loading..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3hfyf")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="sheesh"]

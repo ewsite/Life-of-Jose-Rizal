@@ -1,0 +1,17 @@
+~ this_is_a_node_title
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("Jose", 1)
+do DialogueStates.spawn_character("Paciano", 6)
+Jose: Kapatid, saan tayo pupunta?
+do DialogueStates.change_character_position("Jose", 2)
+Jose: Saan ako mag-aaral?
+do DialogueStates.change_character_position("Paciano", 5)
+Paciano: Dadalhin muna kita sa Binan para mag-aral.
+Paciano: Doon na rin ako nag-aral noon.
+do DialogueStates.change_character_position("Jose", 1)
+do DialogueStates.change_character_position("Paciano", 6)
+Paciano: Kapag nakapunta na tayo, ipapakilala kita sa aking Maestro na siya'y nagturo sa akin.
+do DialogueStates.despawn_character("Paciano")
+do DialogueStates.change_character_position("Jose", 3)
+Sa siyam (9) na taong gulang pa lamang ay umalis si Jose kasama ang kaniyang kapatid na si Paciano para mag-aral sa Binan.
+=> END

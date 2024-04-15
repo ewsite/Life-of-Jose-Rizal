@@ -1,0 +1,209 @@
+{
+	"name": "Ang Huling Araw ni Rizal",
+	"stage_path": "Stage06",
+	"quests": [
+		{
+			"name": "Pagbaba sa Barko...",
+			"description": "Pagbaba sa Barko",
+			"unskippable": true,
+			"scene_path": "Quest01",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagbaba sa Barko...",
+			"description": "Umalis sa lugar na yan",
+			"target_map": "ManilaPortPres",
+			"target_node": "PortEntranceEntry",
+			"scene_path": "Quest02",
+			"inline": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagbaba sa Barko...",
+			"description": "Pumunta dito...",
+			"target_map": "ManilaPortPres",
+			"target_node": "TondoTPEntry",
+			"scene_path": "Quest03",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang Pagtatag ng La Liga FIlipina",
+			"description": "Pumunta sa Bahay sa Tondo",
+			"target_map": "Tondo",
+			"target_node": "TondoBahayEntry",
+			"scene_path": "Quest04",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Sa 'Di Inaasahang Pangyayari",
+			"unskippable": true,
+			"scene_path": "Quest05",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Sa 'Di Inaasahang Pangyayari",
+			"unskippable": true,
+			"scene_path": "Quest06",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagtapon sa Dapitan",
+			"description": "Magmasid ka muna...",
+			"target_map": "DapitanPres",
+			"target_node": "DapitanAutoEntry",
+			"inline": true,
+			"scene_path": "Quest07",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagtapon sa Dapitan",
+			"description": "Pumunta sa Pansamantalang Bahay",
+			"target_map": "DapitanPres",
+			"target_node": "TempHouseEntry",
+			"scene_path": "Quest08",
+			"rewards": {
+				"points": 200,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang Huling Pag-ibig",
+			"description": "Lumapit ka sa isang babae...",
+			"target_map": "DapitanPres",
+			"target_node": "Josephine",
+			"scene_path": "Quest09",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang Huling Pag-ibig",
+			"description": "Suriin si Taufer",
+			"target_map": "DapitanHouseEntry",
+			"target_node": "Taufer",
+			"scene_path": "Quest10",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang Huling Pag-ibig",
+			"description": "Sabihin agad ang nararamdaman mo.",
+			"target_map": "Dapitan",
+			"target_node": "Josephine",
+			"scene_path": "Quest11",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Boluntaryo sa Cuba",
+			"description": "Sumakay ka sa barko",
+			"target_map": "Dapitan",
+			"target_node": "MVIslaEntry",
+			"scene_path": "Quest12",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Plot Twist",
+			"unskippable": true,
+			"scene_path": "Quest13",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagkulong sa Fort Santiago",
+			"description": "Kausapin ang gwardya",
+			"target_map": "FortSantiago",
+			"target_node": "Guard",
+			"scene_path": "Quest14",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagkulong sa Fort Santiago",
+			"description": "Kausapin ang abogado",
+			"target_map": "FortSantiago",
+			"target_node": "LuisTaviel",
+			"scene_path": "Quest15",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagkulong sa Fort Santiago",
+			"description": "Lumabas sa Kulungan at Pumunta sa Korte",
+			"target_map": "FortSantiago",
+			"target_node": "COurtEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Paglilitis at Hatol",
+			"description": "Harapin mo",
+			"target_map": "FortSantiago",
+			"target_node": "CourtEntry2",
+			"scene_path": "Quest16",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Bago Magpatuloy",
+			"description": "Kausapin si Kapitan",
+			"target_map": "FortSantiago",
+			"target_node": "Captain",
+			"scene_path": "Assessment",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagwawakas",
+			"unskippable": true,
+			"scene_path": "Quest17",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		}
+		
+	]
+}

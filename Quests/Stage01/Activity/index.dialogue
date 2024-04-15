@@ -1,0 +1,51 @@
+~ this_is_a_node_title
+
+do DialogueStates.spawn_character("Portrait", 5)
+Captain: Bago ka magpatuloy sa susunod na kabanata. May gagawin ka pang pagsusulit. 
+Captain: Handa ka na ba?
+- Hindi
+	Book: Okay
+	do DialogueStates.abort_dialogue()
+	=> END!
+- Oo
+Captain: Simulan natin!
+Captain: Unang Tanong \n Sino ang ating pambansang bayani?
+- Jose Rizal
+	Captain: Tama!
+- Andres Bonifacio
+	=>< wrong_answer
+	Captain: Ang tamang sagot ay "Jose Rizal"
+Captain: Anong pangalan ng ina ni Rizal?
+- Nidora Melchora Aquino
+	=>< wrong_answer
+	Captain: Mali!
+- Teodora Realonda y Quintos
+	Captain: Tama!
+Captain: Anong pangalan ng ama ni Rizal?
+- Paciano Rizal Mercado
+	=>< wrong_answer
+	Captain: Ang Tamang Sagot ay "Francisco Rizal Mercado"
+- Francisco Rizal Mercado
+	Captain: Tama!
+Captain: Sino ang kapatid na nakasama niya na pag-alis papunta sa Binan para mag-aral?
+- Francisco Rizal Mercado
+	=>< wrong_answer
+	Captain: Ang Tamang Sagot ay "Paciano"
+- Paciano
+	Captain: Tama!
+Captain: Saan pinanganak si Jose Rizal?
+- Calamba, Laguna
+	Captain: Tama!
+- Binan, Laguna
+	=>< wrong_answer
+	Captain: Ang tamang sagot ay "Calamba, Laguna"
+=> END
+
+
+~ wrong_answer
+do GameStats.remove_health()
+do DialogueStates.emote_character("Portrait", "buzz")
+if GameStats.player_dead():
+	do BaseGame.game_over()
+	=> END!
+=> END

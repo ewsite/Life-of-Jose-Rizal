@@ -1,0 +1,13 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://djeif2x4vdmc2"]
+
+[ext_resource type="Texture2D" uid="uid://buv2u0qwou7dg" path="res://UI/Assets/Textures/NormalPressQuitButtonUI.png" id="1_btupe"]
+
+[resource]
+texture = ExtResource("1_btupe")
+texture_margin_left = 9.0
+texture_margin_top = 8.0
+texture_margin_right = 9.0
+texture_margin_bottom = 14.0
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+region_rect = Rect2(8, 6, 112, 52)

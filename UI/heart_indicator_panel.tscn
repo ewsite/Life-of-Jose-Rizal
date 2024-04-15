@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dstiviedqexhn"]
+
+[ext_resource type="Script" path="res://UI/heart_indicator_panel.gd" id="1_2efqk"]
+
+[sub_resource type="Animation" id="Animation_raqrw"]
+resource_name = "add"
+length = 0.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_memsb"]
+_data = {
+"add": SubResource("Animation_raqrw")
+}
+
+[node name="HeartIndicatorPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 192.0
+offset_bottom = 64.0
+script = ExtResource("1_2efqk")
+metadata/_edit_group_ = true
+
+[node name="GridContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_memsb")
+}

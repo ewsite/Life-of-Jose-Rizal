@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cwwu1eyggbvqr"]
+
+[ext_resource type="Texture2D" uid="uid://d31p8xqfxpk4l" path="res://UI/Assets/Textures/PressedPressQuitButtonUI.png" id="1_cuxxe"]
+
+[resource]
+texture = ExtResource("1_cuxxe")
+texture_margin_left = 10.0
+texture_margin_top = 14.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(8, 4, 112, 57)

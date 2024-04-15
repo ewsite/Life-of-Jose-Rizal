@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr8xekmd6x8va"]
+
+[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="1_ptlur"]
+[ext_resource type="Script" path="res://Scenes/game_complete.gd" id="2_eylt6"]
+[ext_resource type="PackedScene" uid="uid://cmr8j8cfpl35u" path="res://Tools/safe_area.tscn" id="3_8pr1q"]
+
+[node name="GameComplete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ptlur")
+script = ExtResource("2_eylt6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.929412, 0.843137, 0.741176, 1)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -328.0
+offset_top = -150.0
+offset_right = -74.0
+offset_bottom = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 16
+metadata/_edit_group_ = true
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Back to main menu"
+
+[node name="RestartButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "restart game"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.5
+offset_top = -67.5
+offset_right = 286.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="GameCompleteLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.223529, 0.172549, 0.117647, 1)
+theme_override_font_sizes/font_size = 48
+text = "Game Complete"
+
+[node name="SafeArea" parent="." instance=ExtResource("3_8pr1q")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+metadata/_edit_group_ = true
+
+[connection signal="pressed" from="VBoxContainer2/MainMenuButton" to="." method="back_to_main_menu"]
+[connection signal="pressed" from="VBoxContainer2/RestartButton" to="." method="restart_game"]

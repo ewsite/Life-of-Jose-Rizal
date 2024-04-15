@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://b0nmgepu55ahp"]
+
+[ext_resource type="Texture2D" uid="uid://dkkcsu53iuofa" path="res://UI/Assets/Textures/FocusInputUI.png" id="1_fft54"]
+
+[resource]
+texture = ExtResource("1_fft54")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 11.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(8, 6, 112, 52)

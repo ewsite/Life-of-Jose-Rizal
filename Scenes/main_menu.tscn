@@ -1,0 +1,627 @@
+[gd_scene load_steps=36 format=3 uid="uid://rtv2edlvqxdk"]
+
+[ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_4woli"]
+[ext_resource type="FontFile" uid="uid://byd4o3d8iu4kc" path="res://UI/Assets/Fonts/PixCon.ttf" id="1_cbbqd"]
+[ext_resource type="StyleBox" uid="uid://d0oy7i5nttcly" path="res://UI/Themes/normat_play_button.tres" id="2_2cbal"]
+[ext_resource type="Texture2D" uid="uid://bmljconui5ujf" path="res://Assets/Own/MainMenuParallax/Set01/Sky.png" id="2_22ap6"]
+[ext_resource type="Texture2D" uid="uid://baifcp4yi41u5" path="res://Assets/Own/MainMenuParallax/Set01/Road.png" id="3_2cnt6"]
+[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="3_4sy4x"]
+[ext_resource type="Texture2D" uid="uid://bbapvpusw5rec" path="res://Assets/Own/MainMenuParallax/Set01/HouseWithFlag.png" id="3_68vab"]
+[ext_resource type="StyleBox" uid="uid://88hhtrhom01p" path="res://UI/Themes/pressed_play_button.tres" id="3_yk8sf"]
+[ext_resource type="StyleBox" uid="uid://djeif2x4vdmc2" path="res://UI/Themes/normal_quit_button.tres" id="4_u4v31"]
+[ext_resource type="StyleBox" uid="uid://cwwu1eyggbvqr" path="res://UI/Themes/pressed_quit_button.tres" id="5_g41qb"]
+[ext_resource type="Texture2D" uid="uid://d3kx04ps3qbea" path="res://Assets/Own/Title Logo.png" id="7_pn7xo"]
+[ext_resource type="PackedScene" uid="uid://dg05p8op21l8" path="res://Characters/animated_jose_rizal.tscn" id="8_bs33e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mg7f4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1lsfe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1x56n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eir5j"]
+
+[sub_resource type="Animation" id="Animation_aq1fm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG/Control/AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BG/Control/House:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BG/LogoContainer/Logo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 50)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BG/Control/Actions:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-316, 200)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BG/Control/Actions/LoadGameButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BG/Control/Actions/NewGameButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BG/Control/Actions/SettingsButton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BG/Control/Actions/QuitButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BG/LogoContainer/NewGamePopup:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -300)]
+}
+
+[sub_resource type="Animation" id="Animation_g7x7k"]
+resource_name = "hide_popup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG/LogoContainer/NewGamePopup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.233258, 5.27803),
+"update": 0,
+"values": [Vector2(0, 50), Vector2(0, -300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BG/LogoContainer/Logo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.189465, 2.92818),
+"update": 0,
+"values": [Vector2(0, -300), Vector2(0, 50)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BG/Control/Actions:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.267943, 3.86374),
+"update": 0,
+"values": [Vector2(-316, 300), Vector2(-316, -1)]
+}
+
+[sub_resource type="Animation" id="Animation_esrgi"]
+resource_name = "show_popup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG/LogoContainer/Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.31864, 5.46416),
+"update": 0,
+"values": [Vector2(0, 50), Vector2(0, -300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BG/LogoContainer/NewGamePopup:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.217637, 2.37842),
+"update": 0,
+"values": [Vector2(0, -300), Vector2(0, 50)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BG/Control/Actions:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.183011, 3.24901),
+"update": 0,
+"values": [Vector2(-316, -1), Vector2(-316, 200)]
+}
+
+[sub_resource type="Animation" id="Animation_7bdsj"]
+resource_name = "start"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG/Control/AnimatedSprite2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"walk_right", 1.0, false],
+"method": &"play"
+}, {
+"args": [&"idle", 1.0, false],
+"method": &"play"
+}, {
+"args": [&"walk_right", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BG/Control/AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 8, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-800, -24), Vector2(0, -24), Vector2(0, -24), Vector2(800, -24)]
+}
+
+[sub_resource type="Animation" id="Animation_w2oxr"]
+resource_name = "start_infrastructure"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG/Control/House:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.1, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_laro1"]
+resource_name = "start_ui"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG/LogoContainer/Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(0.112656, 4.75683),
+"update": 0,
+"values": [Vector2(0, -300), Vector2(0, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BG/Control/Actions:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5, 2.9),
+"transitions": PackedFloat32Array(0.170755, 3.13834),
+"update": 0,
+"values": [Vector2(-316, 200), Vector2(-316, -1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BG/Control/Actions/LoadGameButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.7, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BG/Control/Actions/NewGameButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.9, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BG/Control/Actions/SettingsButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.1, 2.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BG/Control/Actions/QuitButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.3, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1jpk2"]
+_data = {
+"RESET": SubResource("Animation_aq1fm"),
+"hide_popup": SubResource("Animation_g7x7k"),
+"show_popup": SubResource("Animation_esrgi"),
+"start": SubResource("Animation_7bdsj"),
+"start_infrastructure": SubResource("Animation_w2oxr"),
+"start_ui": SubResource("Animation_laro1")
+}
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_ip3lh"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_ftjg7"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b34vw"]
+animation = &"start_infrastructure"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_if261"]
+animation = &"start_ui"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_60rug"]
+animation = &"show_popup"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v3dvr"]
+animation = &"hide_popup"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oukpm"]
+animation = &"start"
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_l05ud"]
+
+[sub_resource type="AnimationNodeBlend3" id="AnimationNodeBlend3_8lkak"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_giwhm"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_vwjjy"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_uy6oh"]
+graph_offset = Vector2(-386.544, 331.396)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_ftjg7")
+nodes/Add2/position = Vector2(-106.667, -160)
+"nodes/Add2 2/node" = SubResource("AnimationNodeAdd2_ip3lh")
+"nodes/Add2 2/position" = Vector2(613.333, 293.333)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_oukpm")
+nodes/Animation/position = Vector2(-426.667, -133.333)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_b34vw")
+"nodes/Animation 2/position" = Vector2(-426.667, 106.667)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_if261")
+"nodes/Animation 3/position" = Vector2(-506.667, 613.333)
+"nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_60rug")
+"nodes/Animation 4/position" = Vector2(-533.333, 826.667)
+"nodes/Animation 5/node" = SubResource("AnimationNodeAnimation_v3dvr")
+"nodes/Animation 5/position" = Vector2(-533.333, 346.667)
+nodes/hide_popup_seek/node = SubResource("AnimationNodeTimeSeek_l05ud")
+nodes/hide_popup_seek/position = Vector2(-320, 346.667)
+nodes/output/position = Vector2(880, 320)
+nodes/popup_blend/node = SubResource("AnimationNodeBlend3_8lkak")
+nodes/popup_blend/position = Vector2(133.333, 533.333)
+nodes/show_popup_seek/node = SubResource("AnimationNodeTimeSeek_giwhm")
+nodes/show_popup_seek/position = Vector2(-320, 826.667)
+nodes/start_ui_seek/node = SubResource("AnimationNodeTimeSeek_vwjjy")
+nodes/start_ui_seek/position = Vector2(-320, 586.667)
+node_connections = [&"Add2", 0, &"Animation", &"Add2", 1, &"Animation 2", &"Add2 2", 0, &"Add2", &"Add2 2", 1, &"popup_blend", &"hide_popup_seek", 0, &"Animation 5", &"output", 0, &"Add2 2", &"popup_blend", 0, &"hide_popup_seek", &"popup_blend", 1, &"start_ui_seek", &"popup_blend", 2, &"show_popup_seek", &"show_popup_seek", 0, &"Animation 4", &"start_ui_seek", 0, &"Animation 3"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4woli")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_right = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_22ap6")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="Control" type="Control" parent="BG"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -104.0
+offset_right = 20.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="House" type="TextureRect" parent="BG/Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -464.0
+offset_top = -448.0
+offset_right = 460.0
+offset_bottom = 72.0
+grow_horizontal = 2
+texture = ExtResource("3_68vab")
+
+[node name="Road" type="TextureRect" parent="BG/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1596.0
+offset_top = -16.0
+offset_right = 1356.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2cnt6")
+expand_mode = 3
+
+[node name="AnimatedSprite2D" parent="BG/Control" instance=ExtResource("8_bs33e")]
+position = Vector2(0, -24)
+scale = Vector2(1.88872, 1.88872)
+animation = &"walk_left"
+
+[node name="Actions" type="HBoxContainer" parent="BG/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = 180.0
+offset_right = 351.0
+offset_bottom = 238.001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+alignment = 1
+metadata/_edit_group_ = true
+
+[node name="LoadGameButton" type="Button" parent="BG/Control/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cbbqd")
+theme_override_styles/normal = ExtResource("2_2cbal")
+theme_override_styles/hover = ExtResource("2_2cbal")
+theme_override_styles/pressed = ExtResource("3_yk8sf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mg7f4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1lsfe")
+text = "Load Game"
+
+[node name="NewGameButton" type="Button" parent="BG/Control/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cbbqd")
+theme_override_styles/normal = ExtResource("2_2cbal")
+theme_override_styles/hover = ExtResource("2_2cbal")
+theme_override_styles/pressed = ExtResource("3_yk8sf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mg7f4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1lsfe")
+text = "New Game"
+
+[node name="SettingsButton" type="Button" parent="BG/Control/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cbbqd")
+theme_override_styles/normal = ExtResource("2_2cbal")
+theme_override_styles/hover = ExtResource("2_2cbal")
+theme_override_styles/pressed = ExtResource("3_yk8sf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mg7f4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1lsfe")
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="BG/Control/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cbbqd")
+theme_override_styles/normal = ExtResource("4_u4v31")
+theme_override_styles/hover = ExtResource("4_u4v31")
+theme_override_styles/pressed = ExtResource("5_g41qb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1x56n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eir5j")
+text = "Quit"
+
+[node name="LogoContainer" type="Control" parent="BG"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_right = 192.0
+offset_bottom = 212.0
+grow_horizontal = 2
+mouse_filter = 2
+theme = ExtResource("3_4sy4x")
+
+[node name="NewGamePopup" type="PanelContainer" parent="BG/LogoContainer"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -300.0
+offset_bottom = -300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewGamePopupContainer" type="MarginContainer" parent="BG/LogoContainer/NewGamePopup"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/LogoContainer/NewGamePopup/NewGamePopupContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BG/LogoContainer/NewGamePopup/NewGamePopupContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.215686, 0.12549, 0.054902, 1)
+text = "anong pangalan mo?"
+horizontal_alignment = 1
+
+[node name="NGPInput" type="LineEdit" parent="BG/LogoContainer/NewGamePopup/NewGamePopupContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="HBoxContainer" parent="BG/LogoContainer/NewGamePopup/NewGamePopupContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="NGPOK" type="Button" parent="BG/LogoContainer/NewGamePopup/NewGamePopupContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ok"
+
+[node name="NGPCancel" type="Button" parent="BG/LogoContainer/NewGamePopup/NewGamePopupContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CANCEL"
+
+[node name="Logo" type="TextureRect" parent="BG/LogoContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -56.0
+offset_right = 192.0
+offset_bottom = 156.043
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_pn7xo")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1jpk2")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1jpk2")
+}
+tree_root = SubResource("AnimationNodeBlendTree_uy6oh")
+advance_expression_base_node = NodePath("../AnimationPlayer")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Add2/add_amount = 1.0
+"parameters/Add2 2/add_amount" = 1.0
+parameters/hide_popup_seek/seek_request = -1.0
+parameters/popup_blend/blend_amount = 0.0
+parameters/show_popup_seek/seek_request = -1.0
+parameters/start_ui_seek/seek_request = -1.0
+
+[connection signal="pressed" from="BG/Control/Actions/LoadGameButton" to="." method="load_game"]
+[connection signal="pressed" from="BG/Control/Actions/NewGameButton" to="." method="play_game"]
+[connection signal="pressed" from="BG/Control/Actions/SettingsButton" to="." method="go_to_settings"]
+[connection signal="pressed" from="BG/Control/Actions/QuitButton" to="." method="quit_game"]
+[connection signal="pressed" from="BG/LogoContainer/NewGamePopup/NewGamePopupContainer/VBoxContainer/VBoxContainer/NGPOK" to="." method="new_game"]
+[connection signal="pressed" from="BG/LogoContainer/NewGamePopup/NewGamePopupContainer/VBoxContainer/VBoxContainer/NGPCancel" to="." method="cancel_popup"]

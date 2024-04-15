@@ -1,0 +1,9 @@
+~ this_is_a_node_title
+do DialogueStates.change_slide(1)
+Sa isang bahay kubo, narito ang isa sa mga masayang pangyayari ni Jose Rizal nang siya'y bata pa lang.
+do DialogueStates.change_slide(2)
+Si Rizal ay madalas makipaglaro kasama ang kanyang mga munting kaibigan.
+do DialogueStates.change_slide(3)
+Siya ay mahilig magpinta ng hayop, ibon at bulaklak.
+Mahilig rin siya gumawa ng figurine.
+=> END

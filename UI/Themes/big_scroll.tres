@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dd5aa5h615bkf"]
+
+[ext_resource type="Texture2D" uid="uid://okgx54uhgn5r" path="res://UI/Assets/Textures/Scroll Large.png" id="1_letve"]
+
+[resource]
+texture = ExtResource("1_letve")
+texture_margin_left = 51.0
+texture_margin_top = 49.0
+texture_margin_right = 51.0
+texture_margin_bottom = 41.0
+region_rect = Rect2(19, 14, 574, 278)

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://tc5sru0lo632"
+path="res://.godot/imported/Quiz 1.dialogue-4732600fdbe3e4fa9034809c14ea2181.tres"
+
+[deps]
+
+source_file="res://Dialogues/Quiz 1/Quiz 1.dialogue"
+dest_files=["res://.godot/imported/Quiz 1.dialogue-4732600fdbe3e4fa9034809c14ea2181.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,39 @@
+~ this_is_a_node_title
+Sa loob ng korte militar, ang kapaligiran ay puno ng tensyon. 
+Ang mga mata ng lahat ay nakatuon kay Rizal, na nakatayo nang matatag sa harap ng hukom.
+
+Hukom: Dr. Jose Rizal, ikaw ay sinakdal sa mga kasong rebelyon, [wait=0.3] sedisyon, [wait=0.3] at pakikipagsabwatan laban sa korona ng Espanya. 
+Hukom: Ano ang iyong masasabi sa mga akusasyong ito?
+Rizal: Mahal na Hukom, ako ay isang manunulat, [wait=0.3] isang doktor, [wait=0.3] at isang repormista. 
+Rizal: Hindi ako isang rebelde. 
+Rizal: Ang aking mga akda ay naglalayong magbigay liwanag sa mga suliraning kinakaharap ng aking bayan, 
+Rizal: hindi upang mag-udyok ng rebelyon.
+Piskal: Ngunit, Dr. Rizal, [wait=0.3] ang iyong mga nobela at mga artikulo ay nagpapakita ng malinaw na...[wait=0.3][next=auto]
+Piskal: pagtuligsa sa pamahalaan at sa mga prayle. 
+Piskal: Hindi ba ito pag-uudyok sa mga Pilipino na mag-alsa?
+Rizal: Ang pagpuna sa mga mali ay hindi nangangahulugang pag-uudyok ng karahasan. 
+Rizal: Ang edukasyon at mapayapang reporma ang aking isinusulong, hindi ang rebelyon.
+Abogado: Mahal na Hukom, walang matibay na ebidensya na nag-uugnay kay Dr. Rizal sa aktwal na pag-aalsa. 
+Abogado: Ang kanyang hangarin ay para sa pagbabago sa pamamagitan ng mapayapang paraan.
+Hukom: Dr. Rizal, ang korte ay magpapasya batay sa mga ebidensyang iniharap.
+Hukom: Ang iyong kapalaran ay nakasalalay sa desisyon ng korte.
+Rizal: Anuman ang maging hatol ng korte, ang aking konsensya ay malinis. 
+Rizal: Ako ay naninindigan para sa katotohanan at katarungan para sa aking bayan.
+Matapos pinag-aaralan ang salaysay ni Rizal at ebidensya laban kay Rizal. 
+Hinihintay ng lahat ng tao sa korte ang hatol na magdedetermina ng kanyang kapalaran.
+Hukom: Dr. Jose Rizal...
+Hukom: matapos masusing pag-aralan ang lahat ng ebidensya at pakinggan ang iyong mga paliwanag, 
+Hukom: ang korte ay nakabuo na ng desisyon.
+Rizal: Handa akong tanggapin ang anumang hatol na inyong ibibigay, mahal na Hukom.
+Hukom: Sa ilalim ng kapangyarihan ng korona ng Espanya, ikaw, Dr. Jose Rizal, [wait=2] ay nahatulan sa mga kasong rebelyon, sedisyon, at pakikipagsabwatan. 
+Hukom: Sa kabila ng iyong pagtanggi sa mga akusasyon, ang korte ay nagpasya na ikaw ay may sala sa lahat ng nabanggit na kaso.
+Rizal: (matatag) Mahal na Hukom, nais kong ipahayag na ang aking konsensya ay malinis.
+Hukom: Ang hatol ng korte ay kamatayan. 
+Hukom: Ikaw ay bibitayin sa pamamagitan ng pagbaril sa Bagumbayan.
+Rizal: Kung ang aking kamatayan ay magiging daan para sa kalayaan ng aking bayan.....
+
+Ang mga tao sa loob ng korte ay natahimik, ang ilan ay hindi makapaniwala sa narinig, 
+habang ang iba ay nagpakita ng simpatya sa bayaning hinatulan. 
+Si Rizal ay dinala pabalik sa kanyang selda upang paghandaan ang kanyang huling araw.
+
+=> END

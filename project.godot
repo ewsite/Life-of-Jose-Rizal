@@ -1,0 +1,126 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Life of Jose Rizal"
+run/main_scene="res://splash.tscn"
+config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="res://Logo (512x512).png"
+
+[autoload]
+
+GameStats="*res://Globals/GameStats.gd"
+GameProps="*res://Globals/GameProps.gd"
+Quest="*res://Globals/Quest.gd"
+BaseGame="*res://Globals/BaseGame.gd"
+DialogueStates="*res://Globals/DialogueStates.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[dialogue_manager]
+
+general/states=["DialogueVars", "DialogueStates"]
+general/balloon_path="res://UI/Dialogue/balloon.tscn"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_height"
+
+[dotnet]
+
+project/assembly_name="History Game"
+
+[editor]
+
+movie_writer/mjpeg_quality=1.0
+movie_writer/movie_file="C:/Users/Rodel/Documents/Godot Projects/Capture/LIFE_OF_JOSE_RIZAL.avi"
+movie_writer/disable_vsync=true
+movie_writer/fps=30
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/main_system/plugin.cfg")
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194310,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+ui_select={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+ui_text_completion_query={
+"deadzone": 0.5,
+"events": []
+}
+player_walk_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"echo":false,"script":null)
+]
+}
+player_walk_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"echo":false,"script":null)
+]
+}
+player_walk_up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"echo":false,"script":null)
+]
+}
+player_walk_down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"echo":false,"script":null)
+]
+}
+player_interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":102,"echo":false,"script":null)
+]
+}
+player_run={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
+]
+}
+player_zoom={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":90,"key_label":0,"unicode":122,"echo":false,"script":null)
+]
+}
+open_cheats={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":true,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":67,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Dialogues/Quiz 1/Quiz 1.dialogue", "res://Quests/Stage01/Activity/index.dialogue", "res://Quests/Stage01/Quest01/index.dialogue", "res://Quests/Stage01/Quest02/index.dialogue", "res://Quests/Stage01/Quest03/index.dialogue", "res://Quests/Stage01/Quest04/index.dialogue", "res://addons/main_system/Templates/NormalDialogue/index.dialogue", "res://Quests/Stage02/Quest01/index.dialogue", "res://Quests/Stage02/Activity/index.dialogue", "res://Quests/Stage06/Quest01/index.dialogue", "res://Quests/Stage06/Quest02/index.dialogue", "res://Quests/Stage06/Quest05/index.dialogue", "res://Quests/Stage06/Quest07/index.dialogue", "res://Quests/Stage06/Quest08/index.dialogue", "res://Quests/Stage06/Quest09/index.dialogue", "res://Quests/Stage06/Quest10/index.dialogue", "res://Quests/Stage06/Quest11/index.dialogue", "res://Quests/Stage06/Quest13/index.dialogue", "res://Quests/Stage02/Quest03/index.dialogue", "res://Quests/Stage02/Quest04/index.dialogue", "res://Quests/Stage02/Quest05/index.dialogue", "res://Quests/Stage02/Quest06/index.dialogue", "res://Quests/Stage02/Quest08/index.dialogue", "res://Quests/Stage02/Quest10/index.dialogue", "res://Quests/Stage02/Quest13/index.dialogue", "res://Quests/Stage03/Quest01/index.dialogue", "res://Quests/Stage03/Quest04/index.dialogue", "res://Quests/Stage03/Quest05/index.dialogue", "res://Quests/Stage03/Quest06/index.dialogue", "res://Quests/Stage02/Quest16/index.dialogue", "res://Quests/Stage02/Quest14/index.dialogue", "res://Quests/Stage02/Quest11/index.dialogue", "res://Quests/Stage06/Quest14/index.dialogue", "res://Quests/Stage06/Quest15/index.dialogue", "res://Quests/Stage06/Quest04/index.dialogue", "res://Quests/Stage06/Quest16/index.dialogue", "res://Quests/Stage02/Quest19/index.dialogue", "res://Quests/Stage02/Quest20/index.dialogue", "res://Quests/Stage02/Quest21/index.dialogue", "res://Quests/Stage02/Quest22/index.dialogue", "res://Quests/Stage03/Quest07/index.dialogue", "res://Quests/Stage03/Quest10/index.dialogue", "res://Quests/Stage03/Quest11/index.dialogue", "res://Quests/Stage03/Quest13/index.dialogue")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+textures/decals/filter=0
+textures/light_projectors/filter=0
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
