@@ -1,18 +1,76 @@
 ~ this_is_a_node_title
-do DialogueStates.spawn_character("Portrait", 6)
-do DialogueStates.flip_character("Portrait", true)
-Portrait: Hello Bitches
-do DialogueStates.fire_identification_question("Doodie?")
-Portrait: Question 1
-if DialogueStates.player_answer == "doodie":
-	Portrait: Nice
+do DialogueStates.spawn_character("Captain", 5)
+Captain: Nagbabalik {{GameStats.player_name}}!
+Captain: Handa ka na ba {{GameStats.player_name}}?
+- Oo
+- 00
+Captain: Meron lang ako sasabihin sayo...
+do DialogueStates.change_character_position("Captain", 4)
+Captain: Lagyan ko lang ng twist...
+do DialogueStates.change_character_position("Captain", 3)
+Captain: Gawin kong identification para malupit!
+do DialogueStates.flip_character("Captain", false)
+Captain: Sa identification ita-type mo yung sagot. Siguraduhin na tama ang capitalization ng sagot mo.
+do DialogueStates.change_character_position("Captain", 2)
+do DialogueStates.flip_character("Captain", true)
+Captain: Gusto mo ba?
+
+- Hindi
+- Hindi
+do DialogueStates.change_character_position("Captain", 5)
+Captain: Bahala ka sa buhay mo.
+Captain: Simulan ko na.[wait=2][next=auto]
+do DialogueStates.fire_identification_question("Saan nag-aral si Rizal sa sekondarya?")
+Captain: Question 1
+if DialogueStates.player_answer == "ateneo de municipal":
+	Captain: Ginalingan ni {{GameStats.player_name}}!
+	Captain: Magaling... Magaling.
 else:
-	Portrait: Bad
-do DialogueStates.fire_identification_question("Anong palayaw ni Francisco Rizal Mercado?")
-Portrait: Question 2
-if DialogueStates.player_answer == "kikoy":
-	Portrait: Nice
-else
-	Portrait: Wrong
-Portrait: That's it
+	=>< wrong_answer
+	Portrait: Ayy!!! [wait=1] Mali!!!
+do DialogueStates.fire_identification_question("Saan nag-aral si Rizal ng kolehiyo?")
+Captain: Question 2
+if DialogueStates.player_answer == "unibersidad de santo tomas" or DialogueStates.player_answer == "santo tomas":
+	Captain: Buti alam mo.
+	Captain: Magaling... Magaling.
+else:
+	=>< wrong_answer
+	Portrait: Ayy!!! [wait=1] Mali!!!
+do DialogueStates.fire_identification_question("Si Rizal ay kumuha ng medisina sa Santo Tomas dahil nabubulag ang kaniyang......")
+Captain: Question 3
+Captain: Sure ka ba?
+- Oo
+if DialogueStates.player_answer == "ina" or DialogueStates.player_answer == "teodora":
+	Captain: Tama!
+	Captain: Magaling... Magaling.
+else:
+	Captain: Paano kapag mali ang sagot mo?
+	- Bawasan mo buhay ko
+	- Tama naman sagot ko ah??
+	- Pwede bang huwag mong bawasan buhay ko?
+		do DialogueStates.emote_character("Portrait", "buzz")
+		Captain: ???? [wait=3][next=auto]
+	=>< wrong_answer
+	Portrait: Mali!!!
+do DialogueStates.fire_identification_question("Sino sa pamilya ni Rizal ang gustong magpatuloy sa kaniyang pag-aaral")
+Captain: Question 4
+Captain: Sure ka ba?
+- Oo
+if DialogueStates.player_answer == "ama" or DialogueStates.player_answer == "francisco":
+	Captain: Tama!
+	Captain: Magaling... Magaling.
+else:
+	=>< wrong_answer
+	Portrait: Mali!!!
+				
+=> END
+
+~ wrong_answer
+
+do GameStats.remove_health()
+do DialogueStates.emote_character("Captain", "buzz")
+if GameStats.player_dead():
+	Captain: Better luck next time sayo, {{GameStats.player_name}}.
+	do BaseGame.game_over()
+	=> END!
 => END

@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dnjbqijxuu5c6"]
+
+[ext_resource type="Texture2D" uid="uid://bcia517oguan6" path="res://UI/Assets/Textures/Liham.png" id="1_h5j64"]
+
+[resource]
+texture = ExtResource("1_h5j64")
+texture_margin_left = 20.0
+texture_margin_top = 19.0
+texture_margin_right = 22.0
+texture_margin_bottom = 23.0
+region_rect = Rect2(45, 34, 503, 228)

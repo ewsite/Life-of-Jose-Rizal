@@ -1,15 +1,24 @@
 ~ this_is_a_node_title
-Tinignan ni Rizal ang kaniyang grado sa unang taon ng pag-aaral niya sa pilosopiya.
+do DialogueStates.change_slide(1)
+Tinignan ni Rizal ang kaniyang grado sa unang taon ng pag-aaral niya sa medisina.
+do DialogueStates.spawn_character("JoseRizal", 1)
 Jose: .....
 Sa kasamaang palad, [wait=1]di nakakuha ng grado na katulad dati noong siya ay nag-pilosopiya.
-Jose: HA????
+do DialogueStates.change_character_position("JoseRizal", 2)
+do DialogueStates.change_slide(2)
 Narito ang mga marka ni Rizal [wait=1][next=auto]
+do DialogueStates.change_slide(3)
 Physics …… [wait=0.3]Fair
+do DialogueStates.emote_character("JoseRizal", "buzz")
+do DialogueStates.change_character_position("JoseRizal", 1)
+Jose: Ha????
+Narito pa ang natitira...
+do DialogueStates.change_slide(4)
+[--------------]
+do DialogueStates.change_slide(5)
+do DialogueStates.change_character_position("JoseRizal", 3)
 Jose: Bakit????
-Chemistry …… [wait=0.3]Excellent
-Natural History … [wait=0.3]Fair
-Anatomy 1 … [wait=0.3]Good
-Dissection 1…… [wait=0.3]Good
+do DialogueStates.emote_character("JoseRizal", "buzz")
 Jose: Hindi ko inaasahan ito. Ang aking mga grado sa medisina ay hindi kasing ganda ng sa Pilosopiya.
 Jose: Paano nangyari ito?
 

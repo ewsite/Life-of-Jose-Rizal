@@ -1,19 +1,25 @@
 ~ this_is_a_node_title
+do DialogueStates.change_slide(1)
 Katulad ng unang taon niya sa Medisina. Napanatili pa rin ang marka kahit hindi gaano katas.
+do DialogueStates.spawn_character("JoseRizal", 1)
+Jose: ...
 Sa ikalawa, ikatlo, at ika-apat niya na pag-aaral ni Rizal sa kursong medisina,
+do DialogueStates.change_slide(2)
 Narito ang mga marka ni Rizal sa pangalawang taon niyang pag-aaral sa Medisina:
-Anatomy 2 …… [wait=0.3]Good
-Dissection 2 …… [wait=0.3]Good
-Physiology …… [wait=0.3]Good
-Public Hygiene …… [wait=0.3]Good
-Private Hygiene …… [wait=0.3]Good
-Narito ang mga marka ni Rizal sa pangatlo taon niyang pag-aaral sa Medisina:
-General Pathology …… [wait=0.3]Fair
-Therapeutics …… [wait=0.3]Excellent
-Surgery…… [wait=0.3]Good
-Narito ang mga marka ni Rizal sa pang-apat taon niyang pag-aaral sa Medisina:
-Medical Pathology …… [wait=0.3]Very Good
-Therapeutics …… [wait=0.3]Very Good
-Surgery…… [wait=0.3]Very Good
+do DialogueStates.change_slide(3)
+do DialogueStates.change_character_position("JoseRizal", 2)
+[--------------]
+do DialogueStates.change_character_position("JoseRizal", 1)
+do DialogueStates.change_slide(4)
+Narito ang mga marka ni Rizal sa ika-tatlong taon niyang pag-aaral sa Medisina:
+do DialogueStates.change_slide(5)
+do DialogueStates.change_character_position("JoseRizal", 2)
+[--------------]
+do DialogueStates.change_character_position("JoseRizal", 1)
+do DialogueStates.change_slide(6)
+Narito ang mga marka ni Rizal sa ika-apat taon niyang pag-aaral sa Medisina:
+do DialogueStates.change_slide(7)
+do DialogueStates.despawn_character("JoseRizal")
+[--------------]
 
 => END

@@ -1,0 +1,20 @@
+~ this_is_a_node_title
+do DialogueStates.spawn_character("JoseRizal", 1)
+Pinatawag si Rizal sa Malacanang tungkol sa reklamo ng mga prayle.
+do DialogueStates.spawn_character("Heneral", 5)
+do DialogueStates.change_character_position("JoseRizal", 2)
+Gobernador-Heneral: Dr. Rizal, pinatawag kita dahil sa mga reklamong natanggap namin mula sa mga prayle tungkol sa iyong nobela, ang “Noli Me Tangere”.
+Rizal: Nauunawaan ko, Gobernador-Heneral. [wait=1]Ano po ang nilalaman ng kanilang reklamo?
+do DialogueStates.change_character_position("Heneral", 6)
+Gobernador-Heneral: Ang nobela mo raw ay naglalaman ng mga ideyang subersibo at mapanganib, na maaaring mag-udyok ng hindi pagkakasundo at rebelyon laban sa pamahalaan at simbahan.
+Rizal: Ang aking nobela ay sumasalamin lamang sa katotohanan ng lipunang Pilipino.
+Rizal: Ito ay para sa edukasyon ng aking mga kababayan at hindi para sa anumang subersibong aktibidad.
+do DialogueStates.change_character_position("Heneral", 5)
+Gobernador-Heneral: Sa kabila ng iyong mga paliwanag, kailangan pa rin nating sumunod sa proseso. 
+Gobernador-Heneral: Ililipat ang iyong kaso sa Komisyon ng Censura para sa masusing pagsusuri. 
+do DialogueStates.change_character_position("Heneral", 4)
+Gobernador-Heneral: At bilang pag-iingat, magtatalaga kami ng isang militar na laging nasa iyong paligid para sa iyong kaligtasan.
+do DialogueStates.flip_character("JoseRizal", true)
+do DialogueStates.flip_character("Heneral", true)
+...[wait=4][next=auto]
+=> END

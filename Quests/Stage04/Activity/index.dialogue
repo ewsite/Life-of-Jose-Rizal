@@ -1,0 +1,58 @@
+~ this_is_a_node_title
+do DialogueStates.spawn_character("Captain", 5)
+Captain: Welcome back, {{GameStats.player_name}}!
+if GameStats.health == GameStats.TOTAL_HEALTH:
+	Captain: Ayos ah!
+	Captain: Wala pang bawas buhay mo.
+elif GameStats.health > 1:
+	Captain: May konting bawas yung buhay mo.
+else:
+	Captain: Onting ingat lang... [wait=3]
+Captain: Handa ka na ba?
+- Oo
+Captain: Simulan ko na.
+Captain: Bonus lang ito sayo.
+Captain: Question 1 \n Totoo ba na bumalik sa Pilipinas si Rizal?
+- Oo
+	Captain: Tama naman sagot mo.
+- Hindi
+	=>< wrong_answer
+	Captain: Mali!
+Captain: Sa susunod na tanong kumpletuhin mo ang pangalan.
+do DialogueStates.fire_identification_question("Sino ang nagreklamo kay Rizal dahil sa nobela na Noli Me Tangere")
+Captain: Question 2
+Captain: Sure ka ba?
+- Oo
+if DialogueStates.player_answer == "prayle" or DialogueStates.player_answer == "mga prayle":
+	Captain: Tama!
+else:
+	=>< wrong_answer
+	Captain: Mali!
+do DialogueStates.fire_identification_question("Saan pinatawag si Rizal para harapin ang reklamo laban sa kanya?")
+Captain: Question 3
+Captain: Sure ka ba?
+- Oo
+if DialogueStates.player_answer == "malacanang" or DialogueStates.player_answer == "malakanyang":
+	Captain: Tama!
+else:
+	=>< wrong_answer
+	Captain: Mali!
+
+Captain: Question 4 \n Nag-alala ba si Francisco tungkol sa sitwasyon ni Rizal?
+- Oo
+	Captain: Tama!
+- Hindi
+	=>< wrong_answer
+	Captain: Syempre nag-alala si Francisco.
+=> END
+
+
+
+~ wrong_answer
+do GameStats.remove_health()
+do DialogueStates.emote_character("Captain", "buzz")
+if GameStats.player_dead():
+	Captain: Better luck next time sayo, {{GameStats.player_name}}.
+	do BaseGame.game_over()
+	=> END!
+=> END

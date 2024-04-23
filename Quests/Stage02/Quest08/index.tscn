@@ -1,8 +1,73 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy61infeo5obu"]
+[gd_scene load_steps=12 format=3 uid="uid://cy61infeo5obu"]
 
 [ext_resource type="Script" path="res://Quests/Stage02/Quest08/index.gd" id="1_alnrk"]
-[ext_resource type="Texture2D" uid="uid://dgaixd7ttywt7" path="res://addons/main_system/Nodes/Portrait/PortraitPlaceholder.png" id="2_tjvnx"]
+[ext_resource type="Texture2D" uid="uid://ccj2smwjw1j2t" path="res://Quests/Stage01/Quest02/Cuts/TokinoSora.png" id="2_isb5g"]
+[ext_resource type="Texture2D" uid="uid://mglueja22fxl" path="res://Quests/Stage01/Quest02/Cuts/InteriorRIzalHaus.png" id="3_m2oca"]
 [ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
+[ext_resource type="Texture2D" uid="uid://dldpuyr37tc15" path="res://Assets/Own/Portraits/PortraitJoseRizal.png" id="4_rkjyv"]
+[ext_resource type="Texture2D" uid="uid://b2gvhk3mvel8d" path="res://Assets/Own/Portraits/Teodora.png" id="6_6wckh"]
+[ext_resource type="Texture2D" uid="uid://dnrk2pkpr1imp" path="res://Assets/Own/Portraits/Francisco.png" id="7_j467r"]
+[ext_resource type="Texture2D" uid="uid://dd10csxiftg5j" path="res://Quests/Stage01/Quest02/Cuts/PortraitPacianoRizalTeen.png" id="8_s20x0"]
+
+[sub_resource type="Animation" id="Animation_ssa8e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Slides/Slide01B:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r27is"]
+resource_name = "slide_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Slides/Slide01B:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2px21"]
+_data = {
+"RESET": SubResource("Animation_ssa8e"),
+"slide_1": SubResource("Animation_r27is")
+}
 
 [node name="NormalDialogue" type="CanvasLayer"]
 script = ExtResource("1_alnrk")
@@ -19,6 +84,33 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01B" type="TextureRect" parent="Slides"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_isb5g")
+expand_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Slide01A" type="TextureRect" parent="Slides"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_m2oca")
+expand_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2px21")
+}
+
 [node name="Portraits" type="GridContainer" parent="."]
 unique_name_in_owner = true
 anchors_preset = 15
@@ -29,8 +121,32 @@ grow_vertical = 2
 theme_override_constants/h_separation = 6
 metadata/_edit_lock_ = true
 
-[node name="Portrait" type="Sprite2D" parent="Portraits"]
+[node name="JoseRizal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
 position = Vector2(491, 340)
-scale = Vector2(3.28767, 3.28767)
-texture = ExtResource("2_tjvnx")
+scale = Vector2(6.85714, 6.85714)
+texture = ExtResource("4_rkjyv")
+script = ExtResource("3_m6ai3")
+
+[node name="Teodora" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(911, 352)
+scale = Vector2(2.68657, 2.68657)
+texture = ExtResource("6_6wckh")
+flip_h = true
+script = ExtResource("3_m6ai3")
+
+[node name="Francisco" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(911, 352)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("7_j467r")
+flip_h = true
+script = ExtResource("3_m6ai3")
+
+[node name="Paciano" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(911, 352)
+scale = Vector2(5.625, 5.625)
+texture = ExtResource("8_s20x0")
 script = ExtResource("3_m6ai3")

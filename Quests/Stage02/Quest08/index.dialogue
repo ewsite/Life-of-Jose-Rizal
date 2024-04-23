@@ -1,11 +1,22 @@
 ~ this_is_a_node_title
+do DialogueStates.change_slide(1)
 Napagdesisyunan ni Francisco na dalhin si Rizal sa Pamantasan ng Santo Tomas para mag-aral ng kolehiyo.
+do DialogueStates.spawn_character("JoseRizal", 1)
+do DialogueStates.spawn_character("Francisco", 6)
+do DialogueStates.spawn_character("Teodora", 5)
 Francisco: Jose, mahalaga na ipagpatuloy mo ang iyong edukasyon sa kolehiyo.
 Jose: Opo, Itay.
 Teodora: Anak, alam kong marami kang matututunan doon. 
 Teodora: Siguraduhin mo lang na hindi mo kakalimutan ang mga aral na itinuro namin sa iyo dito sa tahanan.
 Jose: Hindi ko po kayo bibiguin, Inay. 
+do DialogueStates.change_character_position("JoseRizal", 2)
+do DialogueStates.spawn_character("Paciano", 1)
 Jose: Ang inyong mga aral at gabay ay mananatiling nakatatak sa aking puso habang ako ay nag-aaral.
+do DialogueStates.despawn_character("Francisco")
+do DialogueStates.despawn_character("Teodora")
+do DialogueStates.change_character_position("Paciano", 3)
+do DialogueStates.change_character_position("JoseRizal", 1)
+do DialogueStates.flip_character("Paciano", true)
 Paciano: Jose, ako’y naniniwala sa iyong kakayahan. Gamitin mo ang oportunidad na ito upang maging mas mahusay pa.
 Jose: Salamat po, Kuya. 
 => END

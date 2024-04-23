@@ -5,9 +5,12 @@ var is_key_changing: bool = false
 var target_action: String
 @onready var keyboard_input_popup = %KeyboardInputPopup
 @onready var animation_player = $AnimationPlayer
-
+@onready var direction_marker_checkbox = %DirectionMarkerCheckbox
+@onready var input = %Input
 
 func _ready():
+	if GameProps.is_mobile():
+		input.queue_free()
 	offset.y = 720
 	process_mode = Node.PROCESS_MODE_DISABLED
 	
@@ -17,28 +20,35 @@ func show_panel():
 	animation_player.play("show")
 	await animation_player.animation_finished
 	load_input_map()
+	load_other()
 	
 func hide_and_save_panel():
 	GameProps.save_game_config()
 	animation_player.play("hide")
 	await animation_player.animation_finished
 	process_mode = Node.PROCESS_MODE_DISABLED
+
+func load_other():
+	direction_marker_checkbox.button_pressed = GameProps.show_offscreen_marker
 	
 func load_input_map():
-	for action in InputMap.get_actions():
-		if action in GameProps.AVAILABLE_INPUT_MAPS:
-			var selected_action = InputMap.action_get_events(action).back() as InputEventKey
-			if not has_node("%" + str(action) + "_bind"):
-				continue
-			# Idunno if it works on other symbols
-			var label = get_node("%" + str(action) + "_bind")
-			label.text = selected_action.as_text_physical_keycode()
-			keyboard_input_popup.hide()
+	if not GameProps.is_mobile():
+		for action in InputMap.get_actions():
+			if action in GameProps.AVAILABLE_INPUT_MAPS:
+				var selected_action = InputMap.action_get_events(action).back() as InputEventKey
+				if not has_node("%" + str(action) + "_bind"):
+					continue
+				# Idunno if it works on other symbols
+				var label = get_node("%" + str(action) + "_bind")
+				label.text = selected_action.as_text_physical_keycode()
+				keyboard_input_popup.hide()
 
 func toggle_fullscreen(toggled_on):
 	if (toggled_on):
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func _input(event):
@@ -84,11 +94,13 @@ func change_input_map(action: String):
 	keyboard_input_popup.show()
 
 
-
-
-
 func open_cheats():
 	var open_cheats_event = InputEventAction.new()
 	open_cheats_event.action = "open_cheats"
 	open_cheats_event.pressed = true
 	Input.parse_input_event(open_cheats_event)
+
+
+func toggle_offscreen_marker(toggled_on):
+	GameProps.show_offscreen_marker = toggled_on
+	print(GameProps.show_offscreen_marker)

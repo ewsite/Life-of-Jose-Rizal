@@ -9,14 +9,26 @@ at ang bawat kaluskos ay tila nagpapahiwatig ng isang hindi inaasahang pangyayar
 Rizal: Ang mga anino sa dilim ay nagbabadya ng isang bagong unos.
 
 (Guwardiya Sibil ay kumatok sa pinto)
-
+do DialogueStates.spawn_character("JoseRizal", 5)
+do DialogueStates.spawn_character("Guard1", 1)
+do DialogueStates.spawn_character("Guard2", 1)
+...[wait=2][next=auto]
+do DialogueStates.change_character_position("Guard1", 4)
+do DialogueStates.change_character_position("Guard2", 4)
+do DialogueStates.change_character_position("JoseRizal", 6)
 Guwardiya: Dr. Jose Rizal, ikaw ay inaaresto sa utos ng Gobernador-Heneral. 
 Rizal: Ano ang mga akusasyon laban sa akin?
+do DialogueStates.change_character_position("Guard1", 4)
+do DialogueStates.change_character_position("Guard2", 2)
+do DialogueStates.change_character_position("JoseRizal", 6)
 Guwardiya: Ikaw ay pinaghihinalaang may kinalaman sa mga gawaing subersibo at pagtatag ng La Liga Filipina.
 Habang siya ay dinadala palabas ng kanyang tahanan, 
 si Rizal ay lumingon sa kanyang mga kababayan na nagtipon sa labas
 Rizal: Mga kababayan, huwag kayong mawalan ng pag-asa. 
 Rizal: Ang bawat pagsubok ay may kaakibat na pagkakataon para sa ating paglago at pagkakaisa.
+do DialogueStates.flip_character("Guard1", true)
+do DialogueStates.flip_character("Guard2", true)
+do DialogueStates.change_character_position("JoseRizal", 3)
 Inaresto si Rizal ma-ilang araw lang pagkatapos itatag ang La Liga Filipina. 
 
 => END

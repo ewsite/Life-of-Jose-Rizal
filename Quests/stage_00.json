@@ -10,6 +10,15 @@
 				"points": 0,
 				"health": 0
 			}
+		},
+		{
+			"name": "Tutorial",
+			"unskippable": true,
+			"scene_path": "Tutorial",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
 		}
 	]
 }

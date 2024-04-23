@@ -1,0 +1,11 @@
+~ this_is_a_node_title
+do DialogueStates.spawn_character("JoseRizal", 3)
+Pumunta muna si Rizal sa pansamantalang tahanan sa Heidelberg para magpahinga muna.
+Nabalitaan ni Rizal na may isang tao ang naging interesado sa buhay ng isang Pilipino kahit na ay hindi pa siya nakakapunta.
+do DialogueStates.change_character_position("JoseRizal", 1)
+Sumulat si Rizal kay Professor Ferdinand Blumentritt at ito ang nilalaman.
+do DialogueStates.change_slide(1)
+(Liham)
+do DialogueStates.change_slide(2)
+
+=> END

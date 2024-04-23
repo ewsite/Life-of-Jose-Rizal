@@ -3,10 +3,7 @@
 do DialogueStates.spawn_character("Portrait", 5)
 Captain: Bago ka magpatuloy sa susunod na kabanata. May gagawin ka pang pagsusulit. 
 Captain: Handa ka na ba?
-- Hindi
-	Book: Okay
-	do DialogueStates.abort_dialogue()
-	=> END!
+
 - Oo
 Captain: Simulan natin!
 Captain: Unang Tanong \n Sino ang ating pambansang bayani?

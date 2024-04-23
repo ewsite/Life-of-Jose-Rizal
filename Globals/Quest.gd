@@ -56,14 +56,13 @@ func load_quest(reload_map: bool = true) -> void:
 	current_quest_info = current_stage_info.quests[catalog.current_quest].duplicate()
 
 	var stage_path: String = current_stage_info.get("stage_path")
-	var scene_path: String = current_quest_info.get("scene_path")
+	var scene_path: String = current_quest_info.get("scene_path") if current_quest_info.has("scene_path") else ""
 
 	current_quest_path = "res://Quests/" + stage_path + "/" + scene_path
 
 	if current_quest_info.has("unskippable"):
 		await BaseGame.load_scene(current_quest_path + "/index.tscn")
 	else:
-		
 		if reload_map:
 			var map_name: String = "res://Scenes/Maps/" + current_quest_info.target_map + "/scene.tscn"
 			await BaseGame.load_scene(map_name)
@@ -92,6 +91,8 @@ func load_quest(reload_map: bool = true) -> void:
 		if current_quest_info.has("inline"):
 			npc.is_inline_scene = current_quest_info.has("inline")
 			npc.dialogue_file = current_quest_path + "/index.dialogue"
+		elif current_quest_info.has("force_complete"):
+			npc.force_complete = current_quest_info.has("force_complete")
 		else:
 			npc.scene_file = current_quest_path + "/index.tscn"
 			
@@ -110,7 +111,13 @@ func load_quest(reload_map: bool = true) -> void:
 
 func quest_complete(reload_map: bool = true) -> void:
 	var catalog = GameStats.quests_catalog
-	var is_unskippable = "unskippable" in current_quest_info && current_quest_info.unskippable
+	var need_quest_complete_popup: bool
+	
+	if current_quest_info.rewards.points > 0:
+		need_quest_complete_popup = true
+	else: 
+		need_quest_complete_popup = false
+	
 	catalog.current_quest += 1
 	
 	if catalog.current_quest >= current_stage_info.get("quests").size():
@@ -118,7 +125,7 @@ func quest_complete(reload_map: bool = true) -> void:
 		catalog.current_quest = 0
 		
 	await load_quest(reload_map)
-	quest_completed.emit(is_unskippable)
+	quest_completed.emit(need_quest_complete_popup)
 
 
 func game_complete() -> void:

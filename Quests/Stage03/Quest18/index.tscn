@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy61infeo5obu"]
+
+[ext_resource type="Script" path="res://Quests/Stage03/Quest18/index.gd" id="1_alnrk"]
+[ext_resource type="Texture2D" uid="uid://ea5qgpamuoxh" path="res://Assets/Own/Background/ApartmentDark.png" id="2_nk1l7"]
+[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="3_1v4fr"]
+[ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
+
+[node name="NormalDialogue" type="CanvasLayer"]
+script = ExtResource("1_alnrk")
+
+[node name="WackRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01A" type="TextureRect" parent="Slides"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nk1l7")
+expand_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Portraits" type="GridContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 6
+metadata/_edit_lock_ = true
+
+[node name="JoseRizal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(491, 340)
+scale = Vector2(4, 4)
+texture = ExtResource("3_1v4fr")
+script = ExtResource("3_m6ai3")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

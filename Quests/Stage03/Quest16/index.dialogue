@@ -1,0 +1,21 @@
+~ this_is_a_node_titled
+
+Nakatangaap si Rizal ng masamang balita galling kay Paciano na nakasulat sa liham.
+do DialogueStates.spawn_character("JoseRizal", 1)
+Binasa ito ni Rizal, 
+do DialogueStates.change_character_position("JoseRizal", 2)
+do DialogueStates.emote_character("JoseRizal", "buzz")
+Rizal: ???
+ito ang sinabi:
+do DialogueStates.change_slide(1)
+( Liham )
+do DialogueStates.change_slide(2)
+Nagsulat si Rizal para sabihin kay paciano na uuwi na lamang sa Pilipinas
+do DialogueStates.change_slide(3)
+( Liham )
+do DialogueStates.change_slide(4)
+do DialogueStates.change_character_position("JoseRizal", 3)
+Napagdesisyunan ng pamilya ni Rizal na wag na pauwiin si Rizal ay sa halip, ay magsanay na lang si Rizal sa Paris bilang isang Ophthalmologist.
+ 
+
+=> END

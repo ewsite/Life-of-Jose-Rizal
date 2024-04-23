@@ -16,6 +16,7 @@ class_name EntryArea extends Area2D
 @export var animated_entry_area_body: AnimatedSprite2D
 @export_group("When Interact Happens?")
 @export var is_inline_scene: bool
+@export var force_complete: bool
 @export_file("*.tscn") var scene_file: String
 @export_file("*.dialogue") var dialogue_file: String
 @export_group("Others")
@@ -31,9 +32,8 @@ signal exit_interact
 
 
 var size: Vector2 = Vector2(0, 0)
-var ready_to_interact = false
+var ready_to_interact: bool = false
 var interact_from
-
 const INTERACTION_AREA_SCALE: float = 4.0
 
 
@@ -66,31 +66,31 @@ func _enter_tree():
 	add_child(dz_offscreen_marker)
 
 func _ready():
+	if not Engine.is_editor_hint():
+		body.set_modulate(Color("ffffff00"))
+	else:
+		body.set_modulate(Color("ffffff"))
 	change_properties()
 		
 func _process(_delta):
-	offscreen_marker.enabled = true if (scene_file || dialogue_file) && player_node else false	
+	offscreen_marker.enabled = true if (scene_file || dialogue_file || force_complete) && player_node && not DialogueStates.is_dialogue_running else false	
 	if (Engine.is_editor_hint()):
 		change_properties()
 	
-
 func change_properties():
 	var crack_scale = float(entry_area_scale) * 0.01
 	var texture_size: Vector2
 
-	if (body == null):
+	if not body && not sprite_texture:
 		return
 		
-	if (sprite_texture):
-		texture_size = sprite_texture.get_size()
-		body.texture = sprite_texture
-		body.set_scale(Vector2(crack_scale, crack_scale))
-		texture_size = Vector2(texture_size.x * crack_scale, texture_size.y * crack_scale)
-		body.flip_h = flip_horizontally
-		body.flip_v = flip_vertically
-		body.show()
-	else:
-		return
+	texture_size = sprite_texture.get_size()
+	body.texture = sprite_texture
+	body.set_scale(Vector2(crack_scale, crack_scale))
+	texture_size = Vector2(texture_size.x * crack_scale, texture_size.y * crack_scale)
+	body.flip_h = flip_horizontally
+	body.flip_v = flip_vertically
+	body.show()
 
 	# Set size of the collision based on the size of custom texture.
 	interaction_collision_area.shape.set_size(texture_size)
@@ -99,7 +99,8 @@ func change_properties():
 func _input(event):
 	if (Engine.is_editor_hint() || not ready_to_interact):
 		return
-	if (event.is_action_pressed("player_interact") && scene_file.length()):
+		
+	if (event.is_action_pressed("player_interact") && scene_file):
 		BaseGame.load_scene(scene_file)
 
 
@@ -112,6 +113,8 @@ func want_to_interact(body):
 			enter_interact.emit()
 		elif dialogue_file && not DialogueStates.is_dialogue_running:
 			DialogueStates.start(load(dialogue_file), DialogueStates.DIALOGUE_TYPE.INLINE)
+		elif force_complete:
+			Quest.quest_complete()
 		interact_from = body
 
 

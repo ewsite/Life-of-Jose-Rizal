@@ -163,10 +163,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "show direction markers"
 
-[node name="DirectionMarkerCheckbox" type="CheckBox" parent="Settings/SettingTabs/Gameplay/ScrollContainer/MarginContainer/VBoxContainer/ShowDirectionMarkerContainer"]
+[node name="DirectionMarkerCheckbox" type="CheckButton" parent="Settings/SettingTabs/Gameplay/ScrollContainer/MarginContainer/VBoxContainer/ShowDirectionMarkerContainer"]
+unique_name_in_owner = true
 layout_mode = 2
+button_pressed = true
 
 [node name="ShowScoreIndicatorContainer" type="HBoxContainer" parent="Settings/SettingTabs/Gameplay/ScrollContainer/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Settings/SettingTabs/Gameplay/ScrollContainer/MarginContainer/VBoxContainer/ShowScoreIndicatorContainer"]
@@ -219,6 +222,7 @@ text = "fullscreen"
 layout_mode = 2
 
 [node name="Input" type="PanelContainer" parent="Settings/SettingTabs"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
@@ -428,8 +432,9 @@ libraries = {
 visible = false
 
 [connection signal="pressed" from="Settings/Button" to="." method="hide_and_save_panel"]
+[connection signal="toggled" from="Settings/SettingTabs/Gameplay/ScrollContainer/MarginContainer/VBoxContainer/ShowDirectionMarkerContainer/DirectionMarkerCheckbox" to="." method="toggle_offscreen_marker"]
 [connection signal="pressed" from="Settings/SettingTabs/Gameplay/ScrollContainer/MarginContainer/VBoxContainer/OpenCheatsContainer/OpenCheatsButton" to="." method="open_cheats"]
-[connection signal="toggled" from="Settings/SettingTabs/Display/MarginContainer/VBoxContainer/HBoxContainer/CheckButton" to="Settings" method="toggle_fullscreen"]
+[connection signal="toggled" from="Settings/SettingTabs/Display/MarginContainer/VBoxContainer/HBoxContainer/CheckButton" to="." method="toggle_fullscreen"]
 [connection signal="pressed" from="Settings/SettingTabs/Input/ScrollContainer/MarginContainer/VBoxContainer/WalkLeftContainer/WalkLeftConfig" to="." method="change_input_map" binds= ["player_walk_left"]]
 [connection signal="pressed" from="Settings/SettingTabs/Input/ScrollContainer/MarginContainer/VBoxContainer/WalkRightContainer/WalkRightConfig" to="." method="change_input_map" binds= ["player_walk_right"]]
 [connection signal="pressed" from="Settings/SettingTabs/Input/ScrollContainer/MarginContainer/VBoxContainer/WalkUpContainer/WalkUpConfig" to="." method="change_input_map" binds= ["player_walk_up"]]

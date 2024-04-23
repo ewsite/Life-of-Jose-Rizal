@@ -1,6 +1,10 @@
 ~ this_is_a_node_title
+do DialogueStates.change_slide(1)
 Matapos ang kanyang pag-aaral sa Biñan, si Rizal ay nagtungo sa Maynila upang ipagpatuloy ang kanyang pag-aaral. 
+do DialogueStates.spawn_character("JoseRizal", 1)
 Sa kanyang pagdating, dala niya ang mga alaala ng kanyang kabataan at ang mga simpleng pangarap ng isang batang lalaki.
+do DialogueStates.spawn_character("Francisco", 6)
+do DialogueStates.spawn_character("Teodora", 5)
 Rizal: Ang Biñan ay naging bahagi ng aking kabataan. 
 Rizal: Ngayon, ano kaya ang buhay sa Maynila bilang isang mag-aaral?
 Teodora: Anak, huwag mong kalimutan ang mga aral na iyong natutunan at ang mga simpleng kasiyahan ng pagiging bata.

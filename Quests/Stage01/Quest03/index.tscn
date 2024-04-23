@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmj3hmmcqnp6t"]
+[gd_scene load_steps=7 format=3 uid="uid://dmj3hmmcqnp6t"]
 
 [ext_resource type="Script" path="res://Quests/Stage01/Quest03/index.gd" id="1_kd342"]
 [ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="2_po2hv"]
@@ -39,6 +39,8 @@ _data = {
 "RESET": SubResource("Animation_kvs15"),
 "start": SubResource("Animation_u8cd5")
 }
+
+[sub_resource type="LabelSettings" id="LabelSettings_jnnb4"]
 
 [node name="Quest" type="CanvasLayer"]
 script = ExtResource("1_kd342")
@@ -84,4 +86,5 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "UMALIS SI RIZAL, KASAMA SI PACIANO
 SA BINAN, LAGUNA."
+label_settings = SubResource("LabelSettings_jnnb4")
 horizontal_alignment = 1

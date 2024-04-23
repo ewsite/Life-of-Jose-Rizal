@@ -26,7 +26,7 @@
 		},
 		{
 			"name": "Calamba Papunta sa Binan",
-			"description": "Diretsuhin sa kanan",
+			"description": "Pumunta sa Binan",
 			"target_map": "CalambaPres",
 			"target_node": "BinanTPEntry",
 			"scene_path": "Quest03",
@@ -48,7 +48,6 @@
 		},
 		{
 			"name": "Bago Magpatuloy",
-			"description": "Pumunta kay Captain",
 			"unskippable": true,
 			"scene_path": "Activity",
 			"rewards": {

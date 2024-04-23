@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dr8xekmd6x8va"]
+[gd_scene load_steps=5 format=3 uid="uid://dr8xekmd6x8va"]
 
 [ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="1_ptlur"]
 [ext_resource type="Script" path="res://Scenes/game_complete.gd" id="2_eylt6"]
 [ext_resource type="PackedScene" uid="uid://cmr8j8cfpl35u" path="res://Tools/safe_area.tscn" id="3_8pr1q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2ucrf"]
+font_size = 41
 
 [node name="GameComplete" type="Control"]
 layout_mode = 3
@@ -21,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.929412, 0.843137, 0.741176, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -36,7 +39,7 @@ offset_right = -74.0
 offset_bottom = -42.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/separation = 16
+theme_override_constants/separation = 24
 metadata/_edit_group_ = true
 
 [node name="MainMenuButton" type="Button" parent="VBoxContainer2"]
@@ -66,12 +69,18 @@ metadata/_edit_group_ = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.223529, 0.172549, 0.117647, 1)
 theme_override_font_sizes/font_size = 48
-text = "Game Complete"
+text = "Game Completed"
+label_settings = SubResource("LabelSettings_2ucrf")
+horizontal_alignment = 1
 
 [node name="SafeArea" parent="." instance=ExtResource("3_8pr1q")]
 visible = false
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 metadata/_edit_group_ = true
 
 [connection signal="pressed" from="VBoxContainer2/MainMenuButton" to="." method="back_to_main_menu"]

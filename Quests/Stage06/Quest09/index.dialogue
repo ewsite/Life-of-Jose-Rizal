@@ -1,9 +1,10 @@
 ~ this_is_a_node_title
+do DialogueStates.spawn_character("JoseRizal", 5)
 Sa mapayapang baybayin ng Dapitan, si Rizal ay naghihintay sa pagdating ng isang pasyente. 
 Ang araw ay malapit nang lumubog, at ang kalangitan ay nag-aalab sa kulay ng paglubog ng araw.
-
+do DialogueStates.spawn_character("Bracken", 1)
+do DialogueStates.spawn_character("Taufer", 2)
 # (Josephine Bracken at ang kanyang apong ama na si George Taufer ay lumapit kay Rizal)
-
 Josephine: Magandang hapon po, Dr. Rizal.
 Rizal: Magandang hapon po, binibini, 
 Josephine: Ako po si Josephine Bracken, at ito po ang aking ampong ama, si George Taufer. 

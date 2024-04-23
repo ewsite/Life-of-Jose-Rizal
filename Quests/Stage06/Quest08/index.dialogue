@@ -1,8 +1,16 @@
 ~ this_is_a_node_title
+do DialogueStates.spawn_character("JoseRizal", 1)
 Rizal: Sa lupaing ito’y kahit papaano ay malaya akong makapaglibot-libot...
+do DialogueStates.change_character_position("JoseRizal", 5)
+do DialogueStates.flip_character("JoseRizal", true)
 Rizal: kahit na ako’y nilayo ng mga guwardya.
+do DialogueStates.change_character_position("JoseRizal", 4)
+do DialogueStates.flip_character("JoseRizal", false)
 Rizal: Kahit anong mangyari, tuloy ang aking paglilingkod sa bayan sa lahat ng aking makakaya.
+do DialogueStates.change_character_position("JoseRizal", 3)
+do DialogueStates.flip_character("JoseRizal", true)
 Rizal: …
+do DialogueStates.flip_character("JoseRizal", false)
 Rizal: Saglit lang, iinom lang ako ng kape.
 
 => END

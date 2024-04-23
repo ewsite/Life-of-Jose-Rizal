@@ -1,7 +1,14 @@
 ~ this_is_a_node_title
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("JoseRizal", 2)
 Bukod sa mahusay na usapan..
+do DialogueStates.spawn_character("Ortega", 5)
 Malaki ang motibasyon sa pagpunta si Consuelo Ortiga, ang dalagang anak ng may-ari ng bahay.
+do DialogueStates.change_character_position("Ortega", 4)
+do DialogueStates.change_character_position("Jose", 2)
 Niligawan sya ni Rizal...
+do DialogueStates.change_character_position("Ortega", 5)
 at akala ng dalaga na napakasaya niyang kausap.
+do DialogueStates.spawn_character("Lete", 6)
 Ang pinili niya si Eduardo Lete, isang espanyol na ipinanganak sa Pilipinas na naging lihim na kaaway ni Rizal.
 => END

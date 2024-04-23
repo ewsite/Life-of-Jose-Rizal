@@ -15,6 +15,7 @@ extends CanvasLayer
 @onready var pause_button = %PauseButton
 
 @onready var action_lists_container = %ActionListsContainer
+@onready var quest_list_container = %QuestListContainer
 
 @onready var quest_complete_popup = %QuestCompletePopup
 @onready var quest_complete_duration = %QuestCompleteDuration
@@ -30,17 +31,18 @@ func reset():
 	heart_indicator_panel.reset()
 	bottom_controllers.show()
 	upper_ui.show()
-	
-	# Action Buttons
-	talk_button.hide()
-	enter_button.hide()
-	exit_button.hide()
-	touch_button.hide()
+	hide_actions_button()
 	
 func _ready():
 	Quest.quest_completed.connect(show_quest_complete_popup)
 	quest_complete_popup.position.y = -160
 
+func _process(delta):
+	if quest_description_label.text == "":
+		quest_list_container.hide()
+	else:
+		quest_list_container.show()
+		
 func activate_actions_ui():
 	actions_ui.show()
 
@@ -53,8 +55,8 @@ func deactivate_pause_button():
 func deactivate_actions_ui():
 	actions_ui.hide()	
 	
-func show_quest_complete_popup(is_unskippable: bool):
-	if not is_unskippable:
+func show_quest_complete_popup(need_popup: bool):
+	if need_popup:
 		await get_tree().create_timer(0.5).timeout
 		quest_complete_duration.start()
 		quest_complete_animation.play("show")
@@ -72,7 +74,7 @@ func hide_actions_button():
 	for button in buttons:
 		button.hide()
 
-func show_actions_buton(action: String):
+func show_actions_button(action: String):
 	match action:
 		"interact":
 			interact_button.show()

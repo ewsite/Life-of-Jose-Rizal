@@ -1,4 +1,6 @@
 ~ this_is_a_node_title
+do DialogueStates.spawn_character("Taviel", 5)
+do DialogueStates.spawn_character("JoseRizal", 2)
 Habang pinag-uusapan nila nang masinsinan tungkol sa paglilitis ni Rizal kasama ang kanyang abogado.
 Pagkatapos pag-usapan tungkol dito ay nagsalita si Taviel,
 Taviel: Hindi ko matanggap na ang isang tao na may malinis na konsensya ay haharap sa ganitong kapalaran.

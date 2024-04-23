@@ -1,8 +1,70 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy61infeo5obu"]
+[gd_scene load_steps=9 format=3 uid="uid://cy61infeo5obu"]
 
 [ext_resource type="Script" path="res://Quests/Stage02/Quest04/index.gd" id="1_alnrk"]
-[ext_resource type="Texture2D" uid="uid://dgaixd7ttywt7" path="res://addons/main_system/Nodes/Portrait/PortraitPlaceholder.png" id="2_tjvnx"]
+[ext_resource type="Texture2D" uid="uid://xgkl044ouf0d" path="res://Assets/Own/Background/TokinoSora.png" id="2_3u5s8"]
+[ext_resource type="Texture2D" uid="uid://tkfj1tv78ugh" path="res://Assets/Own/Background/ADMunicipal.png" id="3_67q0b"]
 [ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
+[ext_resource type="Texture2D" uid="uid://dldpuyr37tc15" path="res://Assets/Own/Portraits/PortraitJoseRizal.png" id="4_kq03t"]
+
+[sub_resource type="Animation" id="Animation_ssa8e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Slides/Slide01B:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r27is"]
+resource_name = "slide_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Slides/Slide01B:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2px21"]
+_data = {
+"RESET": SubResource("Animation_ssa8e"),
+"slide_1": SubResource("Animation_r27is")
+}
 
 [node name="NormalDialogue" type="CanvasLayer"]
 script = ExtResource("1_alnrk")
@@ -19,6 +81,32 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01A" type="TextureRect" parent="Slides"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3u5s8")
+expand_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Slide01B" type="TextureRect" parent="Slides"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_67q0b")
+expand_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2px21")
+}
+
 [node name="Portraits" type="GridContainer" parent="."]
 unique_name_in_owner = true
 anchors_preset = 15
@@ -29,8 +117,9 @@ grow_vertical = 2
 theme_override_constants/h_separation = 6
 metadata/_edit_lock_ = true
 
-[node name="Portrait" type="Sprite2D" parent="Portraits"]
-position = Vector2(491, 340)
-scale = Vector2(3.28767, 3.28767)
-texture = ExtResource("2_tjvnx")
+[node name="JoseRizal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(298, 355)
+scale = Vector2(6.85714, 6.85714)
+texture = ExtResource("4_kq03t")
 script = ExtResource("3_m6ai3")

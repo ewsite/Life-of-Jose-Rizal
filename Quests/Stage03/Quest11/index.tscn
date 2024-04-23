@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy61infeo5obu"]
+[gd_scene load_steps=7 format=3 uid="uid://cy61infeo5obu"]
 
 [ext_resource type="Script" path="res://Quests/Stage03/Quest11/index.gd" id="1_alnrk"]
-[ext_resource type="Texture2D" uid="uid://dgaixd7ttywt7" path="res://addons/main_system/Nodes/Portrait/PortraitPlaceholder.png" id="2_tjvnx"]
+[ext_resource type="Texture2D" uid="uid://cqclaedunjcp" path="res://Assets/Own/Background/LargeApartment.png" id="2_gqkf1"]
+[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="3_73wid"]
 [ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
+[ext_resource type="Texture2D" uid="uid://bhb1fav8jhjbl" path="res://Assets/Own/Portraits/Ortega.png" id="5_e6b5r"]
+[ext_resource type="Texture2D" uid="uid://bqugs4i2cau3s" path="res://Assets/Own/Portraits/Lete.png" id="6_afyrj"]
 
 [node name="NormalDialogue" type="CanvasLayer"]
 script = ExtResource("1_alnrk")
@@ -19,6 +22,18 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01A" type="TextureRect" parent="Slides"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gqkf1")
+expand_mode = 5
+metadata/_edit_lock_ = true
+
 [node name="Portraits" type="GridContainer" parent="."]
 unique_name_in_owner = true
 anchors_preset = 15
@@ -29,8 +44,25 @@ grow_vertical = 2
 theme_override_constants/h_separation = 6
 metadata/_edit_lock_ = true
 
-[node name="Portrait" type="Sprite2D" parent="Portraits"]
-position = Vector2(491, 340)
-scale = Vector2(3.28767, 3.28767)
-texture = ExtResource("2_tjvnx")
+[node name="JoseRizal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(123, 348)
+scale = Vector2(1.05417, 1.05417)
+texture = ExtResource("3_73wid")
+script = ExtResource("3_m6ai3")
+
+[node name="Ortega" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(817, 342)
+scale = Vector2(1.0271, 1.0271)
+texture = ExtResource("5_e6b5r")
+flip_h = true
+script = ExtResource("3_m6ai3")
+
+[node name="Lete" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(1138, 333)
+scale = Vector2(3.03797, 3.03797)
+texture = ExtResource("6_afyrj")
+flip_h = true
 script = ExtResource("3_m6ai3")

@@ -1,8 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy61infeo5obu"]
+[gd_scene load_steps=8 format=3 uid="uid://cy61infeo5obu"]
 
 [ext_resource type="Script" path="res://Quests/Stage03/Quest07/index.gd" id="1_alnrk"]
-[ext_resource type="Texture2D" uid="uid://dgaixd7ttywt7" path="res://addons/main_system/Nodes/Portrait/PortraitPlaceholder.png" id="2_tjvnx"]
+[ext_resource type="Texture2D" uid="uid://ea5qgpamuoxh" path="res://Assets/Own/Background/ApartmentDark.png" id="2_21wyq"]
+[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="3_h7mjm"]
 [ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
+
+[sub_resource type="Animation" id="Animation_ugk2l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x6a7x"]
+resource_name = "slide_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j06fq"]
+_data = {
+"RESET": SubResource("Animation_ugk2l"),
+"slide_1": SubResource("Animation_x6a7x")
+}
 
 [node name="NormalDialogue" type="CanvasLayer"]
 script = ExtResource("1_alnrk")
@@ -19,6 +56,19 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01A" type="TextureRect" parent="Slides"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_21wyq")
+expand_mode = 5
+metadata/_edit_lock_ = true
+
 [node name="Portraits" type="GridContainer" parent="."]
 unique_name_in_owner = true
 anchors_preset = 15
@@ -29,8 +79,14 @@ grow_vertical = 2
 theme_override_constants/h_separation = 6
 metadata/_edit_lock_ = true
 
-[node name="Portrait" type="Sprite2D" parent="Portraits"]
+[node name="JoseRizal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
 position = Vector2(491, 340)
-scale = Vector2(3.28767, 3.28767)
-texture = ExtResource("2_tjvnx")
+scale = Vector2(4, 4)
+texture = ExtResource("3_h7mjm")
 script = ExtResource("3_m6ai3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j06fq")
+}

@@ -1,0 +1,22 @@
+~ this_is_a_node_title
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("JoseRizal", 6)
+Bumalik si Rizal sa kanyang tirahan.
+do DialogueStates.change_character_position("JoseRizal", 5)
+do DialogueStates.spawn_character("Francisco", 2)
+Naabutan ni Rizal si Francisco na parang nag-aalala sa kaniya dahil sa galit ng prayle...
+Dulot rin ito ng kaniyang nobela.
+do DialogueStates.change_character_position("Francisco", 3)
+Francisco: Anak... Mas mabuting huwag ka munang lumabas at kumain kahit saan dahil iba ang tingin sayo ng mga prayle sa ating bansa
+at ipasaibang araw mo nalamang ang pagbisita kay teodora sa Dagupan.
+Rizal: Kung ano ang iyong kagustuhan ama pero hindi ko mapapangako na ha ang buhay nalang ay ganito.
+Francisco: Basta anak, palagi kang mag-iingat.
+Rizal: May gusto lang akong sabihin sayo.
+Francisco: Ano 'yon, anak?
+Rizal: Mas maganda na umalis na lang tayo kasama ang pamilya natin papuntang Hong Kong.
+Rizal: Pinayuhan ako ng Heneral dahil mas ikabubuti na matahimik ang buhay natin sa kaguluhan kaysa pagkaisahan tayo ng mga prayle.
+do DialogueStates.change_character_position("Francisco", 2)
+Francisco: Sige, anak. Aalis tayo.
+Francisco: Sasabihan ko na lang sila.
+Rizal: Maraming salamat po.
+=> END

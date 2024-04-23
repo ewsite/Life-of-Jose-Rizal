@@ -1,0 +1,21 @@
+~ this_is_a_node_title
+Sabay nagtalumpati ni Rizal na sa mga susunod na oras ay di niya namalayan ay magbabago sa kaniyang buhay at pamilya, pati sa tingin ng mga kastila sa Pilipinas.
+do DialogueStates.spawn_character("JoseRizal", 3)
+Jose: "Sina Luna, at Hidalgo ay karangalan hindi lamang ng Pilipinas kundi ng Espanya."
+do DialogueStates.flip_character("JoseRizal", true)
+(Palakpakan)
+do DialogueStates.flip_character("JoseRizal", false)
+Jose: "Totoong isinilang sa Pilipinas, ngunit maaring islang sila kahit saan. [wait=1][do DialogueStates.flip_character("JoseRizal", true)] Sapagkat ang talino ay walang kinikilalang bahid, ito ay umuusbong kahit saan katulad ng liwanag ng karunungan."
+do DialogueStates.flip_character("JoseRizal", false)
+(Palakpakan)
+do DialogueStates.flip_character("JoseRizal", true)
+Jose: "Uminom tayo para sa kalusugan ng mga dakilang artistang luna at hidalgo."
+do DialogueStates.flip_character("JoseRizal", false)
+(Palakpakan)
+do DialogueStates.flip_character("JoseRizal", true)
+Jose: "Uminom tayo para sa kalusugan ng kabataang pilipino, ang banal ng pag-asa ng lupang tinubuan."
+do DialogueStates.flip_character("JoseRizal", false)
+Jose: "Nawa'y pamarisan nila ang dalawang artistang ito at ng ibigay na ng madreng espanya na maasikaso at maingat para sa ikabubuti ng kaniyang probinsya, ang reporma na matagal nang binabalak para sa Pilipinas"
+(Palakpakan nang matagal).
+
+=> END

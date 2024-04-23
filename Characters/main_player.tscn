@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://byd4o3d8iu4kc" path="res://UI/Assets/Fonts/PixCon.ttf" id="4_pkfyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_phbct"]
-size = Vector2(32, 48)
+size = Vector2(32, 38)
 
 [node name="SamplePlayer" type="CharacterBody2D"]
 disable_mode = 1
@@ -17,14 +17,11 @@ script = ExtResource("1_dx5ar")
 shape = SubResource("RectangleShape2D_phbct")
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("2_nmd2b")]
+position = Vector2(-0.377777, 0.377777)
+scale = Vector2(0.605555, 0.605555)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.8, 1.8)
-limit_left = -100
-limit_top = -100
-limit_right = 1380
-limit_bottom = 820
-limit_smoothed = true
+zoom = Vector2(2.8, 2.8)
 position_smoothing_speed = 10.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

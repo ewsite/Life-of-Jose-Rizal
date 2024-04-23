@@ -1,0 +1,75 @@
+~ this_is_a_node_title
+do DialogueStates.spawn_character("Captain", 5)
+Captain: Welcome back, {{GameStats.player_name}}!
+if GameStats.health == GameStats.TOTAL_HEALTH:
+	Captain: Wala pang bawas buhay mo.
+elif GameStats.health > 1:
+	Captain: May konting bawas yung buhay mo.
+else:
+	Captain: Onting ingat lang... [wait=3]
+Captain: Panghuling bisita na ako sayo. Sana galingan mo.
+Captain: Handa ka na ba?
+- Oo
+Captain: Saan tinatag ang La Liga Filipina?
+- Calamba
+	=>< wrong_answer
+	Captain: Mali!
+- Tondo
+	Captain: Tama!
+- Dapitan
+	=>< wrong_answer
+	Captain: Mali!
+do DialogueStates.fire_identification_question("Saan tinapon si Rizal?")
+Captain: Question 2
+if DialogueStates.player_answer == "dapitan":
+	Captain: Tama!
+else:
+	=>< wrong_answer
+	Captain: Mali!
+do DialogueStates.fire_identification_question("Sino ang pasyente na gusto magpagamot kay Rizal?")
+Captain: Question 3
+if DialogueStates.player_answer == "taufer":
+	Captain: Tama!
+else:
+	=>< wrong_answer
+	Captain: Mali!
+do DialogueStates.fire_identification_question("Sino ang huling babae nagustuhan ni Rizal?")
+Captain: Question 4
+if DialogueStates.player_answer == "josephine" or DialogueStates.player_answer == "bracken" or DialogueStates.player_answer == "josephine bracken":
+	Captain: Tama!
+else:
+	=>< wrong_answer
+	Captain: Mali!
+do DialogueStates.fire_identification_question("Matapos itapon si Rizal sa Dapitan, saan naman siya kinulong?")
+Captain: Question 5
+if DialogueStates.player_answer == "fort santiago":
+	Captain: Tama!
+else:
+	=>< wrong_answer
+	Captain: Mali!
+Captain: Question 6 \nHARD QUESTION - Habang nililitis si Rizal, anong ang pangunahing akusasyon laban sa kaniya?
+- Sa paggawa ng Noli at El Fili
+	=>< wrong_answer
+	Captain: Mali!
+- Pag-usbong ng marahas na rebolusyon
+	=>< wrong_answer
+	Captain: Mali!
+- Pag-tatag ng La Liga Filipina
+	Captain: Tama!
+do DialogueStates.fire_identification_question("Ano parusa ang naging hatol sa kaniya?")
+Captain: Question 7
+if DialogueStates.player_answer == "kamatayan" or DialogueStates.player_answer == "death" or DialogueStates.player_answer == "death penalty":
+	Captain: Tama!
+else:
+	=>< wrong_answer
+	Captain: Mali!
+	
+=> END
+~ wrong_answer
+do GameStats.remove_health()
+do DialogueStates.emote_character("Captain", "buzz")
+if GameStats.player_dead():
+	Captain: Better luck next time sayo, {{GameStats.player_name}}.
+	do BaseGame.game_over()
+	=> END!
+=> END

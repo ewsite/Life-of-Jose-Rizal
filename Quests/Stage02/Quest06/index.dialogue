@@ -1,8 +1,12 @@
 ~ this_is_a_node_title
+do DialogueStates.change_slide(1)
 Habang pinag-uusapan na ang mga susunod na pag-aaral ni Rizal ay gusto ni Teodora na huwag munang pag-aralin si Rizal...
 dahil aniya sapat na ang kaniyang nalalaman.
+do DialogueStates.spawn_character("Teodora", 1)
+do DialogueStates.spawn_character("Francisco", 6)
 Teodora (kay Francisco): Huwag mo ng dalhin si Rizal sa Maynila, 
 Teodora (kay Francisco): sapat na ang nalalaman nya. 
-Teodora (kay Francisco): Kung pinagpatuloy mo pa, [wait=1]siguradong mapupugutan lang siya ng ulo.
+Teodora (kay Francisco): Kung pinagpatuloy mo pa, [wait=1][do DialogueStates.change_character_position("Teodora", 2)]siguradong mapupugutan lang siya ng ulo.
+do DialogueStates.flip_character("Francisco", true)
 Tumutol naman si Francisco dahil nanghihinayang sa talino ni Rizal
 => END

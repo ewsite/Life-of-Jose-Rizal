@@ -1,13 +1,31 @@
 ~ this_is_a_node_title
 Sa mga sumunod na araw, habang nag-aalaga si Rizal kay Taufer, 
-unti-unti silang nagkakilala ni Josephine at nabuo ang isang espesyal na pagtitinginan)]
-
+do DialogueStates.spawn_character("JoseRizal", 5)
+do DialogueStates.spawn_character("Bracken", 3)
+do DialogueStates.spawn_character("Taufer", 2)
+unti-unti silang nagkakilala ni Josephine at nabuo ang isang espesyal na pagtitinginan
+do DialogueStates.despawn_character("Taufer")
+..[wait=2][next=auto]
+do DialogueStates.change_character_position("JoseRizal", 4)
+do DialogueStates.change_character_position("Bracken", 2)
+do DialogueStates.flip_character("Bracken", true)
 Rizal: Josephine, hindi ko alam kung ano ang hinaharap, 
 Rizal: ngunit nais kong malaman mo na ikaw ay naging liwanag sa aking buhay dito sa Dapitan.
+do DialogueStates.change_character_position("JoseRizal", 5)
+do DialogueStates.change_character_position("Bracken", 3)
+do DialogueStates.flip_character("Bracken", false)
 Josephine:  Dr. Rizal, sa maikling panahon na tayo ay magkasama, 
 Josephine: naramdaman ko ang isang kakaibang damdamin na hindi ko pa nararanasan noon. Ikaw ay naging inspirasyon sa akin.
+do DialogueStates.change_character_position("JoseRizal", 2)
+do DialogueStates.change_character_position("Bracken", 4)
+do DialogueStates.flip_character("Bracken", true)
+do DialogueStates.flip_character("JoseRizal", false)
 Rizal: (hawak ang kamay ni Josephine) Sa bawat pagsubok na aking haharapin, ikaw ang magiging lakas ko. 
 Rizal: Nais kong ikaw ay maging kasama ko sa bawat hakbang ng aking buhay.
+do DialogueStates.change_character_position("JoseRizal", 6)
+do DialogueStates.change_character_position("Bracken", 4)
+do DialogueStates.flip_character("Bracken", false)
+do DialogueStates.flip_character("JoseRizal", true)
 Josephine: (ngumiti) Dr. Rizal, ako ay iyong-iyo. Anuman ang mangyari, 
 Josephine: ako ay mananatili sa iyong tabi.
 

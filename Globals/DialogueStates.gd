@@ -115,4 +115,4 @@ func fire_identification_question(question: String):
 		print_debug("[FIRE][DIALOGUESTATES]: AssessmentNode \"identification\" doesn't have a fire method. Fix this.")
 		return
 		
-	assessment_node.fire(question, 5 if is_timer_activated else 0)
+	assessment_node.fire(question, 10 if is_timer_activated else 0)

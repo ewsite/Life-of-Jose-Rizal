@@ -1,8 +1,137 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy61infeo5obu"]
+[gd_scene load_steps=16 format=3 uid="uid://cy61infeo5obu"]
 
 [ext_resource type="Script" path="res://Quests/Stage06/Quest16/index.gd" id="1_alnrk"]
+[ext_resource type="Texture2D" uid="uid://xw1b3o26uabk" path="res://Assets/Own/Background/CourtRoom.png" id="2_jcqfl"]
 [ext_resource type="Texture2D" uid="uid://dgaixd7ttywt7" path="res://addons/main_system/Nodes/Portrait/PortraitPlaceholder.png" id="2_tjvnx"]
 [ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
+[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="3_uqnjf"]
+[ext_resource type="Texture2D" uid="uid://dsy1v7x3hqmtq" path="res://Assets/Own/Portraits/ColonelOlive.png" id="5_uoo1v"]
+[ext_resource type="Texture2D" uid="uid://e06lohl2md63" path="res://Assets/Own/Portraits/Taviel.png" id="6_1wnfx"]
+[ext_resource type="FontFile" uid="uid://byd4o3d8iu4kc" path="res://UI/Assets/Fonts/PixCon.ttf" id="6_15574"]
+
+[sub_resource type="Animation" id="Animation_iffht"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TempB/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TempB/ColorRect2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fdtq5"]
+resource_name = "slide_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w837h"]
+resource_name = "slide_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TempB/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4e18t"]
+resource_name = "slide_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TempB/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8tpxv"]
+resource_name = "slide_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TempB/ColorRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ywmuk"]
+resource_name = "slide_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TempB/ColorRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2jrbe"]
+_data = {
+"RESET": SubResource("Animation_iffht"),
+"slide_1": SubResource("Animation_fdtq5"),
+"slide_2": SubResource("Animation_w837h"),
+"slide_3": SubResource("Animation_4e18t"),
+"slide_4": SubResource("Animation_8tpxv"),
+"slide_5": SubResource("Animation_ywmuk")
+}
 
 [node name="NormalDialogue" type="CanvasLayer"]
 script = ExtResource("1_alnrk")
@@ -19,6 +148,19 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01A" type="TextureRect" parent="Slides"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jcqfl")
+expand_mode = 5
+metadata/_edit_lock_ = true
+
 [node name="Portraits" type="GridContainer" parent="."]
 unique_name_in_owner = true
 anchors_preset = 15
@@ -29,8 +171,98 @@ grow_vertical = 2
 theme_override_constants/h_separation = 6
 metadata/_edit_lock_ = true
 
-[node name="Portrait" type="Sprite2D" parent="Portraits"]
-position = Vector2(491, 340)
+[node name="JoseRizal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(234, 351)
+scale = Vector2(1.05417, 1.05417)
+texture = ExtResource("3_uqnjf")
+script = ExtResource("3_m6ai3")
+
+[node name="Hukom" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(749, 339)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("5_uoo1v")
+flip_h = true
+script = ExtResource("3_m6ai3")
+
+[node name="Piskal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(1239, 304)
 scale = Vector2(3.28767, 3.28767)
 texture = ExtResource("2_tjvnx")
+flip_h = true
 script = ExtResource("3_m6ai3")
+
+[node name="Abogado" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(163, 383)
+scale = Vector2(1.27886, 1.27886)
+texture = ExtResource("6_1wnfx")
+script = ExtResource("3_m6ai3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2jrbe")
+}
+
+[node name="TempB" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="TempB"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+
+[node name="Label" type="Label" parent="TempB/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -347.0
+offset_top = -37.5
+offset_right = 347.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_15574")
+text = "Matapos pinag-aaralan ang salaysay ni Rizal at ebidensya laban kay Rizal. 
+Hinihintay ng lahat ng tao sa korte ang hatol 
+na magdedetermina ng kanyang kapalaran.
+"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="TempB"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+
+[node name="Label" type="Label" parent="TempB/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -347.0
+offset_top = -37.5
+offset_right = 347.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_15574")
+text = "Ang mga tao sa loob ng korte ay natahimik, ang ilan ay hindi makapaniwala sa narinig, 
+habang ang iba ay nagpakita ng simpatya sa bayaning hinatulan. 
+Si Rizal ay dinala pabalik sa kanyang selda upang paghandaan ang kanyang huling araw."
+horizontal_alignment = 1

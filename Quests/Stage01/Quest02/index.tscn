@@ -92,6 +92,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_vglml")
 expand_mode = 5
+metadata/_edit_use_anchors_ = true
 
 [node name="Slide01A" type="TextureRect" parent="Slides"]
 anchors_preset = 15

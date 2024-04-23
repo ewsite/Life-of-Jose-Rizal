@@ -84,7 +84,6 @@ offset_right = 20.0
 offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "pagkatapos maglayag ni rizal
-pansamantalang nanatili muna sa barcelona..."
+text = "habang naglilibot sa barcelona"
 label_settings = SubResource("LabelSettings_uc0uv")
 horizontal_alignment = 1

@@ -1,20 +1,18 @@
 ~ this_is_a_node_title
-Sa loob ng barkong MV Isla de Panay, habang ito ay nakadaong sa Barcelona, 
+Sa loob ng isang barko papuntang Cuba...
+do DialogueStates.spawn_character("Guard1", 6)
 si Rizal ay biglang ginising mula sa kanyang pagkakatulog.
-
+do DialogueStates.change_character_position("Guard1", 5)
+do DialogueStates.change_slide(1)
+do DialogueStates.emote_character("Guard1", "buzz")
+Guwardiya: Dr. Rizal, Gising!.
+do DialogueStates.spawn_character("JoseRizal", 2)
 Rizal:  Ano ang ibig sabihin ng paggising ninyo sa akin sa oras na ito?
-Guwardiya: Dr. Rizal, ikaw ay inaaresto sa utos ng mga awtoridad ng Espanya. Ikaw ay dadalhin sa Montjuich Prison.	
-Rizal:  Sa anong dahilan? Ako ay patungo sa Cuba upang maglingkod bilang isang doktor.
+Guwardiya: Dr. Rizal, ikaw ay inaaresto alinsunod sa ibinabang utos ng nakakataas.
+do DialogueStates.change_character_position("JoseRizal", 3)
+Rizal:  Sa anong dahilan? [wait=1]Ako ay patungo sa Cuba upang maglingkod bilang isang doktor.
+do DialogueStates.flip_character("JoseRizal", true)
 Guwardiya: Ang mga detalye ay hindi ko maaaring talakayin. Ang mahalaga ay sumama ka sa amin nang walang pagtutol.
-Despujol: Dr. Jose[wait=3] Rizal, 
-Despujol: ikaw ay inaakusahan ng pagkakaroon ng ugnayan sa mga rebeldeng Pilipino. 
-Despujol: Ang iyong mga akda at ang iyong impluwensya 
-Despujol: ................
-Despujol: [shake rate=50 level=10]AY ITINUTURING NA LABAN KONTRA SA KORONA NG ESPANYA[/shake]
-Rizal: General, ako ay isang manunulat at isang doktor. 
-Rizal: Ang aking hangarin ay para sa kapakanan ng aking bayan at hindi para sa rebelyon. 
-Rizal: Ang aking konsensya ay malinis.
-Despujol: Sa korte ka magpaliwanag. 
-Despujol: Ikaw ay ibabalik sa Maynila upang doon ka litisin!
+
 
 => END

@@ -107,6 +107,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="QuestListContainer" type="MarginContainer" parent="FrontUi/ActionsUI"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -116,6 +117,7 @@ offset_top = -172.0
 offset_right = 282.0
 offset_bottom = -70.0
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 9
@@ -157,12 +159,13 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -306.0
-offset_top = -184.0
-offset_right = -66.0
-offset_bottom = 58.0
+offset_left = -248.0
+offset_top = -200.0
+offset_right = -8.0
+offset_bottom = 104.0
 grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -172,6 +175,7 @@ metadata/_edit_group_ = true
 [node name="ActionListsContainer" type="VBoxContainer" parent="FrontUi/ActionsUI/ActionListsRight"]
 unique_name_in_owner = true
 layout_mode = 2
+alignment = 1
 
 [node name="TalkButton" type="Button" parent="FrontUi/ActionsUI/ActionListsRight/ActionListsContainer"]
 unique_name_in_owner = true
@@ -307,17 +311,21 @@ offset_right = 248.0
 offset_bottom = 112.0
 grow_horizontal = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="QuestCompletePopup" type="PanelContainer" parent="FrontUi/Popups"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.0
+offset_right = 248.0
+offset_bottom = 88.0
 grow_horizontal = 2
-grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="FrontUi/Popups/QuestCompletePopup"]
 layout_mode = 2

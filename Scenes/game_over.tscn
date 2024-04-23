@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpyrtr2xrs1st"]
+[gd_scene load_steps=4 format=3 uid="uid://bpyrtr2xrs1st"]
 
 [ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="1_bo3ah"]
 [ext_resource type="Script" path="res://Scenes/game_over.gd" id="1_v04ns"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lvq3r"]
+font_size = 54
 
 [node name="GameOver" type="CanvasLayer"]
 script = ExtResource("1_v04ns")
@@ -23,46 +26,41 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -133.0
-offset_top = -152.0
+offset_top = -29.0
 offset_right = 133.0
-offset_bottom = -94.0
+offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
 text = "Game over"
+label_settings = SubResource("LabelSettings_lvq3r")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ResetChapterButton" type="Button" parent="GameOverUI"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverUI"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -125.0
-offset_top = 3.0
-offset_right = 125.0
-offset_bottom = 59.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -328.0
+offset_top = -176.0
+offset_right = -74.0
+offset_bottom = -60.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 24
+metadata/_edit_group_ = true
+
+[node name="ResetChapterButton" type="Button" parent="GameOverUI/VBoxContainer"]
+layout_mode = 2
 text = "restart stage"
 
-[node name="MainMenuButton" type="Button" parent="GameOverUI"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -127.0
-offset_top = 104.0
-offset_right = 127.0
-offset_bottom = 158.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MainMenuButton" type="Button" parent="GameOverUI/VBoxContainer"]
+layout_mode = 2
 text = "back to main menu"
 
-[connection signal="pressed" from="GameOverUI/ResetChapterButton" to="." method="reset_game"]
-[connection signal="pressed" from="GameOverUI/MainMenuButton" to="." method="back_to_main_menu"]
+[connection signal="pressed" from="GameOverUI/VBoxContainer/ResetChapterButton" to="." method="reset_game"]
+[connection signal="pressed" from="GameOverUI/VBoxContainer/MainMenuButton" to="." method="back_to_main_menu"]

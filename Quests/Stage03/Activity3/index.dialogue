@@ -1,0 +1,69 @@
+~ this_is_a_node_title
+
+do DialogueStates.spawn_character("Captain", 5)
+Captain: Welcome back, {{GameStats.player_name}}!
+if GameStats.health == GameStats.TOTAL_HEALTH:
+	Captain: Ayos ah!
+	Captain: Wala pang bawas buhay mo.
+elif GameStats.health > 1:
+	Captain: May konting bawas yung buhay mo.
+else:
+	Captain: Onting ingat lang... [wait=3]
+Captain: Handa ka na ba?
+- Oo
+Captain: Simulan ko na.
+Captain: Question 1 \n Totoo ba na lihim na umalis si Rizal sa Pilipinas?
+- Oo
+	Captain: Tama naman sagot mo.
+- Hindi
+	=>< wrong_answer
+	Captain: Mali!
+Captain: Sa susunod na tanong kumpletuhin mo ang pangalan.
+do DialogueStates.fire_identification_question("Sinong nagkagusto at niligawan si Rizal sa kaniyang tirahan na kung saan ginanap ang Circulo Hispano Filipino?")
+Captain: Question 2
+Captain: Sure ka ba?
+- Oo
+if DialogueStates.player_answer == "consuelo ortiga":
+	Captain: Tama!
+else:
+	Captain: Paano kapag mali ang sagot mo?
+	- Bawasan mo buhay ko
+	=>< wrong_answer
+	Captain: Doon ka lang tumama sa sagot mo.
+
+Captain: Question 3 \n Bakit natigil ang Circulo Hispano Filipino
+- KUlang sa budget
+	Captain: Tama naman sagot mo.
+- Dahil sa away ni Rizal at Eduardo Lete
+	=>< wrong_answer
+	Captain: Mali!
+- Binulabog ni Rizal ang samahan
+	=>< wrong_answer
+	Captain: Mali!
+
+Captain: Question 4 \n Noong nagtalumpati si Rizal, sino ang kaniyang bingyan ng pugay?
+- Luna at Hidalgo
+	Captain: Tama naman sagot mo.
+- Ortiga at Lete
+	=>< wrong_answer
+	Captain: Mali!
+- Kaniyang pamilya
+	=>< wrong_answer
+	Captain: Mali!
+- Group 4 sa MOR
+	=>< wrong_answer
+	Captain: Mali!
+	
+	
+=> END
+
+
+
+~ wrong_answer
+do GameStats.remove_health()
+do DialogueStates.emote_character("Captain", "buzz")
+if GameStats.player_dead():
+	Captain: Better luck next time sayo, {{GameStats.player_name}}.
+	do BaseGame.game_over()
+	=> END!
+=> END

@@ -1,68 +1,65 @@
 {
-	"name": "Pag-aaral ni Rizal",
-	"stage_path": "Stage02",
+	"name": "Ang Lihim na Pag-alis",
+	"stage_path": "Stage03",
 	"quests": [
 		{
-			"name": "Bago umalis sa Calamba....",
-			"description": "Magpaalam",
-			"target_map": "CalambaPres",
-			"target_node": "BahayRizalEntry",
+			"name": "Ang Lihim na Pag-alis",
+			"description": "Ang Lihim na Pag-alis",
 			"scene_path": "Quest01",
+			"unskippable": true,
 			"rewards": {
 				"points": 0,
 				"health": 0
 			}
 		},
 		{
-			"name": "Bag umalis sa Calamba...",
+			"name": "Ang Lihim na Pag-alis",
 			"description": "Pumunta sa Maynila",
 			"target_map": "CalambaPres",
-			"target_node": "AtaneoTPEntry",
+			"target_node": "ManilaPortTPEntry",
 			"scene_path": "Quest02",
 			"rewards": {
-				"points": 300,
+				"points": 0,
 				"health": 0
 			}
 		},
 		{
-			"name": "Pag-aaral sa Ataneo",
-			"description": "Libutin muna ang paligid.",
-			"target_map": "AteneoPres",
-			"target_node": "Pest1Entry",
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Umakyat sa Barko",
+			"target_map": "ManilaPortPres",
+			"target_node": "BoatEntry",
 			"scene_path": "Quest03",
-			"inline": true,
-			"rewards": {
-				"points": 0,
-				"health": 0
-			}
-		},
-		{
-			"name": "Pag-aaral sa Ataneo De Municipal",
-			"description": "Pumasok sa paaralan",
-			"target_map": "AteneoPres",
-			"target_node": "AtaneoEntry",
-			"scene_path": "Quest04",
-			"rewards": {
-				"points": 0,
-				"health": 0
-			}
-		},
-		{
-			"name": "Pagkatapos mag-aral....",
-			"description": "Bumalik sa Calamba",
-			"target_map": "AteneoPres",
-			"target_node": "CalambaTPEntry",
-			"scene_path": "Quest05",
 			"rewards": {
 				"points": 400,
 				"health": 0
 			}
 		},
 		{
-			"name": "Pagbalik sa Calamba",
-			"description": "Kausapin ang pamilya sa tirahan mo",
-			"target_map": "CalambaPres",
-			"target_node": "BahayRizalEntry",
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Umakyat sa Barko",
+			"unskippable": true,
+			"scene_path": "Quest04",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+		{
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "aaaaaa",
+			"unskippable": true,
+			"scene_path": "Quest05",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pananatili at Pag-aaral sa Espanya",
+			"description": "Maglibot muna",
+			"target_map": "BarcelonaPres",
+			"target_node": "Inline1Entry",
+			"inline": true,
 			"scene_path": "Quest06",
 			"rewards": {
 				"points": 0,
@@ -70,9 +67,10 @@
 			}
 		},
 		{
-			"name": "Pagbalik sa Calamba",
-			"description": "Lumipas ang ilang araw",
-			"unskippable": true,
+			"name": "Pananatili at Pag-aaral sa Espanya",
+			"description": "Pumasok muna sa pansamantalang tirahan",
+			"target_map": "BarcelonaPres",
+			"target_node": "TempHouseEntry",
 			"scene_path": "Quest07",
 			"rewards": {
 				"points": 0,
@@ -80,20 +78,21 @@
 			}
 		},
 		{
-			"name": "Pagbalik sa Calamba",
-			"description": "Kausapin ang pamilya sa tirahan mo",
-			"unskippable": true,
+			"name": "Pananatili at Pag-aaral sa Espanya",
+			"description": "Pumunta sa Madrid",
+			"target_map": "BarcelonaPres",
+			"target_node": "MadridTPEntry",
 			"scene_path": "Quest08",
 			"rewards": {
-				"points": 100,
+				"points": 0,
 				"health": 0
 			}
 		},
 		{
-			"name": "Pagbalik sa Calamba",
-			"description": "Pumunta sa Maynila",
-			"target_map": "CalambaPres",
-			"target_node": "USTTPEntry",
+			"name": "Circulo Hispano Filipino",
+			"description": "Ipagpatuloy ang pag-aaral",
+			"target_map": "MadridPres",
+			"target_node": "UMadridEntry",
 			"scene_path": "Quest09",
 			"rewards": {
 				"points": 0,
@@ -101,9 +100,20 @@
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Libutin muna ang paligid.",
-			"target_map": "USTPres",
+			"name": "Circulo Hispano Filipino",
+			"description": "Pumunta sa isang gusali",
+			"target_map": "MadridPres",
+			"target_node": "CHFEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Circulo Hispano Filipino",
+			"description": "...",
+			"target_map": "CHFPres",
 			"target_node": "Inline1Entry",
 			"scene_path": "Quest10",
 			"inline": true,
@@ -113,22 +123,20 @@
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Libutin muna ang paligid.",
-			"target_map": "USTPres",
-			"target_node": "Inline2Entry",
+			"name": "Circulo Hispano Filipino",
+			"description": "Umupo Dito",
+			"target_map": "CHFPres",
+			"target_node": "ChairEntry",
 			"scene_path": "Quest11",
-			"inline": true,
 			"rewards": {
 				"points": 0,
 				"health": 0
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Pumasok sa paaralan",
-			"target_map": "USTPres",
-			"target_node": "USTEntry",
+			"name": "Circulo Hispano Filipino",
+			"description": "Pagtatapos",
+			"unskippable": true,
 			"scene_path": "Quest12",
 			"rewards": {
 				"points": 0,
@@ -136,21 +144,33 @@
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Kunin ang grading card...",
-			"target_map": "USTPres",
-			"target_node": "USTGCardEntry",
-			"scene_path": "Quest13",
+			"name": "Talumpati",
+			"description": "Dumalo sa isang gusali...",
+			"target_map": "MadridPres",
+			"target_node": "TalumpatiEntry",
+			"force_complete": true,
 			"rewards": {
 				"points": 0,
 				"health": 0
 			}
 		},
 		{
-			"name": "Ang Unang Pag-ibig",
-			"description": "Bumalik sa Pansamantalang Tirahan",
-			"target_map": "USTPres",
-			"target_node": "PT1Entry",
+			"name": "Talumpati",
+			"description": "Dumalo sa isang gusali...",
+			"target_map": "TalumpatiPres",
+			"target_node": "Inline1Entry",
+			"scene_path": "Quest13",
+			"inline": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Talumpati",
+			"description": "Dumalo sa isang gusali...",
+			"target_map": "TalumpatiPres",
+			"target_node": "TalumpatiEntry",
 			"scene_path": "Quest14",
 			"rewards": {
 				"points": 0,
@@ -158,10 +178,10 @@
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Ipagpatuloy ang Pag-aaral",
-			"target_map": "USTPres",
-			"target_node": "USTEntry",
+			"name": "Pagkatapos...",
+			"description": "Kunin ang lisensya sa Unibersidad",
+			"target_map": "MadridPres",
+			"target_node": "UMadridEntry",
 			"scene_path": "Quest15",
 			"rewards": {
 				"points": 0,
@@ -169,10 +189,21 @@
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Kunin ang grading card...",
-			"target_map": "USTPres",
-			"target_node": "USTGCardEntry",
+			"name": "Bunga ng Talumpati",
+			"description": "Pumunta sa pansamantalang tirahan",
+			"target_map": "MadridPres",
+			"target_node": "TempHouseEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Bunga ng Talumpati",
+			"description": "Basahin ang liham",
+			"target_map": "MadridHousePres",
+			"target_node": "ChairEntry",
 			"scene_path": "Quest16",
 			"rewards": {
 				"points": 0,
@@ -180,21 +211,22 @@
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Bumalik sa Pansamantalang Tirahan",
-			"target_map": "USTPres",
-			"target_node": "PT1Entry",
+			"name": "Pagsasanay sa Paris",
+			"description": "Pumunta sa Paris",
+			"target_map": "MadridPres",
+			"target_node": "ParisTPEntry",
 			"scene_path": "Quest17",
 			"rewards": {
-				"points": 0,
+				"points": 400,
 				"health": 0
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Ipagpatuloy ang Pag-aaral",
-			"target_map": "USTPres",
-			"target_node": "USTEntry",
+			"name": "Pagsasanay sa Paris",
+			"description": "Kausapin si Dr. Wecker",
+			"target_map": "ParisPres",
+			"target_node": "Wecker",
+			"inline": true,
 			"scene_path": "Quest18",
 			"rewards": {
 				"points": 0,
@@ -202,10 +234,10 @@
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Kunin ang grading card...",
-			"target_map": "USTPres",
-			"target_node": "USTGCardEntry",
+			"name": "Pagsasanay sa Paris",
+			"description": "Sumanay sa klinika ni Dr. Wecker",
+			"target_map": "ParisPres",
+			"target_node": "WeckerClinicEntry",
 			"scene_path": "Quest19",
 			"rewards": {
 				"points": 0,
@@ -213,56 +245,42 @@
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Magdrama sa pansamantalang bahay",
-			"target_map": "USTPres",
-			"target_node": "PT1Entry",
-			"force_complete": true,
-			"rewards": {
-				"points": 40,
-				"health": 0
-			}
-		},
-		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Magdrama sa pansamantalang bahay",
-			"target_map": "PT1Pres",
-			"target_node": "Drama1Entry",
+			"name": "Pagsasanay sa Paris",
+			"description": "Magsanay pa lalo sa Heidelberg",
+			"target_map": "ParisPres",
+			"target_node": "HeidelbergTPEntry",
 			"scene_path": "Quest20",
-			"inline": true,
 			"rewards": {
 				"points": 0,
 				"health": 0
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Magdrama sa pansamantalang bahay",
-			"target_map": "PT1Pres",
-			"target_node": "Drama2Entry",
+			"name": "Pagsasanay sa Heidelberg",
+			"description": "Pumunta sa klinika ni Otto",
+			"target_map": "HeidelbergPres",
+			"target_node": "OttoClinicEntry",
 			"scene_path": "Quest21",
-			"inline": true,
 			"rewards": {
 				"points": 0,
 				"health": 0
 			}
 		},
 		{
-			"name": "Pag-aaral sa Santo Tomas",
-			"description": "Magdrama sa pansamantalang bahay",
+			"name": "Pagsasanay sa Heidelberg",
+			"description": "Magsulat ng liham kay Blumentritt",
+			"target_map": "HeidelbergPres",
+			"target_node": "TempHouseEntry",
 			"scene_path": "Quest22",
-			"unskippable": true,
 			"rewards": {
 				"points": 0,
 				"health": 0
 			}
 		},
 		{
-			"name": "Bumalik sa Calamba",
-			"description": "Bumalik sa Calamba",
-			"target_map": "USTPres",
-			"target_node": "CalambaTPEntry",
-			"force_complete": true,
+			"name": "Bago Magpatuloy",
+			"unskippable": true,
+			"scene_path": "Activity3",
 			"rewards": {
 				"points": 400,
 				"health": 0

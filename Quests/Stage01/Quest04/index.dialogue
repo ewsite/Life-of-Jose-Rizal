@@ -1,9 +1,23 @@
-~ this_is_a_node_title
-do DialogueStates.spawn_character("Portrait", 1)
-Jose: Kapatid, saan tayo pupunta?
-Jose: Saan mo ako dadalhin?
-Paciano: Dadalhin muna kita sa Binan para mag-aral.
-Paciano: Doon na rin ako nagaral noon.
-Paciano: Kapag nakapunta na tayo, ipapakilala kita sa aking Maestro na siya'y nagturo sa akin.
-Dinala ni Paciano si Jose sa Binan.
+~ Start
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("Paciano", 2)
+do DialogueStates.spawn_character("Justiniano", 6)
+Paciano: Magandang araw po Don Justiniano
+Justiniano: Magandang araw sayo, Paciano
+Justiniano: At tsaka nga pala... [wait=3] sino pala ang dala mong kasama?
+Paciano: Don Justiniano, eto pala si Jose, ang aking nakababatang kapatid.
+Paciano: Gusto ko po siya pag-aralin sa inyo dahil nakita ko naman po na magaling kayo mag-turo noong estyudante mo ako.
+do DialogueStates.spawn_character("JoseRizal", 1)
+do DialogueStates.change_character_position("Paciano", 3)
+do DialogueStates.flip_character("Paciano", false)
+Paciano: Jose, ipapakilala ko pala sayo si Justiniano Cruz, isang magaling na maestro dito sa Binan.
+Paciano: Kumustahin mo.
+do DialogueStates.change_character_position("JoseRizal", 2)
+do DialogueStates.despawn_character("Paciano")
+Jose: Magandang araw po.
+Jose: Ikinalulugod po na makilala ka.
+Justiniano: Ang bait mo naman... [wait=3] Maligayang pagdating dito!
+Tinuruan ni Justiniano sa Jose sa kanilang kubo para mag-aral.
+Hindi rin maiiwasan ni Rizal na makatikim ng maraming palo kay Justiniano.
+ 
 => END

@@ -1,11 +1,16 @@
 ~ this_is_a_node_title
 
+do DialogueStates.spawn_character("JoseRizal", 1)
 Nagbigay ng talumpati si Rizal tungkol sa pagkatatag ng La Liga Filipina.
-Nagtipun-tipon ang mga tao para pakinggan ang kaniyang sasabihin.
+do DialogueStates.spawn_character("JoseRizal", 3)
 Rizal: Mga kababayan, ang ating pagkakaisa at pagtutulungan ang magiging susi sa paglaya ng ating Inang Bayan. 
+do DialogueStates.change_character_position("JoseRizal", true)
 Rizal: Itinatag ko ang La Liga Filipina upang tayo ay magkaisa sa adhikain ng mapayapang reporma.
-Rizal: Hindi ako natatakot sa anumang kapahamakan na maaaring kaharapin. 
+do DialogueStates.change_character_position("JoseRizal", false)
+Rizal: Hindi ako natatakot sa anumang kapahamakan na maaaring kaharapin.
+do DialogueStates.change_character_position("JoseRizal", true) 
 Rizal: Ang mahalaga ay ang ating pagkakaisa at ang walang humpay na paglaban...
+do DialogueStates.change_character_position("JoseRizal", false)
 Rizal: para sa ating mga karapatan.
 
 => END

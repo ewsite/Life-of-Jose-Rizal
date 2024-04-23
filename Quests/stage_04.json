@@ -1,0 +1,103 @@
+{
+	"name": "ANG MAINIT NA SUPORTA NG TAO AT MAINIT NA GALIT NG MGA PRAYLE",
+	"stage_path": "Stage04",
+	"quests": [
+		{
+			"name": "Ang mainit na suporta ng tao",
+			"description": "Pagbaba sa Barko",
+			"target_map": "ManilaPortPres",
+			"target_node": "PortEntranceEntry",
+			"scene_path": "Quest01",
+			"inline": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang mainit na galit ng mga prayle",
+			"description": "Naku po...",
+			"scene_path": "Quest02",
+			"unskippable": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang mainit na galit ng mga prayle",
+			"description": "Pumasok sa loob at kausapin ang Gobernador-Heneral",
+			"target_map": "MalacanangPres",
+			"target_node": "MalacanangEntry",
+			"scene_path": "Quest03",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang mainit na galit ng mga prayle",
+			"description": "Bumalik sa Calamba",
+			"target_map": "MalacanangPres",
+			"target_node": "ManilaPortTPEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Ang mainit na galit ng mga prayle",
+			"description": "Bumalik sa Calamba",
+			"target_map": "ManilaPortPres",
+			"target_node": "CalambaTPEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Planong pag-alis sa Hong Kong",
+			"description": "Bisitahin ang iyong bahay",
+			"target_map": "CalambaPres",
+			"target_node": "BahayRizalEntry",
+			"scene_path": "Quest04",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Planong pag-alis sa Hong Kong",
+			"description": "Bumalik sa Calamba",
+			"target_map": "CalambaPres",
+			"target_node": "ManilaPortTPEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Planong pag-alis sa Hong Kong",
+			"description": "Sumakay sa barko at mag-exile sa Hong Kong",
+			"target_map": "ManilaPortPres",
+			"target_node": "BoatEntry",
+			"scene_path": "Quest05",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Bago Magpatuloy",
+			"unskippable": true,
+			"scene_path": "Activity",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		}
+	]
+}

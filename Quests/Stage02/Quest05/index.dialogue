@@ -1,9 +1,0 @@
-~ this_is_a_node_title
-do DialogueStates.spawn_character("Portrait", 1)
-Jose: Kapatid, saan tayo pupunta?
-Jose: Saan mo ako dadalhin?
-Paciano: Dadalhin muna kita sa Binan para mag-aral.
-Paciano: Doon na rin ako nagaral noon.
-Paciano: Kapag nakapunta na tayo, ipapakilala kita sa aking Maestro na siya'y nagturo sa akin.
-Dinala ni Paciano si Jose sa Binan.
-=> END

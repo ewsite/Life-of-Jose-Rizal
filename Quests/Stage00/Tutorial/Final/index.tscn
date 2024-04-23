@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ihbhhvvh24u1"]
+[gd_scene load_steps=5 format=3 uid="uid://ihbhhvvh24u1"]
 
 [ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="1_l41ed"]
 [ext_resource type="Script" path="res://Quests/Stage00/Tutorial/Final/index.gd" id="2_8as1j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0r2e0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ktrrn"]
 
 [node name="Final" type="Control"]
 layout_mode = 3
@@ -28,6 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "tutorial completed
 good job, player."
+label_settings = SubResource("LabelSettings_0r2e0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -45,6 +50,7 @@ offset_bottom = -22.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "continue in..."
+label_settings = SubResource("LabelSettings_ktrrn")
 horizontal_alignment = 1
 vertical_alignment = 1
 

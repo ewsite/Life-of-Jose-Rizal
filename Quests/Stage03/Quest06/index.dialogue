@@ -1,14 +1,14 @@
 ~ this_is_a_node_title
-Sa unang araw pa lang ay di kanais-nais ang naging impresyon ni Rizal sa Barcelona.
-Jose: Anong hindi kaaya-ayang amoy ito? 
-Jose: Ang bawat hakbang ay tila nagdadala sa akin sa mas malalim na bahagi ng kahirapan ng lungsod na ito.
-Jose: Ang mga eskinitang ito, masikip at madilim, ay puno ng dumi. Ang baho ay nakakasulasok,
-Jose: at ang pakiramdam ng dumi ay tila dumidikit sa aking balat.
-Jose: Ang Barcelona, na inaasahan kong magiging perlas ng aking mga paglalakbay...
-Jose: ay ngayon ay tila isang bangungot na gising. 
-Jose: Walang pakialam ang mga tao, walang ngiti, walang pagbati.
-Jose: Saan ba ako dinala ng aking mga paa? 
-Jose: Ang siyudad na ito, sa unang araw ko pa lamang, ay nagpakita na ng kanyang tunay na mukha...
-Jose: isang mukha na hindi ko inasahan.
+Sa unang araw pa lang ay di kanais-nais ang naging impresyon ni Rizal sa Barcelona.[wait=3][next=auto]
+Jose: Anong hindi kaaya-ayang amoy ito? [wait=3][next=auto]
+Jose: Ang bawat hakbang ay tila nagdadala sa akin sa mas malalim na bahagi ng kahirapan ng lungsod na ito.[wait=3][next=auto]
+Jose: Ang mga eskinitang ito, masikip at madilim, ay puno ng dumi. [wait=1]Ang baho ay nakakasulasok,[wait=3][next=auto]
+Jose: at ang pakiramdam ng dumi ay tila dumidikit sa aking balat.[wait=3][next=auto]
+Jose: Ang Barcelona, na inaasahan kong magiging perlas ng aking mga paglalakbay...[wait=3][next=auto]
+Jose: ay ngayon ay tila isang bangungot na gising. [wait=3][next=auto]
+Jose: Walang pakialam ang mga tao, walang ngiti, walang pagbati.[wait=3][next=auto]
+Jose: Saan ba ako dinala ng aking mga paa? [wait=3][next=auto]
+Jose: Ang siyudad na ito, sa unang araw ko pa lamang, ay nagpakita na ng kanyang tunay na mukha...[wait=3][next=auto]
+Jose: isang mukha na hindi ko inasahan.[wait=3][next=auto]
 
 => END

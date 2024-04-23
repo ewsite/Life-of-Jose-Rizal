@@ -93,15 +93,11 @@ func _enter_tree():
 	add_child(dz_offscreen_marker)
 
 func _ready():
-	DialogueManager.dialogue_ended.connect(dialogue_finished)
 	change_properties()
 		
-func dialogue_finished():
-	Quest.quest_complete()
-	
 func _process(_delta):
 	await get_tree().physics_frame
-	npc_offscreen_marker.enabled = true if scene_file && player_node else false
+	npc_offscreen_marker.enabled = true if (scene_file || dialogue_file) && player_node else false	
 	if Engine.is_editor_hint():
 		change_properties()
 	
@@ -133,20 +129,19 @@ func change_properties():
 func _input(event):
 	if (Engine.is_editor_hint() || not ready_to_interact):
 		return
-	if (event.is_action_pressed("player_interact") && scene_file.length() && not used_for_tutorial):
-		if is_inline_scene:
-			DialogueManager.show_dialogue_balloon(load(dialogue_file))
-		else:
-			BaseGame.load_scene(scene_file)
+	if (event.is_action_pressed("player_interact") && scene_file):
+		BaseGame.load_scene(scene_file)
 
 
 func want_to_interact(body):
 	if (body.name == "Player"):
 		change_properties()
-		if (scene_file):
-			BaseGame.front_ui.show_actions_button("talk")
+		if scene_file:
+			BaseGame.front_ui.show_actions_button("interact")
 			ready_to_interact = true	
 			enter_interact.emit()
+		elif dialogue_file && not DialogueStates.is_dialogue_running:
+			DialogueStates.start(load(dialogue_file), DialogueStates.DIALOGUE_TYPE.INLINE)
 		interact_from = body
 		npc_body.flip_h = true
 

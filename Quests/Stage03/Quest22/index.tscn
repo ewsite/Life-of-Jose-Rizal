@@ -1,0 +1,149 @@
+[gd_scene load_steps=11 format=3 uid="uid://cy61infeo5obu"]
+
+[ext_resource type="Script" path="res://Quests/Stage03/Quest22/index.gd" id="1_alnrk"]
+[ext_resource type="Texture2D" uid="uid://ea5qgpamuoxh" path="res://Assets/Own/Background/ApartmentDark.png" id="2_kcr5e"]
+[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="3_da1d6"]
+[ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
+[ext_resource type="StyleBox" uid="uid://dnjbqijxuu5c6" path="res://UI/Themes/liham.tres" id="5_yo7x2"]
+[ext_resource type="FontFile" uid="uid://byd4o3d8iu4kc" path="res://UI/Assets/Fonts/PixCon.ttf" id="6_vueqh"]
+
+[sub_resource type="Animation" id="Animation_kvf5m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Liham/Liham1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_i0tqo"]
+resource_name = "slide_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Liham/Liham1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p2t85"]
+resource_name = "slide_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Liham/Liham1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cv5e2"]
+_data = {
+"RESET": SubResource("Animation_kvf5m"),
+"slide_1": SubResource("Animation_i0tqo"),
+"slide_2": SubResource("Animation_p2t85")
+}
+
+[node name="NormalDialogue" type="CanvasLayer"]
+script = ExtResource("1_alnrk")
+
+[node name="WackRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01A" type="TextureRect" parent="Slides"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kcr5e")
+expand_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Portraits" type="GridContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 6
+metadata/_edit_lock_ = true
+
+[node name="JoseRizal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(491, 340)
+scale = Vector2(4, 4)
+texture = ExtResource("3_da1d6")
+script = ExtResource("3_m6ai3")
+
+[node name="Liham" type="Node" parent="."]
+
+[node name="Liham1" type="PanelContainer" parent="Liham"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.0
+offset_top = -296.5
+offset_right = 271.0
+offset_bottom = 166.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("5_yo7x2")
+
+[node name="MarginContainer" type="MarginContainer" parent="Liham/Liham1"]
+clip_contents = true
+custom_minimum_size = Vector2(500, 2.315)
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="Liham/Liham1/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.215686, 0.12549, 0.054902, 1)
+theme_override_fonts/font = ExtResource("6_vueqh")
+text = "Professor Ferdinand Blumentritt:
+
+#Nang mabalitaan ko po na pinag-aaralan ninyo ang aming wika, at sa katunayang nakapagpalimbag na ng akda tungkol dito, minabuti ko na padalhan ko kayo ng isang aklat na sinulat galling sa isa naming Pilipino.
+
+Gumagalang,
+Jose Rizal"
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cv5e2")
+}

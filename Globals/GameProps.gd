@@ -16,8 +16,12 @@ const AVAILABLE_INPUT_MAPS = [
 							
 var configs: Dictionary = {
 	"input": {} as Dictionary,
-	"display": {} as Dictionary
+	"display": {} as Dictionary,
+	"gameplay": {} as Dictionary
 }
+
+# Gameplay Props
+var show_offscreen_marker: bool = true
 
 var current_save_path: String
 
@@ -26,6 +30,11 @@ func _init():
 	if not DirAccess.dir_exists_absolute(SAVEBIN_PATH):
 		DirAccess.make_dir_absolute(SAVEBIN_PATH)
 
+
+func is_mobile() -> bool:
+	var os_name: String = OS.get_name()
+	return os_name == "iOS" || os_name == "Android"
+	
 func get_saved_lists() -> Array:
 	var filtered_files: Array = []
 	for file in DirAccess.get_files_at(SAVEBIN_PATH):
@@ -59,7 +68,9 @@ func _ready():
 # ===========================
 func load_game_config() -> void:
 	# Display
-	DisplayServer.window_set_mode(configs.display.fullscreen)
+	
+	show_offscreen_marker = configs.gameplay.get("show_offscreen_marker")
+	DisplayServer.window_set_mode(configs.display.get("fullscreen"))
 	for action in InputMap.get_actions():
 		if (action in AVAILABLE_INPUT_MAPS):
 			InputMap.action_erase_events(action)
@@ -70,6 +81,9 @@ func save_game_config() -> void:
 	var fp: FileAccess = FileAccess.open(GAME_CONFIG_FILENAME, FileAccess.WRITE)
 	for c in AVAILABLE_INPUT_MAPS:
 		configs.input[c] = InputMap.action_get_events(c).back().duplicate()
+	configs.gameplay = {
+		"show_offscreen_marker": show_offscreen_marker
+	}
 	configs.display = {
 		"fullscreen": DisplayServer.window_get_mode()
 	}
@@ -138,6 +152,7 @@ func load_game(filename: String):
 
 func restart_game(reload_quest: bool = true) -> void:
 	GameStats.reset()
+	GameStats.quests_catalog.current_stage = 1
 	save_game()
 
 	if (reload_quest):

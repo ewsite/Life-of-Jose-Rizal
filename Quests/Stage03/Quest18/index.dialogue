@@ -1,0 +1,10 @@
+~ this_is_a_node_title
+Rizal: Maligayang paglalakbay sa akin sa Paris! Isipin mo ang mga posibilidad. [wait=3][next=auto] 
+Rizal: Ang mga kalsada, ang kultura, at ang kaalaman na naghihintay na alamin.[wait=3][next=auto] 
+Dr. Louis de Wecker: Totoo iyan, bata. Pero tandaan, nandito tayo para mag-trabaho. [wait=3][next=auto] 
+Dr. Louis de Wecker: Naghihintay ang aking klinika, at marami tayong pasyente.[wait=3][next=auto] 
+Rizal: Handa ako magsilbi sa iyong klinika.  Anong mga hiwaga ang nag-aabang sa likod ng mga pintuan ng klinika?[wait=3][next=auto] 
+Dr. Louis de Wecker: Mamaya ko na ipaliwanag sa iyo, bata. [wait=3][next=auto] 
+Dr. Louis de Wecker: Malalaman mo naman kung anong mga kaganapan at mga gagawin sa klinika.[wait=3][next=auto] 
+Dr. Louis de Wecker: Halika, pasok tayo![wait=3][next=auto] 
+=> END

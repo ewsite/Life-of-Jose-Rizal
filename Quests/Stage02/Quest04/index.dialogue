@@ -1,9 +1,15 @@
 ~ this_is_a_node_title
-Sa kaniyang unang araw sa Ateneo Municipal de Manila, ay puno ng pag-asa at determinasyon na magtagumpay sa kabila ng mga hamon.[wait=1][next=auto]
-Ngunit sa unang araw rin sa Ateneo Municipal de Manila...[wait=1][next=auto]
-Bagaman huli na sa pagpaparehistro at itinuturing na mahina at maliit para sa kanyang edad.[wait=1][next=auto]
-Sa tingin ni Rizal ay parang nag-iisa lang siya dahil ang mga kasabayan niya ay mga mestizo at marunong magsalita ng wikang Espanyol.[wait=1][next=auto]
-Rizal: Bagong simula ito, bagong hamon. Kahit anong mangyari, sisikapin kong abutin ang aking mga pangarap.[wait=1][next=auto]
+do DialogueStates.change_slide(1)
+
+Sa kaniyang unang araw sa Ateneo Municipal de Manila, ay puno ng pag-asa at determinasyon na magtagumpay sa kabila ng mga hamon.
+Ngunit sa unang araw rin sa Ateneo Municipal de Manila...
+Bagaman huli na sa pagpaparehistro at itinuturing na mahina at maliit para sa kanyang edad.
+Sa tingin ni Rizal ay parang nag-iisa lang siya dahil ang mga kasabayan niya ay mga mestizo at marunong magsalita ng wikang Espanyol.
+do DialogueStates.spawn_character("JoseRizal", 1)
+Rizal: Bagong simula ito, bagong hamon. Kahit anong mangyari...
+do DialogueStates.change_character_position("JoseRizal", 2)
+sisikapin kong abutin ang aking mga pangarap.
+do DialogueStates.despawn_character("JoseRizal")
 Bukod sa gilas na pinakita ni Rizal sa iba’t-ibang larangan, 
 pagkatapos ng pag-aaral sa sekondarya ay nakakuha siya ng pnakamataas na karangalan na “highest honors” sa degree na “bachelor en artes”.
 => END

@@ -18,7 +18,8 @@ var map: bool = true
 var already_played: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	GameProps.reset_player_position_from_map(name)
+	fui.quest_title_label.text = ""
+	fui.quest_description_label.text = ""
 	play_something()
 
 func play_something(skip: bool = false):
@@ -42,6 +43,7 @@ func send_requirement_keypress(keypress: String):
 func hit_sample_quest():
 	fui.quest_title_label.text = "Subukan mo lang"
 	fui.quest_description_label.text = "Lumapit ka kay Mark"
+	npc.scene_file = "res://Quests/Stage00/Tutorial/Final/index.tscn"
 	
 	
 func _input(event):
@@ -50,20 +52,20 @@ func _input(event):
 	
 	if (DisplayServer.is_touchscreen_available()):
 		print(playlists[playlist_index	])
-		if player.velocity.x < 0 && requirement_keypress == "player_left":
+		if player.velocity.x < 0 && requirement_keypress == "player_walk_left":
 			animation_player.play("plop_reset")
 			requirement_keypress = ""
 			play_something()
-		elif player.velocity.x > 0  && requirement_keypress == "player_right":
+		elif player.velocity.x > 0  && requirement_keypress == "player_walk_right":
 			animation_player.play("plop_reset")
 			requirement_keypress = ""
 			play_something()
 			
-		if player.velocity.y < 0 && requirement_keypress == "player_up":
+		if player.velocity.y < 0 && requirement_keypress == "player_walk_up":
 			animation_player.play("plop_reset")
 			requirement_keypress = ""
 			play_something()
-		elif player.velocity.y > 0 && requirement_keypress == "player_down":
+		elif player.velocity.y > 0 && requirement_keypress == "player_walk_down":
 			animation_player.play("plop_reset")
 			requirement_keypress = ""
 			play_something()
@@ -79,12 +81,11 @@ func hit_interact():
 	if (not already_played):
 		play_something(true)
 		already_played = true
-	fui.show_interact_button()
+	fui.show_actions_button("interact")
 	
-	
-	
+
 func unhit_interact():
-	fui.hide_interact_button()
+	fui.hide_actions_button()
 
 func complete():
 	Quest.quest_complete()

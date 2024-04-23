@@ -188,6 +188,9 @@ func _should_auto_pause() -> bool:
 
 	var parsed_text: String = get_parsed_text()
 
+	if visible_characters > parsed_text.length() - 1:
+		return false
+		
 	# Ignore pause characters if they are next to a non-pause character
 	if parsed_text[visible_characters] in skip_pause_at_character_if_followed_by.split():
 		return false

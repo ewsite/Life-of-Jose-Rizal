@@ -34,3 +34,5 @@ position = Vector2(491, 340)
 scale = Vector2(3.28767, 3.28767)
 texture = ExtResource("2_tjvnx")
 script = ExtResource("3_m6ai3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

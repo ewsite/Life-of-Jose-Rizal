@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://buyclaa84t4y2"]
+[gd_scene load_steps=10 format=3 uid="uid://buyclaa84t4y2"]
 
 [ext_resource type="Script" path="res://Scenes/Maps/ManilaPortPres/scene.gd" id="1_3nccf"]
 [ext_resource type="Texture2D" uid="uid://dcxvelod4w1wm" path="res://Assets/Own/Terrain Tilemap R1.png" id="2_pl2ja"]
 [ext_resource type="PackedScene" uid="uid://kfckpaja0ylc" path="res://Characters/main_player.tscn" id="3_gefq2"]
 [ext_resource type="Texture2D" uid="uid://tg4xckspt3se" path="res://Assets/Own/Buildings/Brown Bldg 2 Floor.png" id="4_tp6no"]
 [ext_resource type="Texture2D" uid="uid://dfxj480mm35dp" path="res://Assets/Own/Buildings/Church.png" id="5_h35fp"]
+[ext_resource type="Script" path="res://addons/main_system/Nodes/EntryArea/entry_area.gd" id="6_jk3vf"]
+[ext_resource type="Texture2D" uid="uid://dscalu43c33x7" path="res://Assets/Third Party/NinjaAdventure/Vehicles/Boat.png" id="7_und4x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpyxq"]
 texture = ExtResource("2_pl2ja")
@@ -1041,14 +1043,39 @@ position = Vector2(279, 393)
 
 [node name="Building" type="Node" parent="."]
 
-[node name="NPC" type="Node" parent="."]
-
-[node name="BrownBldg2Floor" type="Sprite2D" parent="."]
+[node name="BrownBldg2Floor" type="Sprite2D" parent="Building"]
 position = Vector2(417, 62)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("4_tp6no")
 
-[node name="Church" type="Sprite2D" parent="."]
+[node name="Church" type="Sprite2D" parent="Building"]
 position = Vector2(801, 24)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("5_h35fp")
+
+[node name="NPC" type="Node" parent="."]
+
+[node name="BoatEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
+position = Vector2(688, 783)
+script = ExtResource("6_jk3vf")
+player_node = NodePath("../../Player")
+
+[node name="PortEntranceEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
+position = Vector2(691, 582)
+script = ExtResource("6_jk3vf")
+player_node = NodePath("../../Player")
+
+[node name="TondoTPEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
+position = Vector2(17, 211)
+script = ExtResource("6_jk3vf")
+player_node = NodePath("../../Player")
+
+[node name="CalambaTPEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
+position = Vector2(1247, 208)
+script = ExtResource("6_jk3vf")
+player_node = NodePath("../../Player")
+
+[node name="Boat" type="Sprite2D" parent="."]
+position = Vector2(692, 870)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("7_und4x")

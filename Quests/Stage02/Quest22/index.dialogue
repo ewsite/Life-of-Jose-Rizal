@@ -1,7 +1,22 @@
 ~ this_is_a_node_title
-Jose: Marahil, ang aking pagnanais na mag-aral sa ibang bansa ay nagdudulot sa akin ng pagkawalang-diwa dito. 
-Jose: Ang pangarap ng mas progresibong edukasyon ay patuloy na umaalingawngaw sa aking isipan.
-Jose: Hindi. [wait=1]Hindi ako magpapatalo sa mga pagsubok na ito. [wait=0.5]Ang bawat hamon ay magiging hakbang patungo sa aking paglago. 
-Jose: Ako ay mag-aaral,[wait=0.5] hindi lamang para sa mga grado, [wait=0.5]kundi para sa aking layunin at misyon sa buhay.
+do DialogueStates.spawn_character("JoseRizal", 1)
+Jose: Marahil, [wait=0.5][do DialogueStates.change_character_position("JoseRizal", 2)]ang aking pagnanais na mag-aral sa ibang bansa ay [do DialogueStates.change_character_position("JoseRizal", 3)]nagdudulot sa akin ng pagkawalang-diwa dito. 
+do DialogueStates.change_character_position("JoseRizal", 5)
+do DialogueStates.flip_character("JoseRizal", true)
+do DialogueStates.change_slide(1)
+Jose: Ang pangarap ng mas progresibong edukasyon ay patuloy na [wait=0.3]umaalingawngaw sa aking [wait=1][do DialogueStates.change_character_position("JoseRizal", 3)]isipan.
+do DialogueStates.change_character_position("JoseRizal", 1)
+do DialogueStates.flip_character("JoseRizal", false)
+do DialogueStates.change_slide(2)
+Jose: Hindi. [wait=1][do DialogueStates.change_character_position("JoseRizal", 6)][do DialogueStates.flip_character("JoseRizal", true)]Hindi ako magpapatalo sa mga pagsubok na ito.
+do DialogueStates.change_character_position("JoseRizal", 2)
+do DialogueStates.flip_character("JoseRizal", false)
+Jose: Ang bawat hamon ay magiging hakbang patungo sa aking paglago. 
+do DialogueStates.change_character_position("JoseRizal", 4)
+do DialogueStates.flip_character("JoseRizal", true)
+Jose: Ako ay mag-aaral,[wait=0.5] hindi lamang para sa mga grado, 
+do DialogueStates.change_character_position("JoseRizal", 3)
+Jose: [wait=0.5]kundi para sa aking layunin at misyon sa buhay.
+do DialogueStates.flip_character("JoseRizal", false)
 Sa madaling salita, nagpasiya si Rizal na mag-aral na lang sa ibang bansa.
 => END

@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://cy61infeo5obu"]
+
+[ext_resource type="Script" path="res://Quests/Stage04/Quest03/index.gd" id="1_alnrk"]
+[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="2_6pl8a"]
+[ext_resource type="Texture2D" uid="uid://ccj2smwjw1j2t" path="res://Quests/Stage01/Quest02/Cuts/TokinoSora.png" id="2_s266b"]
+[ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
+[ext_resource type="Texture2D" uid="uid://ndyjuyihbxbg" path="res://Assets/Own/Portraits/HeneralEmilioTerrero.png" id="5_xfima"]
+
+[sub_resource type="Animation" id="Animation_tfi8m"]
+resource_name = "slide_1"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_veiem"]
+_data = {
+"slide_1": SubResource("Animation_tfi8m")
+}
+
+[node name="NormalDialogue" type="CanvasLayer"]
+script = ExtResource("1_alnrk")
+
+[node name="WackRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01B" type="TextureRect" parent="Slides"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s266b")
+expand_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Portraits" type="GridContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 6
+metadata/_edit_lock_ = true
+
+[node name="JoseRizal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(309, 360)
+scale = Vector2(1.05417, 1.05417)
+texture = ExtResource("2_6pl8a")
+script = ExtResource("3_m6ai3")
+
+[node name="Heneral" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(1025, 347)
+scale = Vector2(1.07784, 1.07784)
+texture = ExtResource("5_xfima")
+flip_h = true
+script = ExtResource("3_m6ai3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_veiem")
+}

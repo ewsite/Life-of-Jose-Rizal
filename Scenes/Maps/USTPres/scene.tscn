@@ -362,30 +362,37 @@ position = Vector2(287, 29)
 
 [node name="NPC" type="Node" parent="."]
 
-[node name="USTEntry" type="Area2D" parent="NPC"]
+[node name="USTEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
 position = Vector2(743, 400)
 script = ExtResource("4_clnp3")
+player_node = NodePath("../../Player")
 
-[node name="Inline1Entry" type="Area2D" parent="NPC"]
+[node name="Inline1Entry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
 position = Vector2(287, 210)
 script = ExtResource("4_clnp3")
+player_node = NodePath("../../Player")
 
-[node name="Inline2Entry" type="Area2D" parent="NPC"]
+[node name="Inline2Entry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
 position = Vector2(289, 395)
 script = ExtResource("4_clnp3")
+player_node = NodePath("../../Player")
 
-[node name="ManilaTPEntry" type="Area2D" parent="NPC"]
+[node name="ManilaTPEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
 position = Vector2(18, 399)
 script = ExtResource("4_clnp3")
+player_node = NodePath("../../Player")
 
-[node name="USTGCardEntry" type="Area2D" parent="NPC"]
+[node name="USTGCardEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
 position = Vector2(1055, 188)
 script = ExtResource("4_clnp3")
+player_node = NodePath("../../Player")
 
-[node name="PT1Entry" type="Area2D" parent="NPC"]
+[node name="PT1Entry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
 position = Vector2(1058, 634)
 script = ExtResource("4_clnp3")
+player_node = NodePath("../../Player")
 
-[node name="CalambaTPEntry" type="Area2D" parent="NPC"]
+[node name="CalambaTPEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
 position = Vector2(286, -13)
 script = ExtResource("4_clnp3")
+player_node = NodePath("../../Player")

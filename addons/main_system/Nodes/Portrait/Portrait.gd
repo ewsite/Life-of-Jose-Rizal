@@ -36,7 +36,6 @@ func _init():
 func _ready():
 	if (Engine.is_editor_hint()):
 		return
-	tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 	var gd_texture = preload("PortraitPlaceholder.png")
 	
 	print(gd_texture) 
@@ -74,6 +73,7 @@ func spawn(character_name: String, character_position: int):
 		modulate = Color(1, 1, 1, 0)
 		offset.y = 50
 		first_animate = false
+		tween = create_tween().set_trans(Tween.TRANS_CUBIC)
 		tween.parallel().tween_property(self, "offset", Vector2(offset.x, 0), 0.5)
 		tween.parallel().tween_property(self, "modulate", Color(1, 1, 1, 1), 0.5)
 

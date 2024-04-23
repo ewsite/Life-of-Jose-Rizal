@@ -34,19 +34,20 @@ func load_scene(scene_file: String, loading_type: LOADING_TYPE = LOADING_TYPE.FA
 	
 	var transition_scene = _load_loading_transition_overlay(loading_type)
 
+
 	front_ui.reset()
 	game_over_ui.hide()	
 	
 	# Let's add a delay just for you motherfuckers
 	ResourceLoader.load_threaded_request(scene_file)
 	
+	# Wait for transition overlay to animate in before changing scene on background
 	await transition_scene.loading_initialized
 	
-	if (current_scene):
+	if current_scene:
 		current_scene.queue_free()
 		current_scene = null
 		
-	print("Done bitch")
 	while not on_ready:
 		var scene_load_status = ResourceLoader.load_threaded_get_status(scene_file)
 		match scene_load_status:

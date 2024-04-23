@@ -4,9 +4,11 @@
 	"quests": [
 		{
 			"name": "Pagbaba sa Barko...",
-			"description": "Pagbaba sa Barko",
-			"unskippable": true,
+			"description": "Lumabas sa Barko",
+			"target_map": "ManilaPortPres",
+			"target_node": "PortEntranceEntry",
 			"scene_path": "Quest01",
+			"inline": true,
 			"rewards": {
 				"points": 0,
 				"health": 0
@@ -38,7 +40,7 @@
 		{
 			"name": "Ang Pagtatag ng La Liga FIlipina",
 			"description": "Pumunta sa Bahay sa Tondo",
-			"target_map": "Tondo",
+			"target_map": "TondoPres",
 			"target_node": "TondoBahayEntry",
 			"scene_path": "Quest04",
 			"rewards": {
@@ -80,7 +82,7 @@
 			"name": "Pagtapon sa Dapitan",
 			"description": "Pumunta sa Pansamantalang Bahay",
 			"target_map": "DapitanPres",
-			"target_node": "TempHouseEntry",
+			"target_node": "DapitanHouseEntry",
 			"scene_path": "Quest08",
 			"rewards": {
 				"points": 200,
@@ -90,7 +92,7 @@
 		{
 			"name": "Ang Huling Pag-ibig",
 			"description": "Lumapit ka sa isang babae...",
-			"target_map": "DapitanPres",
+			"target_map": "DapitanHousePres",
 			"target_node": "Josephine",
 			"scene_path": "Quest09",
 			"rewards": {
@@ -101,7 +103,7 @@
 		{
 			"name": "Ang Huling Pag-ibig",
 			"description": "Suriin si Taufer",
-			"target_map": "DapitanHouseEntry",
+			"target_map": "DapitanHousePres",
 			"target_node": "Taufer",
 			"scene_path": "Quest10",
 			"rewards": {
@@ -112,7 +114,7 @@
 		{
 			"name": "Ang Huling Pag-ibig",
 			"description": "Sabihin agad ang nararamdaman mo.",
-			"target_map": "Dapitan",
+			"target_map": "DapitanHousePres",
 			"target_node": "Josephine",
 			"scene_path": "Quest11",
 			"rewards": {
@@ -122,9 +124,9 @@
 		},
 		{
 			"name": "Boluntaryo sa Cuba",
-			"description": "Sumakay ka sa barko",
-			"target_map": "Dapitan",
-			"target_node": "MVIslaEntry",
+			"description": "Pumunta ka dito...",
+			"target_map": "DapitanPres",
+			"target_node": "UnknownTPEntry",
 			"scene_path": "Quest12",
 			"rewards": {
 				"points": 0,
@@ -143,7 +145,7 @@
 		{
 			"name": "Pagkulong sa Fort Santiago",
 			"description": "Kausapin ang gwardya",
-			"target_map": "FortSantiago",
+			"target_map": "FortSantiagoPres",
 			"target_node": "Guard",
 			"scene_path": "Quest14",
 			"rewards": {
@@ -154,7 +156,7 @@
 		{
 			"name": "Pagkulong sa Fort Santiago",
 			"description": "Kausapin ang abogado",
-			"target_map": "FortSantiago",
+			"target_map": "FortSantiagoPres",
 			"target_node": "LuisTaviel",
 			"scene_path": "Quest15",
 			"rewards": {
@@ -165,19 +167,8 @@
 		{
 			"name": "Pagkulong sa Fort Santiago",
 			"description": "Lumabas sa Kulungan at Pumunta sa Korte",
-			"target_map": "FortSantiago",
-			"target_node": "COurtEntry",
-			"force_complete": true,
-			"rewards": {
-				"points": 400,
-				"health": 0
-			}
-		},
-		{
-			"name": "Paglilitis at Hatol",
-			"description": "Harapin mo",
-			"target_map": "FortSantiago",
-			"target_node": "CourtEntry2",
+			"target_map": "FortSantiagoPres",
+			"target_node": "CourtEntry",
 			"scene_path": "Quest16",
 			"rewards": {
 				"points": 400,
@@ -186,24 +177,12 @@
 		},
 		{
 			"name": "Bago Magpatuloy",
-			"description": "Kausapin si Kapitan",
-			"target_map": "FortSantiago",
-			"target_node": "Captain",
-			"scene_path": "Assessment",
-			"rewards": {
-				"points": 400,
-				"health": 0
-			}
-		},
-		{
-			"name": "Pagwawakas",
 			"unskippable": true,
-			"scene_path": "Quest17",
+			"scene_path": "Activity2",
 			"rewards": {
 				"points": 400,
 				"health": 0
 			}
 		}
-		
 	]
 }
