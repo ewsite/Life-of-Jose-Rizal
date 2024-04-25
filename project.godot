@@ -25,6 +25,7 @@ Quest="*res://Globals/Quest.gd"
 BaseGame="*res://Globals/BaseGame.gd"
 DialogueStates="*res://Globals/DialogueStates.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Trivia="*res://Globals/Trivia.gd"
 
 [dialogue_manager]
 

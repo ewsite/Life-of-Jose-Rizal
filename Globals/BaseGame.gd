@@ -43,6 +43,7 @@ func load_scene(scene_file: String, loading_type: LOADING_TYPE = LOADING_TYPE.FA
 	
 	# Wait for transition overlay to animate in before changing scene on background
 	await transition_scene.loading_initialized
+	Trivia.stop_trivia()	
 	
 	if current_scene:
 		current_scene.queue_free()
@@ -67,21 +68,25 @@ func load_scene(scene_file: String, loading_type: LOADING_TYPE = LOADING_TYPE.FA
 func set_game_props_process(scene_type: SCENE_TYPE) -> void:
 	match scene_type:
 		SCENE_TYPE.MAP:
+			Trivia.show_trivia_visibility()
 			pause_ui.hide()
 			front_ui.show_panel()
 			pause_ui.process_mode = Node.PROCESS_MODE_ALWAYS
 			GameStats.current_scene_map = true
 			GameStats.current_map_name = current_scene.name
 		SCENE_TYPE.ASSESSMENT:
+			Trivia.hide_trivia_visibility()
 			pause_ui.hide()
 			front_ui.show_panel()
 			front_ui.deactivate_actions_ui()
 			pause_ui.process_mode = Node.PROCESS_MODE_ALWAYS
 		SCENE_TYPE.UI:
+			Trivia.hide_trivia_visibility()
 			pause_ui.hide()
 			front_ui.hide_panel()
 			pause_ui.process_mode = Node.PROCESS_MODE_DISABLED
 		SCENE_TYPE.DIALOGUE:
+			Trivia.hide_trivia_visibility()
 			pause_ui.hide()
 			front_ui.hide_panel()
 			pause_ui.process_mode = Node.PROCESS_MODE_DISABLED
