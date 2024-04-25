@@ -1,0 +1,110 @@
+[gd_scene load_steps=10 format=3 uid="uid://cy61infeo5obu"]
+
+[ext_resource type="Script" path="res://Quests/Stage05/Quest05/index.gd" id="1_alnrk"]
+[ext_resource type="Texture2D" uid="uid://bj4h0o0l0pv4f" path="res://Assets/Own/Background/BritishMuseum.png" id="2_3htmy"]
+[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="3_c8yfh"]
+[ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
+[ext_resource type="Texture2D" uid="uid://coykvrh0u3av7" path="res://Assets/Own/Portraits/ReinoldRost.png" id="5_klujo"]
+[ext_resource type="Texture2D" uid="uid://bfdimes0mc537" path="res://Assets/Own/Portraits/AntonioDeMorga.png" id="6_bjerc"]
+
+[sub_resource type="Animation" id="Animation_idp2j"]
+resource_name = "slide_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_moviq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tbvx7"]
+_data = {
+"RESET": SubResource("Animation_moviq"),
+"slide_1": SubResource("Animation_idp2j")
+}
+
+[node name="NormalDialogue" type="CanvasLayer"]
+script = ExtResource("1_alnrk")
+
+[node name="WackRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01A" type="TextureRect" parent="Slides"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3htmy")
+expand_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Portraits" type="GridContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 6
+metadata/_edit_lock_ = true
+
+[node name="JoseRizal" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(289, 388)
+scale = Vector2(1.05417, 1.05417)
+texture = ExtResource("3_c8yfh")
+script = ExtResource("3_m6ai3")
+
+[node name="ReinholdRost" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(1169, 368)
+scale = Vector2(1.43141, 1.43141)
+texture = ExtResource("5_klujo")
+flip_h = true
+script = ExtResource("3_m6ai3")
+
+[node name="AntonioDeMorga" type="Sprite2D" parent="Portraits"]
+unique_name_in_owner = true
+position = Vector2(1265, 400)
+scale = Vector2(1.43141, 1.43141)
+texture = ExtResource("6_bjerc")
+flip_h = true
+script = ExtResource("3_m6ai3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tbvx7")
+}

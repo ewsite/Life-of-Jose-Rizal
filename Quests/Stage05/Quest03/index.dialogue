@@ -1,0 +1,14 @@
+~ this_is_a_node_title
+Pumasok muna sa Rizal sa isang bahay na tinitirahan ng kaniyang susunod na umibig sa kanya na si O-sei-san.
+Kahit saglit lang ang pagmamahalan sa isa't-isa ay tatak na tatak sa isipan at puso ni Rizal.
+do DialogueStates.spawn_character("JoseRizal", 1)
+do DialogueStates.spawn_character("OSeiSan", 5)
+Jose: salamat sa dahil nakilala kita, ikaw lamang ang babaeng nag mahal sakin ng ganito
+O-Sei-San: (sabay ngiti) malaki rin ang pasasalamat ko at ikaw ay dumating sa buhay ko 
+do DialogueStates.change_character_position("JoseRizal", 2)
+Jose: taglay mo ang lahat ng kulay ng kamelyas at ikaw lang ang babaeng hindi ko makakalimutan ang larawan
+O-Sei-San: maraming salamat sa papuring sinasabit ng iyong mga labi tunay nga talagang nakakapag patibok ito ng puso
+do DialogueStates.change_character_position("JoseRizal", 1)
+Jose: ngunit akoy may mga kailangan pang gawin sa aking bansa kung kayat akoy mag iiwan muna
+Jose: SAYONARA.
+=> END

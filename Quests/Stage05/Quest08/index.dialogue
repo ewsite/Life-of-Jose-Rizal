@@ -1,0 +1,13 @@
+~ this_is_a_node_title
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("JoseRizal", 2)
+Naging aktibo si Rizal sa La Solidaridad...
+Ang La Solidaridad ay isang pahayagang propagandistang inilalabas ng mga Filipino sa Espana...
+Sa imbitasyon ni Graciano López Jaena ang una nitong editor at kahuntahan niya sa España,
+do DialogueStates.change_slide(2)
+Nagsulat si Rizal na ang karaniwang tema ng mga artikulo ay ang pagtatanggol sa kultura at pagkatao ng Pilipino laban sa pang aalipusta ng mga mamamahayag ng espanyol. 
+Nagsulat si Rizal tungkol sa karapatan na dapat sana'y tinatamasa ng mga Filipino....
+Bilang lehitimong mamamayan ng España na nagbabayad ng buwis at nagbibigay serbisyo
+isa rito ang sikat na liham sa mga babae ng Malolos na pinapurihan niya sa kanilang pakikipaglaban upang bigyan ng pagkakataong makapag aral ng wikang espanyol.
+
+=> END

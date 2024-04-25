@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c0533h22c3is"]
 
-[ext_resource type="Script" path="res://Scenes/Cheats/cheats.gd" id="1_0hndh"]
+[ext_resource type="Script" path="res://Scenes/cheats.gd" id="1_gkd7h"]
 [ext_resource type="Script" path="res://Scenes/Cheats/DeveloperConsoleWindow.gd" id="1_pm3ri"]
 [ext_resource type="Script" path="res://Scenes/Cheats/QuestListWindow.gd" id="2_qw7wf"]
 [ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="3_0nxi3"]
@@ -9,7 +9,7 @@
 [node name="Cheats" type="CanvasLayer"]
 process_mode = 3
 layer = 128
-script = ExtResource("1_0hndh")
+script = ExtResource("1_gkd7h")
 
 [node name="CheatsContainer" type="Control" parent="."]
 layout_mode = 3

@@ -1,0 +1,258 @@
+{
+	"name": "Ang Muling Pag-alis",
+	"stage_path": "Stage05",
+	"quests": [
+		{
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"unskippable": true,
+			"scene_path": "Quest01",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Maglibot muna",
+			"target_map": "JapanPres",
+			"target_node": "Inline1Entry",
+			"inline": true,
+			"scene_path": "Quest02",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Kumustahin si O-sei-san sa isang bahay",
+			"target_map": "JapanPres",
+			"target_node": "OSeiSanHouseEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Kumustahin si O-sei-san",
+			"target_map": "OSeiSanHousePres",
+			"target_node": "OSeiSan",
+			"scene_path": "Quest03",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Continuation...",
+            "unskippable": true,
+			"scene_path": "Quest04",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+        {
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Bumisita sa Museo ng London",
+			"target_map": "LondonPres",
+			"target_node": "LondonMuseumEntry",
+			"scene_path": "Quest05",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Pumunta sa Paris",
+			"target_map": "LondonPres",
+			"target_node": "ParisTPEntry",
+			"scene_path": "Quest06",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Patungo sa Liwanag ng Daong at Daigdig",
+			"description": "Magpalimbag ng Libro",
+			"target_map": "ParisPres",
+			"target_node": "LimbagEntry",
+			"scene_path": "Quest07",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "La Solidaridad",
+			"description": "Sumali sa isang samahan ng mga Pilipino",
+			"target_map": "BarcelonaPres",
+			"target_node": "LaSolidaridadEntry",
+			"scene_path": "Quest08",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Balita sa Calamba",
+			"description": "May dumating na liham sa tinitirahan mo...",
+			"target_map": "BarcelonaPres",
+			"target_node": "TempHouseEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Balita sa Calamba",
+			"description": "Basahin ang liham sa lamesa",
+			"target_map": "BarcelonaHousePres",
+			"target_node": "ChairEntry",
+            "scene_path": "Quest09",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Balita sa Calamba",
+			"description": "Basahin ang liham sa lamesa",
+            "unskippable": true,
+			"scene_path": "Quest10",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Balita sa Calamba",
+			"description": "Basahin ang liham sa lamesa",
+            "unskippable": true,
+			"scene_path": "Quest11",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Balita sa Calamba",
+			"description": "Ang pinakamasakit na natanggap ni Rizal galing sa liham ni Leonor",
+            "unskippable": true,
+			"scene_path": "Quest12",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		},
+        {
+			"name": "Sa Biarritz",
+			"description": "Pumunta muna sa bahay ng mga Boustead",
+            "target_map": "BarcelonaPres",
+			"target_node": "BiarritzTPEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Sa Biarritz, Boustead at Antonio Luna",
+			"description": "Pumunta muna sa bahay ng mga Boustead",
+            "target_map": "BiarritzPres",
+			"target_node": "BousteadHouseEntry",
+            "scene_path": "Quest13",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		}, 
+        {
+			"name": "Sa Biarritz, Boustead at Antonio Luna",
+			"description": "May problema",
+            "unskippable": true,
+            "scene_path": "Quest14",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		}, 
+        {
+			"name": "Sa Biarritz, Boustead at Antonio Luna",
+			"description": "May problema",
+            "unskippable": true,
+            "scene_path": "Quest15",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		}, 
+        {
+			"name": "Sa Biarritz, Boustead at Antonio Luna",
+			"description": "May problema",
+            "unskippable": true,
+            "scene_path": "Quest16",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		}, 
+        {
+			"name": "Sa Ghent at Pangalawang Nobela",
+			"description": "Pumunta sa Belgium",
+            "target_map": "BiarritzPres",
+			"target_node": "GhentTPEntry",
+			"force_complete": true,
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		}, 
+        {
+			"name": "Sa Ghent at Pangalawang Nobela",
+			"description": "Ipagpatuloy ang adhikain....",
+            "unskippable": true,
+            "scene_path": "Quest17",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Sa Ghent at Pangalawang Nobela",
+			"description": "Ipagpatuloy ang adhikain....",
+            "unskippable": true,
+            "scene_path": "Quest18",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+        {
+			"name": "Sa Ghent at Pangalawang Nobela",
+			"description": "Umuwi muna sa Hong Kong",
+            "unskippable": true,
+            "scene_path": "Quest19",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		}, 
+        {
+			"name": "La Liga Filipina",
+			"description": "La Liga Filipina",
+            "unskippable": true,
+            "scene_path": "Quest20",
+			"rewards": {
+				"points": 400,
+				"health": 0
+			}
+		}
+	]
+}

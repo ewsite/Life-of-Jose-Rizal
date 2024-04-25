@@ -1,0 +1,10 @@
+~ this_is_a_node_title
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("JoseRizal", 2)
+Sa tulong ng liham ni Blumentritt ay nabigyan si Rizal ng pahintulot sa [do DialogueStates.spawn_character("ReinholdRost", 5)]British Museum galing kay Reinhold Rost.
+do DialogueStates.despawn_character("ReinholdRost")
+Pagkatapos maglibot sa Museo ay nahanap niya ang libro na pinamagatang "Sucesos de las Islas Filipinas".
+do DialogueStates.spawn_character("AntonioDeMorga", 5)
+ang libro na ito ay isinulat ni Antonio de Morga at ang nilalaman nito ay tungkol sa "kasaysayan sa Pilipinas".
+
+=> END

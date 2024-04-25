@@ -1,0 +1,50 @@
+~ this_is_a_node_titled
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("JoseRizal", 2)
+May dumating na balita ukol sa resulta ng demanda.
+
+do DialogueStates.change_slide(2)
+(Sulat)
+do DialogueStates.change_slide(3)
+do DialogueStates.change_character_position("JoseRizal", 1)
+Jose: Hindi ako makapiwala sa sinapit ng aking mga kababayan sa Calamba.
+Jose: Hindi panatag ang loob ko na tama ang desisyon ng korte sa kanila.
+Jose: Hindi panatag ang loob ko na sa akin lahat ang dahilan ng kanilang paglayas, at pagmamalupit sa kanila.
+Jose: Ito ba ay dahil sa aking pinaglalaban para sa aking bayan?
+Jose: Ito ba sa aking sinulat na nobela?
+do DialogueStates.change_character_position("JoseRizal", 2)
+Jose: O sa dalawang nabanggit ko?
+
+Nagsulat si Rizal kay Professor Blumentritt para balitaan ang nangyari sa Calamba.
+do DialogueStates.change_character_position("JoseRizal", 1)
+do DialogueStates.change_slide(4)
+(Sulat)
+do DialogueStates.change_slide(5)
+do DialogueStates.change_character_position("JoseRizal", 2)
+Jose: Sinulat ko ang aking liham kay Professor Blumentritt dahil gusto ko malaman niya ang...[wait=3][next=auto]
+do DialogueStates.change_character_position("JoseRizal", 1)
+do DialogueStates.emote_character("JoseRizal", "buzz")
+Jose: ???? [wait=3][next=auto]
+do DialogueStates.change_slide(6)
+(Sulat)
+do DialogueStates.change_slide(7)
+do DialogueStates.change_character_position("JoseRizal", 2)
+Jose: Sa dinami-dami ang kaniyang problema ay ito na ang pinakamabigat sa lahat.
+do DialogueStates.change_character_position("JoseRizal", 3)
+Jose: Sunod-sunod na ang aking problema na natatanggap ko habang ako'y namamalagi sa ibayong dagat.
+do DialogueStates.change_character_position("JoseRizal", 4)
+Jose: Sa loob ng 11 na taon ng aming pag-sasama ay napakasakit isipin na magugulat ka nalang ma meron siyang iba.
+do DialogueStates.change_character_position("JoseRizal", 2)
+do DialogueStates.change_slide(8)
+Jose: Sa dinami-dami ko ng liham na pinadala na nuot sa puso ko ay balewala lang?
+Jose: Sa dulo ng aming pag-sasama ay ang ibabalita sa iyo na magpapakasal na sa isang ingles na ang pangalan ay KIPPING?
+Jose: Tapos naman ang bagyo.
+Jose: Sisikat na araw.....
+Jose: Ang lahat-lahat ay.....
+do DialogueStates.change_slide(9)
+Jose: Nawala na ang lahat sa amin 
+Jose: Nawala na ang lahat sa akin.
+
+Kasabay ng kaniyang pagkalungkot ay binalita na rin kay Professor Blumentritt ang mga nangyari.
+
+=> END

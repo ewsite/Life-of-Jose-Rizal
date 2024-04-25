@@ -1,0 +1,32 @@
+~ this_is_a_node_title
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("JoseRizal", 2)
+Pumunta muna si Rizal sa isang limbagan ng libro para magpalimbag
+Bakit magpapalimbag?
+Sinulat niya ang buong nilalaman ng libro na nahanap niya sa British Museum.
+Gustung-gusto baguhin ni Rizal na baguhin ang nakasulat sa libro....
+Dahil gusto ni Rizal na pabulaanan ang paratang na nakasulat sa libro ni Antonio de Morga na walang sibilisasyon ang Pilipinas bago sakupin ng Espanyol.
+
+do DialogueStates.change_slide(2)
+do DialogueStates.change_character_position("JoseRizal", 3)
+do DialogueStates.emote_character("JoseRizal", "buzz")
+Jose: Ano ba ang mga nakikita ko sa libro?
+Jose: Ang librong ito ay parang hindi napag-isipan...
+Jose: o napag-aralan nang maayos...
+do DialogueStates.change_character_position("JoseRizal", 2)
+do DialogueStates.emote_character("JoseRizal", "buzz")
+Jose: Ang librong ito ay isang munting halimbawa ng malaking kasinungalingan!!!
+do DialogueStates.change_character_position("JoseRizal", 4)
+do DialogueStates.flip_character("JoseRizal", true)
+do DialogueStates.emote_character("JoseRizal", "buzz")
+Jose: Isang malaking kahihiyan sa ating mga Pilipino kung may makakabasa ng aklat na ito.
+Jose: Kokopyahin ko lahat ng nilalaman ng librong ito kasabay ng aking sanaysay ayon sa aking nalalaman ayon sa katotohanan.
+do DialogueStates.change_character_position("JoseRizal", 2)
+do DialogueStates.flip_character("JoseRizal", false)
+do DialogueStates.spawn_character("AntonioMariaRegidor", 5)
+Sinubukan 'rin niya magpalimbag ng kaniyang nakopyang aklat sa London sa tulong na 'rin ng kaniyang kababayan ni si Antonio Maria Regidor......
+ngunit [do DialogueStates.flip_character("AntonioMariaRegidor", true)]hindi natuloy[do DialogueStates.flip_character("AntonioMariaRegidor", false)] dahil hindi [do DialogueStates.flip_character("AntonioMariaRegidor", true)]natupad ang usapan.
+do DialogueStates.despawn_character("AntonioMariaRegidor")
+do DialogueStates.change_slide(3)
+Kaya sa Paris nalang nagpalimbag dahil mura.
+=> END
