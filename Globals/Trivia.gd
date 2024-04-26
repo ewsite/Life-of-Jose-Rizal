@@ -17,7 +17,7 @@ func _init():
 		else:
 			_trivia.push_back(JSON.parse_string(fp.get_as_text()))
 	
-	BaseGame.overlay_ui.add_child(_TRIVIA_NODE)
+	BaseGame.ui.add_child(_TRIVIA_NODE)
 
 func _ready():
 	Quest.quest_updated.connect(show_next_trivia)
@@ -51,6 +51,8 @@ func show_next_trivia(quest: Dictionary):
 		var magic_number = randi_range(0, filtered_trivia.size() - 1)
 		_TRIVIA_NODE.fire(filtered_trivia[magic_number].description)
 	else:
+		if trivias.size() == 0:
+			return
 		var magic_number = randi_range(0, trivias.size() - 1)
 		_TRIVIA_NODE.fire(trivias[magic_number].description)
 	

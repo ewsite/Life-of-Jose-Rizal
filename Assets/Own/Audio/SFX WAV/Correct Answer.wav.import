@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c0eokcv3gckcc"
+path="res://.godot/imported/Correct Answer.wav-1478a034fcbcc1caba7838e710bc5137.sample"
+
+[deps]
+
+source_file="res://Assets/Own/Audio/SFX WAV/Correct Answer.wav"
+dest_files=["res://.godot/imported/Correct Answer.wav-1478a034fcbcc1caba7838e710bc5137.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

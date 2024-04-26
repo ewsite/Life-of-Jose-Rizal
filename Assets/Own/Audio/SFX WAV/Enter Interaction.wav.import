@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8lbwc4a8cujy"
+path="res://.godot/imported/Enter Interaction.wav-d3ef792a15456985d60d9dc1b64bfe1d.sample"
+
+[deps]
+
+source_file="res://Assets/Own/Audio/SFX WAV/Enter Interaction.wav"
+dest_files=["res://.godot/imported/Enter Interaction.wav-d3ef792a15456985d60d9dc1b64bfe1d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

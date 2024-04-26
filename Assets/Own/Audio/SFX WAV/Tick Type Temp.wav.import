@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfw7b588p71ya"
+path="res://.godot/imported/Tick Type Temp.wav-1ef82ba53a060b8f6e927f5f3aaffb5d.sample"
+
+[deps]
+
+source_file="res://Assets/Own/Audio/SFX WAV/Tick Type Temp.wav"
+dest_files=["res://.godot/imported/Tick Type Temp.wav-1ef82ba53a060b8f6e927f5f3aaffb5d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

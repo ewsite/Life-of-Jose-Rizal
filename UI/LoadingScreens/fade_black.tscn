@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cd1pip6ysks6w"]
+[gd_scene load_steps=7 format=3 uid="uid://cd1pip6ysks6w"]
 
 [ext_resource type="Script" path="res://UI/LoadingScreens/fade_black.gd" id="1_qfl4n"]
+[ext_resource type="AudioStream" uid="uid://c8lbwc4a8cujy" path="res://Assets/Own/Audio/SFX WAV/Enter Interaction.wav" id="2_8wn7q"]
 
 [sub_resource type="Animation" id="Animation_275qb"]
 length = 0.001
@@ -72,3 +73,8 @@ color = Color(0, 0, 0, 1)
 libraries = {
 "": SubResource("AnimationLibrary_m6lqt")
 }
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_8wn7q")
+autoplay = true
+bus = &"Transition"

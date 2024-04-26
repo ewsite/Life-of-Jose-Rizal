@@ -699,6 +699,11 @@ position = Vector2(530, 366)
 script = ExtResource("11_awrer")
 player_node = NodePath("../../Player")
 
+[node name="LimbagEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
+position = Vector2(1046, 604)
+script = ExtResource("11_awrer")
+player_node = NodePath("../../Player")
+
 [node name="HeidelbergTPEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
 position = Vector2(136, 720)
 script = ExtResource("11_awrer")

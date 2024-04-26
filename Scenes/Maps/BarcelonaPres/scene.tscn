@@ -583,3 +583,13 @@ player_node = NodePath("../../Player")
 position = Vector2(688, 776)
 script = ExtResource("9_rnb75")
 player_node = NodePath("../../Player")
+
+[node name="LaSolidaridadEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
+position = Vector2(1088, 728)
+script = ExtResource("9_rnb75")
+player_node = NodePath("../../Player")
+
+[node name="BiarritzTPEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
+position = Vector2(16, 760)
+script = ExtResource("9_rnb75")
+player_node = NodePath("../../Player")
