@@ -1,26 +1,11 @@
 [gd_scene load_steps=18 format=3 uid="uid://cfchhfo2d4b33"]
 
-[ext_resource type="Script" path="res://Quests/Stage05/Quest10B/index.gd" id="1_tqhhj"]
+[ext_resource type="Script" path="res://Quests/Stage05/Quest12/index.gd" id="1_tqhhj"]
 [ext_resource type="Texture2D" uid="uid://ea5qgpamuoxh" path="res://Assets/Own/Background/ApartmentDark.png" id="2_gc08s"]
 [ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="3_f2lfm"]
 [ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="4_fsxs2"]
 [ext_resource type="StyleBox" uid="uid://dnjbqijxuu5c6" path="res://UI/Themes/liham.tres" id="5_yjkg3"]
 [ext_resource type="FontFile" uid="uid://byd4o3d8iu4kc" path="res://UI/Assets/Fonts/PixCon.ttf" id="6_osbiy"]
-
-[sub_resource type="Animation" id="Animation_f3rvq"]
-resource_name = "slide_1"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Slides/Slide01A:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_6wc6v"]
 length = 0.001
@@ -71,6 +56,21 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_f3rvq"]
+resource_name = "slide_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slides/Slide01A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_bsnkl"]

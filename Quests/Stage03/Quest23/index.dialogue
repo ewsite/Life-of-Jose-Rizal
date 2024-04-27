@@ -1,0 +1,12 @@
+~ this_is_a_node_title
+do DialogueStates.spawn_character("JoseRizal", 2)
+Habang pansamantalang namalagi si Rizal ay tinatapos na ang nobelang Noli Me Tangere 
+Nahirapan siya malimbag ang kanyang nobela dahil sa kakulangan ng salapi
+Nagpunta si Maximo Viola, isang kaibigang nakilala nya sa Barcelona para tignan ang unang nobela ni Rizal. Agad na humanga kay Rizal sa talino at dedikasyon.
+Siya rin ang nag-abono sa pagpapalimbag ng buong Noli Me Tangere kahit noong una ayaw ni Rizal.
+do DialogueStates.spawn_character("MaximoViola", 5)
+Maximo Viola: Kaya’t pumunta ako mula Barcelona para tingnan ang iyong unang nobela. Agad akong humanga sa iyong talino at dedikasyon.
+Jose Rizal: Salamat, Maximo. Hindi ko akalaing may mag-aabono para sa pagpapalimbag ng buong Noli Me Tangere.
+Maximo Viola: Walang anuman, kaibigan. Ang iyong akda ay mahalaga para sa ating bayan. Ako ang mag-aabono.
+Jose Rizal: Maraming salamat, Maximo. Ito’y isang malaking tulong para sa ating adhikain.
+=> END

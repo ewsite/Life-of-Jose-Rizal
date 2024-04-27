@@ -1,9 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0os7466xh0m2"]
+[gd_scene load_steps=7 format=3 uid="uid://bb6tesl7h1cr0"]
 
-[ext_resource type="Script" path="res://Quests/Stage03/Quest02/index.gd" id="1_rfh2t"]
-[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="2_2u66t"]
+[ext_resource type="Script" path="res://Quests/Stage03/Quest20/index.gd" id="1_px2vt"]
+[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="2_ybi7k"]
 
-[sub_resource type="Animation" id="Animation_kvs15"]
+[sub_resource type="LabelSettings" id="LabelSettings_uc0uv"]
+
+[sub_resource type="Animation" id="Animation_dubtx"]
+resource_name = "start"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ga678"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -15,35 +33,17 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_u8cd5"]
-resource_name = "start"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Label:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ty11y"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wmr4m"]
 _data = {
-"RESET": SubResource("Animation_kvs15"),
-"start": SubResource("Animation_u8cd5")
+"RESET": SubResource("Animation_ga678"),
+"start": SubResource("Animation_dubtx")
 }
-
-[sub_resource type="LabelSettings" id="LabelSettings_uc0uv"]
 
 [node name="Quest" type="CanvasLayer"]
-script = ExtResource("1_rfh2t")
+script = ExtResource("1_px2vt")
 
 [node name="WackRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -57,11 +57,6 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ty11y")
-}
-
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -69,9 +64,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_2u66t")
+theme = ExtResource("2_ybi7k")
 
 [node name="Label" type="Label" parent="Control"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -84,7 +80,14 @@ offset_right = 20.0
 offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "umalis muna si rizal para pumunta sa ghent
-"
+text = "AGAD NA PUMUNTA SI RIZAL SA PALIMBAGAN
+PARA MAPALIMBAG ANG KANIYANG UNANG NOBELA
+
+PAGKATAPOS NITO AY AGAD SIYANG BUMALIK SA BAHAY"
 label_settings = SubResource("LabelSettings_uc0uv")
 horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wmr4m")
+}

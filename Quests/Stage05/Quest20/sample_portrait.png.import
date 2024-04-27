@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmqu3sqd1bvlr"
-path="res://.godot/imported/sample_portrait.png-9678def7dc306688c91c4c88b045f10d.ctex"
+uid="uid://bl1veyngdvjp8"
+path="res://.godot/imported/sample_portrait.png-a707e2cddeeaf201e0cd1630b35176da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Quests/Stage05/Quest10A/sample_portrait.png"
-dest_files=["res://.godot/imported/sample_portrait.png-9678def7dc306688c91c4c88b045f10d.ctex"]
+source_file="res://Quests/Stage05/Quest20/sample_portrait.png"
+dest_files=["res://.godot/imported/sample_portrait.png-a707e2cddeeaf201e0cd1630b35176da.ctex"]
 
 [params]
 

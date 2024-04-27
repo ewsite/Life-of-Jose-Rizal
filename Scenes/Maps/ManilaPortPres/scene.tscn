@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://buyclaa84t4y2"]
+[gd_scene load_steps=12 format=3 uid="uid://buyclaa84t4y2"]
 
 [ext_resource type="Script" path="res://Scenes/Maps/ManilaPortPres/scene.gd" id="1_3nccf"]
 [ext_resource type="Texture2D" uid="uid://dcxvelod4w1wm" path="res://Assets/Own/Terrain Tilemap R1.png" id="2_pl2ja"]
@@ -1030,6 +1030,12 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/1 = SubResource("TileSetAtlasSource_bpyxq")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ultrg"]
+size = Vector2(147.25, 1145.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3du1"]
+size = Vector2(1521.63, 214)
+
 [node name="ManilaPortPres" type="Node2D"]
 script = ExtResource("1_3nccf")
 
@@ -1079,3 +1085,21 @@ player_node = NodePath("../../Player")
 position = Vector2(692, 870)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("7_und4x")
+
+[node name="WorldCollision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="WorldCollision"]
+position = Vector2(-64, 539.5)
+shape = SubResource("RectangleShape2D_ultrg")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="WorldCollision"]
+position = Vector2(1355, 509.75)
+shape = SubResource("RectangleShape2D_ultrg")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="WorldCollision"]
+position = Vector2(655, 1166)
+shape = SubResource("RectangleShape2D_b3du1")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="WorldCollision"]
+position = Vector2(643, -140)
+shape = SubResource("RectangleShape2D_b3du1")

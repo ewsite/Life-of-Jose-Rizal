@@ -1,0 +1,8 @@
+~ this_is_a_node_title
+do DialogueStates.spawn_character("JoseRizal", 2)
+Sumulat si Rizal kay Blumentritt upang ipamahagi ang isang kopya ng Noli Me Tangere
+do DialogueStates.change_slide(1)
+(Sulat)
+do DialogueStates.change_slide(2)
+Nagpasya na lang si Rizal na umuwi siya sa Pilipinas kahit na ayaw ng kaniyang pamilya.
+=> END

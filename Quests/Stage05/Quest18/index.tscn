@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cy61infeo5obu"]
 
-[ext_resource type="Script" path="res://Quests/Stage05/Quest03/index.gd" id="1_alnrk"]
-[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="2_y2os0"]
+[ext_resource type="Script" path="res://Quests/Stage05/Quest18/index.gd" id="1_alnrk"]
+[ext_resource type="Texture2D" uid="uid://ea5qgpamuoxh" path="res://Assets/Own/Background/ApartmentDark.png" id="2_i3rsq"]
+[ext_resource type="Texture2D" uid="uid://dgaixd7ttywt7" path="res://addons/main_system/Nodes/Portrait/PortraitPlaceholder.png" id="2_tjvnx"]
 [ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="3_m6ai3"]
-[ext_resource type="Texture2D" uid="uid://ddrxetmhjcytt" path="res://Assets/Own/Portraits/OSeiSan.png" id="4_u6kur"]
 
 [node name="NormalDialogue" type="CanvasLayer"]
 script = ExtResource("1_alnrk")
@@ -16,9 +16,20 @@ offset_left = 8.0
 offset_right = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.87451, 0.788235, 0.709804, 1)
+color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
+
+[node name="Slides" type="Node" parent="."]
+
+[node name="Slide01A" type="TextureRect" parent="Slides"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i3rsq")
+expand_mode = 5
 
 [node name="Portraits" type="GridContainer" parent="."]
 unique_name_in_owner = true
@@ -32,17 +43,9 @@ metadata/_edit_lock_ = true
 
 [node name="JoseRizal" type="Sprite2D" parent="Portraits"]
 unique_name_in_owner = true
-position = Vector2(303, 352)
-scale = Vector2(1.05417, 1.05417)
-texture = ExtResource("2_y2os0")
-script = ExtResource("3_m6ai3")
-
-[node name="OSeiSan" type="Sprite2D" parent="Portraits"]
-unique_name_in_owner = true
-position = Vector2(1005, 338)
-scale = Vector2(0.48032, 0.48032)
-texture = ExtResource("4_u6kur")
-flip_h = true
+position = Vector2(491, 340)
+scale = Vector2(3.28767, 3.28767)
+texture = ExtResource("2_tjvnx")
 script = ExtResource("3_m6ai3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,0 +1,24 @@
+~ this_is_a_node_title
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("JoseRizal", 2)
+do DialogueStates.spawn_character("AntonioLuna", 5)
+Pumunta si Rizal sa isang bahay na kung saan nandoon si Antonio Luna at mga kababayan niya na nagsalo-salo.
+Lasing ang lahat kasama na si Rizal.
+do DialogueStates.change_slide(2)
+do DialogueStates.flip_character("JoseRizal", true)
+do DialogueStates.emote_character("JoseRizal", "buzz")
+do DialogueStates.change_character_position("AntonioLuna", 5)
+Habang lasing si Antonio Luna ay may nasabi na hindi maganda kay Rizal.
+do DialogueStates.change_character_position("JoseRizal", 3)
+do DialogueStates.change_character_position("AntonioLuna", 5)
+do DialogueStates.flip_character("JoseRizal", false)
+do DialogueStates.change_slide(3)
+do DialogueStates.emote_character("JoseRizal", "buzz")
+do DialogueStates.emote_character("AntonioLuna", "buzz")
+Nag-away ang dalawang ito at muntik ng umabot sa eksenang magkakapatayan sila sa isa't isa.
+do DialogueStates.change_character_position("JoseRizal", 1)
+do DialogueStates.change_character_position("AntonioLuna", 6)
+do DialogueStates.change_slide(4)
+Agad itong inawat ng kaniyang kababayan na sa gayon ay hindi na matuloy ang gulo.
+
+=> END

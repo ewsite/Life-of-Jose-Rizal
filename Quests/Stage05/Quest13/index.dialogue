@@ -1,0 +1,47 @@
+~ this_is_a_node_title
+do DialogueStates.change_slide(1)
+do DialogueStates.spawn_character("JoseRizal", 2)
+Jose: Nagpapasalamat na rin sa sarili ko para makapag-pahinga ang isip ko sa kabila ng hindi kanais-nais na balita at liham na natatanggap ko.
+do DialogueStates.change_character_position("JoseRizal", 3)
+Jose: Habang nananatili ako rito ay kailangan kong ipagpatuloy ang aking susunod na nobela na tutuloy sa Noli Me Tangere.
+do DialogueStates.change_character_position("JoseRizal", 2)
+Habang pinagpatuloy niya ang pagsusulat ng kaniyang susunod na nobela.....
+do DialogueStates.spawn_character("Nellie", 5)
+Nagkaroon ng interest si Rizal kay Nellie Boustead...
+do DialogueStates.change_character_position("JoseRizal", 1)
+isang babae ng pamilyang may-ari ng pansamantalahang tinitirahan ngayon ni Rizal.
+Sinisuyo pa siya ni Antonio Luna na sa una... ay si Rizal ang unang sumuyo kay Antonio Luna para kay Nellie
+do DialogueStates.despawn_character("Nellie")
+do DialogueStates.despawn_character("JoseRizal")
+Pagkalipas ng ilang araw ay may itatanong si Antonio Luna kay Rizal kung totoo ba talaga ang relasyon nila ni Boustead
+do DialogueStates.change_slide(2)
+do DialogueStates.spawn_character("AntonioLuna", 5)
+do DialogueStates.spawn_character("JoseRizal", 2)
+Luna: Kompadre!
+Jose: Kumusta, kompadre?
+do DialogueStates.change_character_position("AntonioLuna", 4)
+Luna: Tinanong kita ng ilang beses kung may pag-ibig ka ba talaga kay Nellie?
+Luna: Noong una, ikaw pa ang sumusuyo sa akin...
+do DialogueStates.change_character_position("AntonioLuna", 5)
+Luna: Totoo ba talaga?
+Jose: Huwag kang mag-alala, hindi naman totoo yon.
+do DialogueStates.despawn_character("AntonioLuna")
+do DialogueStates.change_character_position("JoseRizal", 3)
+do DialogueStates.spawn_character("Nellie", 5)
+Nagkatuluyan si Rizal at si Boustead pero sa isang dulo ng kanilang relasyon ay gusto naman pakasalan si Boustead si Rizal.
+do DialogueStates.change_character_position("JoseRizal", 1)
+Tumanggi si Rizal dahil si Boustead ay isang protestante at si Rizal ay isang katoliko....
+at nakasangla ang buhay ni Rizal sa kaniyang gawain para sa Pilipinas.
+do DialogueStates.change_character_position("Nellie", 4)
+Wala ng magawa ang dalawa kundi tapusin ang kanilang pagmamahalan.
+
+do DialogueStates.despawn_character("Nellie")
+do DialogueStates.change_character_position("JoseRizal", 2)
+Jose: Talagang malas ako sa pag-ibig.
+Jose: Maraming babae ang umibig at nagpahalaga sa akin.
+do DialogueStates.change_slide(3)
+Jose: Isa sa kanila ay walang nagtatagal... Maliban kay Leonor...
+Jose: Kahit na nagtagal ang pagsasama namin ni Leonor ay nawala rin..
+Jose: Gayumpan, hindi ito magiging hadlang sa adhikain kong ipaglaban para sa aking bayan.
+
+=> END

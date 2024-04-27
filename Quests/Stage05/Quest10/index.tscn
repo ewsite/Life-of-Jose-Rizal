@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0os7466xh0m2"]
+[gd_scene load_steps=7 format=3 uid="uid://cdfhaevr3w0cr"]
 
-[ext_resource type="Script" path="res://Quests/Stage03/Quest02/index.gd" id="1_rfh2t"]
-[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="2_2u66t"]
+[ext_resource type="Script" path="res://Quests/Stage05/Quest10/index.gd" id="1_gh8b1"]
+[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="2_y317c"]
 
 [sub_resource type="Animation" id="Animation_kvs15"]
 length = 0.001
@@ -43,7 +43,7 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_uc0uv"]
 
 [node name="Quest" type="CanvasLayer"]
-script = ExtResource("1_rfh2t")
+script = ExtResource("1_gh8b1")
 
 [node name="WackRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -69,7 +69,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_2u66t")
+theme = ExtResource("2_y317c")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
@@ -84,7 +84,7 @@ offset_right = 20.0
 offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "umalis muna si rizal para pumunta sa ghent
-"
+text = "SA SULAT NA IYON AY NAGULAT SI RIZAL
+SA MGA NANGYAYARI SA CALAMBA"
 label_settings = SubResource("LabelSettings_uc0uv")
 horizontal_alignment = 1

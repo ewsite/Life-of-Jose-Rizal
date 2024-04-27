@@ -59,7 +59,7 @@
 			"name": "Patungo sa Liwanag ng Daong at Daigdig",
 			"description": "Bumisita sa Museo ng London",
 			"target_map": "LondonPres",
-			"target_node": "LondonMuseumEntry",
+			"target_node": "BritishMuseumEntry",
 			"scene_path": "Quest05",
 			"rewards": {
 				"points": 0,
@@ -194,16 +194,6 @@
 			}
 		}, 
         {
-			"name": "Sa Biarritz, Boustead at Antonio Luna",
-			"description": "May problema",
-            "unskippable": true,
-            "scene_path": "Quest16",
-			"rewards": {
-				"points": 400,
-				"health": 0
-			}
-		}, 
-        {
 			"name": "Sa Ghent at Pangalawang Nobela",
 			"description": "Pumunta sa Belgium",
             "target_map": "BiarritzPres",
@@ -218,7 +208,7 @@
 			"name": "Sa Ghent at Pangalawang Nobela",
 			"description": "Ipagpatuloy ang adhikain....",
             "unskippable": true,
-            "scene_path": "Quest17",
+            "scene_path": "Quest16",
 			"rewards": {
 				"points": 0,
 				"health": 0
@@ -228,7 +218,7 @@
 			"name": "Sa Ghent at Pangalawang Nobela",
 			"description": "Ipagpatuloy ang adhikain....",
             "unskippable": true,
-            "scene_path": "Quest18",
+            "scene_path": "Quest17",
 			"rewards": {
 				"points": 0,
 				"health": 0
@@ -238,7 +228,7 @@
 			"name": "Sa Ghent at Pangalawang Nobela",
 			"description": "Umuwi muna sa Hong Kong",
             "unskippable": true,
-            "scene_path": "Quest19",
+            "scene_path": "Quest18",
 			"rewards": {
 				"points": 0,
 				"health": 0
@@ -248,7 +238,7 @@
 			"name": "La Liga Filipina",
 			"description": "La Liga Filipina",
             "unskippable": true,
-            "scene_path": "Quest20",
+            "scene_path": "Quest19",
 			"rewards": {
 				"points": 400,
 				"health": 0

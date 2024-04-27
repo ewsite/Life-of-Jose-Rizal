@@ -278,6 +278,37 @@
 			}
 		},
 		{
+			"name": "Pagpunta sa Berlin",
+			"description": "Sumandaling tumira para tapusin.....",
+			"target_map": "BerlinPres",
+			"target_node": "TempHouseEntry",
+			"scene_path": "Quest23",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagpunta sa Berlin",
+			"description": "Sumandaling tumira para tapusin.....",
+			"unskippable": true,
+			"scene_path": "Quest24",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
+			"name": "Pagpunta sa Berlin",
+			"description": "Sumandaling tumira para tapusin.....",
+			"unskippable": true,
+			"scene_path": "Quest25",
+			"rewards": {
+				"points": 0,
+				"health": 0
+			}
+		},
+		{
 			"name": "Bago Magpatuloy",
 			"unskippable": true,
 			"scene_path": "Activity3",

@@ -1,56 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://bfuno5j20gxx6"]
+[gd_scene load_steps=11 format=3 uid="uid://ci7n7e0evxuv"]
 
-[ext_resource type="Script" path="res://Quests/Stage05/Quest09/index.gd" id="1_dqi33"]
-[ext_resource type="Texture2D" uid="uid://ea5qgpamuoxh" path="res://Assets/Own/Background/ApartmentDark.png" id="2_p1vbh"]
-[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="3_jqpxj"]
-[ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="4_46pry"]
-[ext_resource type="StyleBox" uid="uid://dnjbqijxuu5c6" path="res://UI/Themes/liham.tres" id="5_418rw"]
-[ext_resource type="FontFile" uid="uid://byd4o3d8iu4kc" path="res://UI/Assets/Fonts/PixCon.ttf" id="6_v8vmi"]
+[ext_resource type="Script" path="res://Quests/Stage03/Quest25/index.gd" id="1_cp3mr"]
+[ext_resource type="Texture2D" uid="uid://ea5qgpamuoxh" path="res://Assets/Own/Background/ApartmentDark.png" id="2_4e85t"]
+[ext_resource type="Texture2D" uid="uid://dt6yxn8nekrd0" path="res://Assets/Own/Portraits/JoseRIzal.png" id="3_5wn14"]
+[ext_resource type="Script" path="res://addons/main_system/Nodes/Portrait/Portrait.gd" id="4_2cr14"]
+[ext_resource type="StyleBox" uid="uid://dnjbqijxuu5c6" path="res://UI/Themes/liham.tres" id="5_1d5mu"]
+[ext_resource type="FontFile" uid="uid://byd4o3d8iu4kc" path="res://UI/Assets/Fonts/PixCon.ttf" id="6_0e0br"]
 
-[sub_resource type="Animation" id="Animation_we2qg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Slides/Slide01A:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Liham/Liham1:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_4dsxg"]
+[sub_resource type="Animation" id="Animation_f2aa4"]
 resource_name = "slide_1"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Slides/Slide01A:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_cafvt"]
-resource_name = "slide_2"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -64,8 +22,23 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_bw8ia"]
-resource_name = "slide_3"
+[sub_resource type="Animation" id="Animation_t3ga7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Liham/Liham1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dbi5t"]
+resource_name = "slide_2"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -79,16 +52,15 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rlhag"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n164a"]
 _data = {
-"RESET": SubResource("Animation_we2qg"),
-"slide_1": SubResource("Animation_4dsxg"),
-"slide_2": SubResource("Animation_cafvt"),
-"slide_3": SubResource("Animation_bw8ia")
+"RESET": SubResource("Animation_t3ga7"),
+"slide_1": SubResource("Animation_f2aa4"),
+"slide_2": SubResource("Animation_dbi5t")
 }
 
 [node name="NormalDialogue" type="CanvasLayer"]
-script = ExtResource("1_dqi33")
+script = ExtResource("1_cp3mr")
 
 [node name="WackRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -105,13 +77,12 @@ metadata/_edit_lock_ = true
 [node name="Slides" type="Node" parent="."]
 
 [node name="Slide01A" type="TextureRect" parent="Slides"]
-modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_p1vbh")
+texture = ExtResource("2_4e85t")
 expand_mode = 5
 metadata/_edit_lock_ = true
 
@@ -129,8 +100,8 @@ metadata/_edit_lock_ = true
 unique_name_in_owner = true
 position = Vector2(491, 340)
 scale = Vector2(1.05417, 1.05417)
-texture = ExtResource("3_jqpxj")
-script = ExtResource("4_46pry")
+texture = ExtResource("3_5wn14")
+script = ExtResource("4_2cr14")
 
 [node name="Liham" type="Node" parent="."]
 
@@ -149,7 +120,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = ExtResource("5_418rw")
+theme_override_styles/panel = ExtResource("5_1d5mu")
 
 [node name="MarginContainer" type="MarginContainer" parent="Liham/Liham1"]
 clip_contents = true
@@ -163,16 +134,18 @@ theme_override_constants/margin_bottom = 4
 [node name="Label" type="Label" parent="Liham/Liham1/MarginContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.215686, 0.12549, 0.054902, 1)
-theme_override_fonts/font = ExtResource("6_v8vmi")
-text = "Senior Jose Rizal,
+theme_override_fonts/font = ExtResource("6_0e0br")
+text = "Professor Ferdinand Blumentritt:
 
-Sa kasalukuyan, 13 hanggang 60 sakada ang nakademanda sa korte ng hukom tagamapayapa. Sakaling matalo, palalayasin sila at ipagigiba ang lahat ng kamalig, ang asukalera, at lahat ng nakatirik sa lupa.
+Kasama nito ang isang libro, ang kauna-unahan at matapang na libro tungkol sa buhay ng Tagalog sampung-taon ang nakakaraan. Panigurado’y tutuligsain ito ng gobyerno at mga prayle. Pero nananalig ako sa Diyos ng katotohanan at sa mga taong nakakakita ng aming tunay na kalagayan
 
-Ang iyong bayaw,
-Silvestre Ubaldo"
+Lubos na Gumagalang,
+Jose Rizal
+
+"
 autowrap_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_rlhag")
+"": SubResource("AnimationLibrary_n164a")
 }

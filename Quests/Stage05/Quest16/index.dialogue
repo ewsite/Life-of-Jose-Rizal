@@ -1,0 +1,40 @@
+~ this_is_a_node_title
+
+
+
+Sumandali muna nanirahan sa belgium para ipagpatuloy ang kanyang pangalawang nobela...
+Ang "El Filibusterismo".
+do DialogueStates.spawn_character("JoseRizal", 1)
+Subalit katulad ng nakaraang nobela, kinapos si Rizal ng pondo para ipalimbag ang nasabing nobela.
+
+do DialogueStates.change_character_position("JoseRizal", 2)
+Jose: Ginagawa ko na lahat ng paraan para maipalimbag ang aking nobela.
+Jose: Sinangla ko na ang alahas ko...
+do DialogueStates.change_character_position("JoseRizal", 3)
+Jose: Nakatira ako sa isang maliit na silid
+Jose: Kumakain sa dukhang restaurant
+do DialogueStates.change_character_position("JoseRizal", 5)
+do DialogueStates.flip_character("JoseRizal", true)
+Jose: Tinitipid ko na ang aking sarili...
+Jose: Para maipalimbag ko ang aking nobela...
+do DialogueStates.despawn_character("JoseRizal")
+do DialogueStates.flip_character("JoseRizal", false)
+Sa kabutihang palad ay may tumulong kay Rizal para maipalimbag ang kanyang nobela.
+do DialogueStates.spawn_character("JoseRizal", 2)
+do DialogueStates.spawn_character("ValentinVentura", 5)
+Jose: Valentin Ventura, nasa bingit ako ng kawalan. Hindi ko maipalimbag ang aking nobela dahil sa kakulangan ng aking salapi.
+Valentin: Maari ko bang makita ang iyong nobela?
+Jose: Oo naman.
+
+Pinakita ni Jose kay Valentin ang El Filibusterismo.
+
+Valentin: Jose, alam ko ang kahalagahan ng iyong adhikain. 
+Valentin: Hindi ko hahayaang mapigilan ang paglalathala ng iyong nobela dahil lamang sa salapi.
+do DialogueStates.change_character_position("JoseRizal", 3)
+Jose: Maraming salamat sa iyo, Valentin!
+Valentin: Kaya tutulungan kita dahil hindi lang ito tungkol sa utang na loob, Jose. 
+Valentin: Ito ay tungkol sa ating bayan.
+Valentin: Ang iyong nobela ay magiging susi sa paggising ng diwa ng ating mga kababayan.
+Jose: Walang anuman, Jose. Gawin natin ito para sa ating Inang Bayan.
+
+=> END

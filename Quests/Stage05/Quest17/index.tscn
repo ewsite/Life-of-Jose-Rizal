@@ -84,7 +84,7 @@ offset_right = 20.0
 offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "pumunta sa maynila para makapaghanda
-para sa kanyang pag-alis"
+text = "bumalik si rizal sa hong kong para makapiling
+muli ang kaniyang pamilya"
 label_settings = SubResource("LabelSettings_uc0uv")
 horizontal_alignment = 1

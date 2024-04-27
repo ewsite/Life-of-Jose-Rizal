@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://gdtprukkjo0l"]
+[gd_scene load_steps=15 format=3 uid="uid://gdtprukkjo0l"]
 
 [ext_resource type="Script" path="res://Scenes/Maps/BerlinPres/scene.gd" id="1_md60x"]
 [ext_resource type="PackedScene" uid="uid://kfckpaja0ylc" path="res://Characters/main_player.tscn" id="2_ssk1a"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bb2qwwahi1hji" path="res://Assets/Own/Buildings/Orange Bldg 2 Floor Part 2.png" id="6_0id0f"]
 [ext_resource type="Texture2D" uid="uid://g084ymjoryue" path="res://Assets/Own/Buildings/Green Bldg 3 Floor Wide.png" id="7_stx0h"]
 [ext_resource type="Texture2D" uid="uid://c4wb0x8w5p0jq" path="res://Assets/Own/Buildings/Orange Bldg 3 Floor Part 2 Wide.png" id="8_1ns82"]
+[ext_resource type="Script" path="res://addons/main_system/Nodes/EntryArea/entry_area.gd" id="10_sx1qr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4m4vt"]
 size = Vector2(147.25, 800)
@@ -356,7 +357,7 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_je6h3")
 
-[node name="Scene" type="Node2D"]
+[node name="BerlinPres" type="Node2D"]
 script = ExtResource("1_md60x")
 
 [node name="WorldCollision" type="StaticBody2D" parent="."]
@@ -454,3 +455,8 @@ texture = ExtResource("8_1ns82")
 position = Vector2(1264, 160)
 
 [node name="NPC" type="Node" parent="."]
+
+[node name="TempHouseEntry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
+position = Vector2(251, 599)
+script = ExtResource("10_sx1qr")
+player_node = NodePath("../../Player")

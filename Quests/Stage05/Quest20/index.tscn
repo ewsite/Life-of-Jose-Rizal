@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdfhaevr3w0cr"]
+[gd_scene load_steps=7 format=3 uid="uid://dhn87bmgba77w"]
 
-[ext_resource type="Script" path="res://Quests/Stage05/Quest10A/index.gd" id="1_gh8b1"]
-[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="2_y317c"]
+[ext_resource type="Script" path="res://Quests/Stage03/Quest02/index.gd" id="1_37mwe"]
+[ext_resource type="Theme" uid="uid://dp7geumd7i46m" path="res://UI/theme.tres" id="2_dn3se"]
 
 [sub_resource type="Animation" id="Animation_kvs15"]
 length = 0.001
@@ -43,7 +43,7 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_uc0uv"]
 
 [node name="Quest" type="CanvasLayer"]
-script = ExtResource("1_gh8b1")
+script = ExtResource("1_37mwe")
 
 [node name="WackRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -69,7 +69,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_y317c")
+theme = ExtResource("2_dn3se")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
@@ -84,6 +84,7 @@ offset_right = 20.0
 offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "ILANG ARAW ANG NAKAKALIPAS..."
+text = "pagkatapos gumawa ng konstitusyon 
+para sa la liga filipina"
 label_settings = SubResource("LabelSettings_uc0uv")
 horizontal_alignment = 1

@@ -518,6 +518,11 @@ position = Vector2(784, 533)
 script = ExtResource("3_3e6mf")
 player_node = NodePath("../../Player")
 
+[node name="Inline1Entry" type="Area2D" parent="NPC" node_paths=PackedStringArray("player_node")]
+position = Vector2(197, 543)
+script = ExtResource("3_3e6mf")
+player_node = NodePath("../../Player")
+
 [node name="Player" parent="." instance=ExtResource("4_oiit7")]
 position = Vector2(22, 214)
 
