@@ -84,6 +84,7 @@ offset_right = 20.0
 offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "pumunta ulit sa maynila para mag-aral sa santo tomas..."
+text = "BUMALIK ulit sa maynila para mag-aral sa
+ santo tomas..."
 label_settings = SubResource("LabelSettings_uc0uv")
 horizontal_alignment = 1

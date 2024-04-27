@@ -84,8 +84,8 @@ offset_right = 20.0
 offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "pagkatapos niya mag-aral sa maynila
+text = "pagkatapos niya mag-aral sa ateneo
 ay bumalik si rizal sa calamba para makapiling
-niya ang kaniyang mahal sa buhay"
+niya ang kaniyang pamilya"
 label_settings = SubResource("LabelSettings_uc0uv")
 horizontal_alignment = 1

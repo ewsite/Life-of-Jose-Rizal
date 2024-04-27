@@ -85,6 +85,6 @@ offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "UMALIS SI RIZAL, KASAMA SI PACIANO
-SA BINAN, LAGUNA."
+PARA MAG-ARAL SA BINAN"
 label_settings = SubResource("LabelSettings_jnnb4")
 horizontal_alignment = 1

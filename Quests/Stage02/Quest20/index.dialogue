@@ -1,6 +1,6 @@
 ~ this_is_a_node_title
-Jose: Ang landas ng kaalaman ay hindi kailanman naging madali.[wait=3][next=auto] 
-Jose: Ang bawat pahina, bawat salita, [wait=1]ay nagdadala ng bigat ng aking mga pangarap at inaasahan.[wait=3][next=auto] 
-Jose: Ngunit, [wait=0.4]bakit ganito? [wait=1]Bakit ang aking pagsisikap ay tila hindi sapat upang makamit ang mga markang aking inaasam? [wait=3][next=auto] 
+Jose: Ang landas ng kaalaman ay hindi kailanman naging madali.[wait=12][next=auto] 
+Jose: Ang bawat pahina, bawat salita, [wait=1]ay nagdadala ng bigat ng aking mga pangarap at inaasahan.[wait=12][next=auto] 
+Jose: Ngunit, [wait=0.4]bakit ganito? [wait=1]Bakit ang aking pagsisikap ay tila hindi sapat upang makamit ang mga markang aking inaasam? [wait=12][next=auto] 
 
 => END

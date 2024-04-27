@@ -295,7 +295,7 @@ metadata/_edit_lock_ = true
 [node name="JoseRizal" type="Sprite2D" parent="Portraits"]
 unique_name_in_owner = true
 position = Vector2(196, 355)
-scale = Vector2(4, 4)
+scale = Vector2(1.05417, 1.05417)
 texture = ExtResource("6_3f1wj")
 script = ExtResource("3_ps7lf")
 

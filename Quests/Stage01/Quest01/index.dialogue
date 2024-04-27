@@ -2,8 +2,12 @@
 do DialogueStates.change_slide(1)
 Sa isang bahay kubo, narito ang isa sa mga masayang pangyayari ni Jose Rizal nang siya'y bata pa lang.
 do DialogueStates.change_slide(2)
-Si Rizal ay madalas makipaglaro kasama ang kanyang mga munting kaibigan.
+Jose: Sa bahay kubo na ito ay madalas akong naglalaro dito.
+Jose: Sinasama ko na ang aking mga kaibigan para makipag-laro.
+Jose: ang tawag nila sa akin ay "Moy".
+Jose: Kapag tapos na ang laro ay, tahimik lang ako dito pero....
+Jose: Pag naaantig ako sa isang bagay na maganda ay talaging nahuhumaling ako.
 do DialogueStates.change_slide(3)
-Siya ay mahilig magpinta ng hayop, ibon at bulaklak.
-Mahilig rin siya gumawa ng figurine.
+Jose: Mahilig rin ako magpinta ng mga nakikita ko sa paligid katuload ng hayop, ibon, o bulaklak.
+Jose: Kumukuha ako ng pintura galing sa atsuete at iba pang halaman, kakatasan ko nga lang.
 => END
